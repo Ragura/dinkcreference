@@ -4,6 +4,7 @@ module.exports = {
   themeConfig: {
     repo: 'ragura/dinkcreference',
     docsDir: 'docs',
+    docsBranch: 'main',
     editLinks: true,
     editLinkText: 'Edit this page on GitHub',
     lastUpdated: 'Last Updated',
