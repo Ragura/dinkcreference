@@ -35,7 +35,6 @@ function getGuideSidebar() {
         { text: 'What is DinkC?', link: '/guide/dinkc' },
         { text: 'Scripts', link: '/guide/scripts' },
         { text: 'Variables', link: '/guide/variables' },
-        { text: 'Operations', link: '/guide/operations' },
         { text: 'Procedures', link: '/guide/procedures' },
         { text: 'Control Structures', link: '/guide/control-structures' }
       ]
