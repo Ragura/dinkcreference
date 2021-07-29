@@ -122,6 +122,7 @@ void arm(void)
 ```
 
 ## Additional parameters
+
 Other additional parameters to the `load_sequence` command include: `NOTANIM`; `BLACK`; `LEFTALIGN`.
 
 ### `NOTANIM`

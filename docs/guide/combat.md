@@ -2,7 +2,7 @@
 
 In combat, strength, defense, and hitpoints interact about like this:
 
-1. When Dink or a monster hits the other, a number of hitpoints is randomly selected from the upper half of its strength range. In DinkC terms, you might write it like this:
+Step 1. When Dink or a monster hits the other, a number of hitpoints is randomly selected from the upper half of its strength range. In DinkC terms, you might write it like this:
 
 ```c
 int &hit_work = sp_strength( <hitting-sprite>, -1);
@@ -11,7 +11,7 @@ int &hits = random( &hit_work, &hit_work );
 &hits += 1;
 ```
 
-2. Now the defense of the sprite that got hit is figured in:
+Step 2. Now the defense of the sprite that got hit is figured in:
 
 ```c
 &hits -= sp_defense( <sprite-getting-hit>, -1 );
@@ -21,7 +21,7 @@ if (&hits < 0)
 }
 ```
 
-3. Make sure the sprite cannot always get off scott-free (this algorithm is used in hurt and when Dink gets hit; it does not seem to always apply to Dink hitting a monster, especially when he hits it with magic):
+Step 3. Make sure the sprite cannot always get off scott-free (this algorithm is used in hurt and when Dink gets hit; it does not seem to always apply to Dink hitting a monster, especially when he hits it with magic):
 
 ```c
 if (&hits == 0)
@@ -30,7 +30,7 @@ if (&hits == 0)
 }
 ```
 
-4. Finally, apply the hit:
+Step 4. Finally, apply the hit:
 
 ```c
 int &health = sp_hitpoints( <sprite-getting-hit>, -1 );
