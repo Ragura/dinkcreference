@@ -4,6 +4,22 @@ This repository is home to the documentation site for the DinkC Reference guide 
 
 The website includes information on how to set up your DinkC development environment, basic and advanced information about the DinkC programming language and a list of common techniques you'll need to make a nice, functional Dink Smallwood mod.
 
+## Technology
+
+The website was made with the excellent [Vitepress](https://vitepress.vuejs.org) static site generator. The package manager is [PNPM](https://pnpm.io).
+
+To run the site in development mode, use:
+
+```bash
+pnpm docs:dev
+```
+
+To build it (generates static files in the `dist` folder):
+
+```bash
+pnpm docs:build
+```
+
 ## Contributions
 
 The documentation contained on this website is a revision of documentation written by many authors throughout the years:
