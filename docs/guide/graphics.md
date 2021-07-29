@@ -77,7 +77,7 @@ load_sequence_now graphics\dink\walk\ds-w1- 71 43 38 72
 
 Here is an example bmp of Dink walking in direction "1" to help illustrate this – this image is enlarged but is scaled proportionally from the original bmp graphic:
 
-![Dink walking in direction 1](images/dink_direction_1.png)
+![Dink walking in direction 1](./images/dink_direction_1.png)
 
 The first image is the normal graphic, the second image has a red dot marked for the depth dot (orange lines pin pointing it) and the final image has the dimensions of the hardness box (pink). I've also placed a 1 pixel dot at the top left hand corner to mark the refernece point from which the depth dot is calculated. Hardness box is calculated from the red depth dot.
 
