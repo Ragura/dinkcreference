@@ -1,0 +1,22 @@
+{
+  "name": "dinkcreference",
+  "version": "0.1.0",
+  "description": "Documentation site for the DinkC scripting language",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
+  },
+  "keywords": [
+    "DinkC",
+    "Dink",
+    "Smallwood",
+    "Dink"
+  ],
+  "author": "Steven Schoovaerts",
+  "license": "ISC",
+  "devDependencies": {
+    "vitepress": "^0.15.6"
+  }
+}

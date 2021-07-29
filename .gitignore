@@ -1,0 +1,7 @@
+*.log
+.DS_Store
+.vite_opt_cache
+dist
+node_modules
+TODOs.md
+.vscode
