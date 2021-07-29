@@ -135,14 +135,14 @@ This might cause the current sprite to say something like *"You have 15 life poi
 
 Now, besides storing plain numbers, variables can be used to store several different types of numbers used internally by the Dink engine.
 
-| Name          | Description                                                                                           | Range   |
-|---------------|-------------------------------------------------------------------------------------------------------|---------|
-| Editor sprite | A sprite placed in a map editor. Useful to save `editor_seq` and `editor_frame` information.          | 1 - 99  |
-| Active sprite | A sprite that is currently on the screen. It will usually be different from the editor sprite number. | 1 - 300 |
-| Map           | A map screen                                                                                          | 1 - 768 |
-| Sound number  | A sound loaded using `load_sound()`.                                                                  | 1 - 99  |
-| Soundbank     | A currently playing sound.                                                                            | 1 - 19  |
-| Script number | A currently executing script.                                                                         | 1 - 299 |
+| Name          | Description                                                                                           | Range |
+|---------------|-------------------------------------------------------------------------------------------------------|-------|
+| Editor sprite | A sprite placed in a map editor. Useful to save `editor_seq` and `editor_frame` information.          | 1-99  |
+| Active sprite | A sprite that is currently on the screen. It will usually be different from the editor sprite number. | 1-300 |
+| Map           | A map screen                                                                                          | 1-768 |
+| Sound number  | A sound loaded using `load_sound()`.                                                                  | 1-99  |
+| Soundbank     | A currently playing sound.                                                                            | 1-19  |
+| Script number | A currently executing script.                                                                         | 1-299 |
 
 ## Special variables
 

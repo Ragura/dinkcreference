@@ -145,4 +145,3 @@ Take a look at the list of all scripts summoned by the game (except input, magic
 | `main`     | When the game first starts up.                                          |
 | `start`    | When the game is first active, after `main.c`.                          |
 | `start`    | When the game is first active, after `main.c`.                          |
-
