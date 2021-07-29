@@ -43,13 +43,13 @@ function getGuideSidebar() {
       text: 'Techniques',
       children: [
         { text: 'Non-player characters', link: '/guide/npc' },
+        { text: 'Plot', link: '/guide/plot' },
         { text: 'Enemies', link: '/guide/enemies' },
         { text: 'Combat', link: '/guide/combat' },
         { text: 'Items', link: '/guide/items' },
         { text: 'Warps', link: '/guide/warps' },
-        { text: 'Visions', link: '/guide/visions' },
-        { text: 'Permanent changes', link: '/guide/permanent-changes' },
-        { text: 'Screen Lock', link: '/guide/screen-lock' },
+        { text: 'A Changing world', link: '/guide/changing-world' },
+        { text: 'Screen Lock', link: '/guide/screenlock' },
         { text: 'Graphics', link: '/guide/graphics' },
       ]
     }
