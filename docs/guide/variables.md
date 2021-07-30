@@ -1,12 +1,12 @@
 # Variables
 
-A variable is a word that stores a number. This word must always start with an ampersand `&` symbol. The number must be in the range −2,147,483,648 to +2,147,483,647. There is a limit of 248 local and global variables active at any given time.
+A variable is a word that stores a number. This word must always start with an ampersand `&` symbol. The number must be in the range −2,147,483,648 to +2,147,483,647. There is a limit of 249 local and global variables active at any given time.
 
 Each variable must be declared to some extent, and variables can have several mathematical operations performed on them. While variables can only store numbers, sometimes these numbers have a type with a deeper meaning.
 
 ## Local variables
 
-A local variable can only be read and changed by the active script. This is very useful for temporary values that other scripts don't need to use. To declare a local variable, you use the int keyword followed by the variable name.
+A local variable can only be read and changed by the active script. This is very useful for temporary values that other scripts don't need to use. To declare a local variable, you use the **int** keyword followed by the variable name.
 
 Here's a quick example:
 
@@ -55,7 +55,6 @@ There are several global variables that are **required** by the Dink engine. The
 | `&lifemax`        | The player's maximum life (hitpoints).                                                                                                              |
 | `&magic`          | The player's magic.                                                                                                                                 |
 | `&magic_cost`     | Determines how long it takes to fill up the magic meter. Values less than 100 may crash the game.                                                   |
-| `&missile_target` | The last known target to be hit by a missile.                                                                                                       |
 | `&missile_target` | The last known target to be hit by a missile.                                                                                                       |
 | `&missle_source`  | The last known active sprite to attack something. In the case of missiles, will store the missile's sprite. And yes, missle is spelled incorrectly. |
 | `&player_map`     | The current map screen number. The screen will not change unless `load_screen()` and `draw_screen()` are called.                                    |
@@ -142,7 +141,7 @@ Now, besides storing plain numbers, variables can be used to store several diffe
 | Map           | A map screen                                                                                          | 1-768 |
 | Sound number  | A sound loaded using `load_sound()`.                                                                  | 1-99  |
 | Soundbank     | A currently playing sound.                                                                            | 1-19  |
-| Script number | A currently executing script.                                                                         | 1-299 |
+| Script number | A currently executing script.                                                                         | 1-199 |
 
 ## Special variables
 

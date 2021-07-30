@@ -89,6 +89,8 @@ void say_banana(void)
 
 This one is slightly more complicated. Here, `banana2.c` is attached to a sprite, and it runs through the `main()` procedure when it is first displayed on the screen. It calls the predefined procedure external. We tell external to open the `bananax.c` script, and launch the `say_banana()` procedure. It does so, and causes Dink to say *'Banana!'*
 
+Note: In Dink Smallwood 1.08 and FreeDink, custom procedures called both externally and from within the same script will run on their own script number. As a consequence, called procedures will not have access to previously declared local variables. 
+
 ## Global procedures
 
 It is possible to create custom procedures that are global. Similar to a global variable, this allows you to reference it from anywhere in the script, without using the external function. Note that it acts the same as external, but it is a bit more convenient.
@@ -112,6 +114,8 @@ void talk(void)
 
 Once a global procedure is defined, you can reference the procedure name without specifying the script name.
 
+Note: Global Procedures are Bugged in Dink Smallwood 1.08 and Freedink. You can declare one Global Procedure and it will work fine, but declaring anymore will make none of them work(including the first one), and might cause the game to crash in some instances.
+
 ## Advanced Procedures
 
 One of the most important features of procedures is the ability to give it values and return a value. This capability was added to 1.08+, and won't work in previous versions.
@@ -126,6 +130,7 @@ void main(void)
     // You can specify up to 9 parameters by calling a procedure directly.
     // Will cause Dink to say "1, 2, 3, 4, 5, 6, 7, 8, 9"
     say_stuff(1, &two, 3, 4, 5, 6, 7, 8, 9);
+    
     // You can only pass up to 8 parameters when using external.
     // Will cause Dink to say "1, 2, 3, 4, 5, 6, 7, 8, 0"
     external("passing", "say_stuff", 1, &two, 3, 4, 5, 6, 7, 8);

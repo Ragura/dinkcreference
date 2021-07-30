@@ -46,9 +46,9 @@ Put the save-as filename in double-quotes: `"blah.c"`.
 
 To force Windows to display all file extensions:
 
-1. Open My Computer
-2. Enter the 'Tools' menu
-3. Select 'Folder Options'
+1. Locate the windows search box (on the task bar or in the start menu)
+2. Search for 'Folder Options'
+3. Select 'Folder Options' or 'File Explorer Options' (whichever is in your search list)
 4. Select the 'View' tab
 5. Uncheck the 'Hide extensions for known file types' checkbox.
 
@@ -79,6 +79,9 @@ say("Hey, this does something", 1); //But this is a comment!
 
 Comments following commands are not fully supported. They seem to work fine for the most part, but they may cause some problems, so it is recommended that you leave comments on their own lines.
 
+In Dink Smallwood 1.08 comments have a character limit of 199(including the slashes). Any comments that exceed this limit can cause the game to crash.
+This limit does not apply in certain specific circumstances and does not apply in Freedink. For best compatibility, avoid using comments that exceed 199 characters.
+
 ## Execution
 
 Let's say you've created the `grocery.c` example script in your D-Mod's `STORY` directory. That's all fine and good... but how might the game know about `grocery.c`? Or any script?
@@ -91,7 +94,7 @@ Scripts can be linked to sprites (monsters, people, houses, etc) and screens thr
 
 Usually this is done in the map editor, but you can also use the internal function sp_script to attach a script to a sprite while the game is running.
 
-An attached script defines the behavior of the sprite or screen by automatically running several predefined procedures under certain circumstances, such as when the script is first run.
+An attached script defines the behaviour of the sprite or screen by automatically running several predefined procedures under certain circumstances, such as when the script is first run.
 
 If you create a sprite in the map editor and attach our grocery.c script to it, Dink will say the grocery list whenever he first sees that sprite in the game.
 
@@ -142,6 +145,5 @@ Take a look at the list of all scripts summoned by the game (except input, magic
 | `dnomagic` | When Dink tries to use magic, but doesn't have any magic armed.         |
 | `dnotalk`  | When Dink talks and no talking sprites are around.                      |
 | `lraise`   | When Dink gains enough experience to gain a level. `raise()` procedure. |
-| `main`     | When the game first starts up.                                          |
-| `start`    | When the game is first active, after `main.c`.                          |
-| `start`    | When the game is first active, after `main.c`.                          |
+| `main`     | When the game first starts up or `restart_game()` is called.                  |
+| `start`    | When the game first starts up or `restart_game()` is called. After Main.c     |
