@@ -1,3 +1,5 @@
+const functions = require("./functions")
+
 module.exports = {
   title: 'DinkC Reference Guide',
   description: 'Documentation site for the DinkC scripting language for the game Dink Smallwood.',
@@ -20,7 +22,8 @@ module.exports = {
 
     sidebar: {
       '/guide/': getGuideSidebar(),
-      '/functions/': getFunctionsSidebar(),
+      '/functions/': generateFunctionList(),
+      // '/functions/': getFunctionsSidebar(),
       '/': getGuideSidebar()
     }
   }
@@ -56,8 +59,62 @@ function getGuideSidebar() {
   ]
 }
 
+function generateFunctionList() {
+  functionList = []
+  
+  Object.keys(functions).sort().forEach(key => {
+    functionList.push({
+      text: key.charAt(0).toUpperCase() + key.slice(1),
+      children: functions[key].map(functionName => {
+        return {
+          text: functionName,
+          link: `/functions/${functionName.replace(/_/g, "-")}`
+        }
+      })
+    })
+  })
+  
+  return functionList
+}
+
 function getFunctionsSidebar() {
   return [
+    {
+      text: 'Editor',
+      children: [
+        { text: 'clear_editor_info', link: '/functions/clear-editor-info' },
+      ]
+    },
+    {
+      text: 'Items',
+      children: [
+        { text: 'active_bow', link: '/functions/activate-bow' },
+        { text: 'add_item', link: '/functions/add-item' },
+        { text: 'add_magic', link: '/functions/add-magic' },
+        { text: 'arm_magic', link: '/functions/arm-magic' },
+        { text: 'arm_weapon', link: '/functions/arm-weapon' },
+      ]
+    },
+    {
+      text: 'Text',
+      children: [
+        { text: 'busy', link: '/functions/busy' },
+        { text: 'choice_start', link: '/functions/choice-start' },
+        { text: 'choice_end', link: '/functions/choice-end' },
+      ]
+    },
+    {
+      text: 'Dink',
+      children: [
+        { text: 'add_exp', link: '/functions/add-exp' },
+      ]
+    },
+    {
+      text: 'Scripts',
+      children: [
+        { text: 'callback_kill', link: '/functions/callback-kill' },
+      ]
+    },
     {
       text: 'Sprites',
       children: [
