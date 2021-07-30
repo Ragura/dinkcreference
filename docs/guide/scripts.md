@@ -145,6 +145,5 @@ Take a look at the list of all scripts summoned by the game (except input, magic
 | `dnomagic` | When Dink tries to use magic, but doesn't have any magic armed.         |
 | `dnotalk`  | When Dink talks and no talking sprites are around.                      |
 | `lraise`   | When Dink gains enough experience to gain a level. `raise()` procedure. |
-| `main`     | When the game first starts up.                                          |
-| `start`    | When the game is first active, after `main.c`.                          |
-| `start`    | When the game is first active, after `main.c`.                          |
+| `main`     | When the game first starts up or `restart_game()` is called.                  |
+| `start`    | When the game first starts up or `restart_game()` is called. After Main.c     |
