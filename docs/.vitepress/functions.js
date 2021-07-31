@@ -29,7 +29,7 @@ const functions = {
     "preload_seq",
   ],
   
-  "items": [
+  "inventory": [
     "add_item",
     "add_magic",
     "arm_magic",
