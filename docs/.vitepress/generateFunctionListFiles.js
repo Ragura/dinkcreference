@@ -6,6 +6,7 @@ Object.keys(functionList).reduce((acc, key) => {
   acc.push(...functionList[key])
   return acc
 }, []).forEach(functionName => {
-  fs.writeFileSync(`../functions/${functionName.replace(/_/g, "-")}.md`, "")
+  content = `# ${functionName}\n\n<Prototype></Prototype>\n`
+  fs.writeFileSync(`../functions/${functionName.replace(/_/g, "-")}.md`, content)
 })
 

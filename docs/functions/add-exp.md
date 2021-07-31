@@ -1,6 +1,6 @@
 # add_exp
 
-`void add_exp(int amount, int active_sprite)`
+<Prototype>void add_exp(int amount, int active_sprite)</Prototype>
 
 `add_exp()` adds amount experience and creates a text-sprite to float above `active_sprite`.
 
