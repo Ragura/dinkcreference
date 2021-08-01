@@ -32,8 +32,7 @@ void main(void)
 void die(void)
 {
     // It should respawn in 5 minutes
-    int &editor_sprite =
-    sp_editor_num(&current_sprite);
+    int &editor_sprite = sp_editor_num(&current_sprite);
     if (&editor_sprite != 0)
         editor_type(&editor_sprite, 6);
 

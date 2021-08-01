@@ -34,7 +34,8 @@ void talk(void)
         wait(250);
         say_stop("`8Hmm... could you tell that person standing", &current_sprite);
         say_stop("`8over there to stop talking to himself?", &current_sprite);
-        wait(250); say_stop("What's in it for me?", 1);
+        wait(250); 
+        say_stop("What's in it for me?", 1);
         wait(250);
         say_stop("`850 gold.", &current_sprite);
         wait(250);
