@@ -94,7 +94,7 @@ This one is slightly more complicated. Here, `banana2.c` is attached to a sprite
 The following should be noted about custom procedures:
 - Custom procedures called both externally and from within the same script will run on their own script number. Called procedures will not have access to previously declared local variables.
 
-- Calling custom procedures can randomly cause the calling script to continue past `}` and into code afterwards. In some cases it may even continue past a `return;`. A solution to this is using `goto` at the end of the calling procedure, and jump to the end of the script. Check out [Jumps](./control-structures.md#Jumps) use `goto`
+- Calling custom procedures can randomly cause the calling script to continue past `}` and into code afterwards. In some cases it may even continue past a `return;`. A solution to this is using `goto` at the end of the calling procedure, and jump to the end of the script. Check out [Jumps](./control-structures.md#Jumps) for how to use `goto`
 :::
 
 ## Global procedures
