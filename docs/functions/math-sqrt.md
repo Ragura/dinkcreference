@@ -1,3 +1,5 @@
 # math_sqrt
 
-<Prototype></Prototype>
+<Prototype>int math_sqrt(int value)</Prototype>
+
+`math_sqrt()` returns the square root of `value`.
