@@ -10,3 +10,5 @@
 arm_magic();
 draw_status();
 ```
+
+For more information, see [Items](../guide/items.md)

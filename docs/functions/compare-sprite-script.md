@@ -14,8 +14,7 @@ void hit( void )
     if (&rcrap == 1)
     {
         //rock just got hit by a sprite with a script named dam-bomn, I'm
-
-        //gonna guess it was the bombb
+        //gonna guess it was the bomb.
     }
 }
 ```

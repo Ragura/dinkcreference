@@ -5,3 +5,20 @@
 `busy()` returns the active sprite number of the text sprite the `active_sprite` is currently saying. If 0, `active_sprite` is not currently talking.
 
 It has been used to see if a sprite is busy or not (hence the function name), but problems may occur if `active_sprite` is in the middle of a conversation and isn't currently talking. Checking to see if the sprite is frozen with `sp_freeze()` is probably a better option.
+
+One useful purpose of this function is to check if a sprite is currently saying something when it dies, and if so, kill off the text sprite. This will prevent a bug where the text sprite will jump to a different positoon on the screen when the sprite it belongs to no longer exists:
+
+```c
+void die(void)
+{
+ //if this sprite is saying anything, kill the text sprite
+ int &gettext = busy(&current_sprite);
+ if (&gettext > 0)
+ {
+  sp_active(&gettext, 0);
+ }
+}
+```c
+
+
+

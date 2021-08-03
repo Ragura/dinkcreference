@@ -10,3 +10,5 @@ add_item("item-fst", 438, 1);
 &cur_weapon = 1;
 arm_weapon();
 ```
+
+For more information, see [Items](../guide/items.md)
