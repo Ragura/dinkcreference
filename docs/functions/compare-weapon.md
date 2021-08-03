@@ -16,3 +16,5 @@ void hit(void)
       say_stop("You hit me with a sword!", 1);
     }
 }
+
+For more information, see [Items](../guide/items.md)

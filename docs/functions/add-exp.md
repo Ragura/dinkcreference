@@ -4,10 +4,10 @@
 
 `add_exp()` adds amount experience and creates a text-sprite to float above `active_sprite`.
 
-<VersionInfo dink="< 1.07">Requires that `active_sprite` was last hit by Dink.</VersionInfo><br>
-<VersionInfo dink="1.08" freeedink="all">Will work with any active_sprite.</VersionInfo>
+<VersionInfo dink="< 1.07"></VersionInfo>Requires that `active_sprite` was last hit by Dink.<br>
+<VersionInfo dink="1.08" freeedink="all"></VersionInfo>Will work with any active_sprite.
 
-For most situations `sp_exp()` will work well enough and will automatically add and display the experience addition properly. However, if you change a monster's brain when it dies, Dink won't get the experience points. Here is an example of a work-around:
+For most situations [sp_exp()](./sp-exp.md) will work well enough and will automatically add and display the experience addition properly. However, if you change a monster's brain when it dies, Dink won't get the experience points. Here is an example of a work-around:
 
 ```c
 void die(void)
