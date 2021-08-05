@@ -1,3 +1,5 @@
 # stopmidi
 
-<Prototype></Prototype>
+<Prototype>void stopmidi(void)</Prototype>
+
+`stopmidi()` stops the currently playing midi.
