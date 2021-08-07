@@ -115,7 +115,7 @@ void main(void)
 }
 ```
 
-`spawn()` will create a completely new script that will survive and do things long after the spawner script has died:
+[spawn()](../functions/spawn.md) will create a completely new script that will survive and do things long after the spawner script has died:
 
 ```c
 // spawner.c
@@ -131,7 +131,7 @@ void main(void)
 }
 ```
 
-Note that the above example is a bit flawed... scripts that are [spawn()](../functions/spawn.md)ed will survive forever unless explicitly killed with [kill_this_task()](../functions/kill-this-task.md). To fix this, we could add [kill_this_task()](../functions/kill-this-task.md); after the [unfreeze](../functions/kill-this-task.md)(1); line of `grocery.c`.
+Note that the above example is a bit flawed... scripts that are [spawn](../functions/spawn.md)ed will survive forever unless explicitly killed with [kill_this_task()](../functions/kill-this-task.md). To fix this, we could add [kill_this_task()](../functions/kill-this-task.md); after the [unfreeze](../functions/unfreeze.md)(1); line of `grocery.c`.
 
 ### Summoning
 
