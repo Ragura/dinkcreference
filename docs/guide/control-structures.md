@@ -32,7 +32,7 @@ The &lt;left&gt; and &lt;right&gt; values can be numbers or variable names, and 
 | &gt;         | Returns true if the left value is greater than the right value.             |
 | &gt;=        | Returns true if the left value is greater than or equal to the right value. |
 
-It is possible to embed some internal functions in if statements, but it only works with a handful. It is strongly recommended that you assign the result of an internal function to a variable, using the variable in the if statement.
+It is possible to embed some [internal functions](../functions/) in if statements, but it only works with a handful. It is strongly recommended that you assign the result of an [internal function](../functions/) to a variable, using the variable in the if statement.
 
 Here's a simple example, where Dink will say something only if he's completely healthy.
 

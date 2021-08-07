@@ -19,7 +19,7 @@ void main(void)
 }
 ```
 
-All sprites with vision 0 will be visible no matter what. Also note that the `&vision` variable must be changed before any `wait()`, `say_stop()`, or similar commands. Otherwise, it will not have any effect.
+All sprites with vision 0 will be visible no matter what. Also note that the `&vision` variable must be changed before any [wait()](../functions/wait.md), [say_stop()](../functions/say-stop.md), or similar commands. Otherwise, it will not have any effect.
 
 ## Permanent changes
 
@@ -27,7 +27,7 @@ We want the world to remember changes. For instance, if Dink burned a tree, trav
 
 How do we make the game remember? Yes, we could assign global variables to everything and have scripts kill off what has been taken and change stuff, but this would become very tedious. So we only do that in special spots where greater control is required. For little stuff, like keeping hearts we pick up from reappearing, we use another system. It still uses attached scripts to drive it, just no global variables.
 
-The player's save game file is capable of storing one type, one sequence, and one frame for every editor sprite in the entire game. The type tells the draw_screen command to override what the map data says and do it different. For example, we have the barrels' script do this:
+The player's save game file is capable of storing one type, one sequence, and one frame for every editor sprite in the entire game. The type tells the [draw_screen()](../functions/draw-screen.md) command to override what the map data says and do it different. For example, we have the barrels' script do this:
 
 ```c
 int &hold = sp_editor_num(&current_sprite);
@@ -43,11 +43,11 @@ if (&hold != 0)
 }
 ```
 
-See the `editor_type()` command for a full description of all types.
+See the [editor_type()](../functions/editor-type.md) command for a full description of all types.
 
-`editor_seq()` and `editor_frame()` store the sequence and frame of the new sprite to be displayed, for instance, a burned tree. The associated hardbox will be taken from the sprite's info if `editor_type` 4 or 5 is used.
+[editor_seq()](../functions/editor-seq.md) and [editor_frame()](../functions/editor-frame.md) store the sequence and frame of the new sprite to be displayed, for instance, a burned tree. The associated hardbox will be taken from the sprite's info if [editor_type()](../functions/editor-type.md) 4 or 5 is used.
 
-You may wish to call a `draw_hard_sprite()` or `draw_hard_map()` afterward if hardness has been changed. One cool thing is the `editor_frame()` and `editor_seq()` commands can be used without changing the `editor_type`, allowing sprites to remember things about themselves.
+You may wish to call a [draw_hard_sprite()](../functions/draw-hard-sprite.md) or [draw_hard_map()](../functions/draw-hard-map.md) afterward if hardness has been changed. One cool thing is the [editor_frame()](../functions/editor-frame.md) and [editor_seq()](../functions/editor-seq.md) commands can be used without changing the [editor_type()](../functions/editor-type.md), allowing sprites to remember things about themselves.
 
 ```c
 // memory.c
@@ -91,4 +91,4 @@ void talk(void)
 }
 ```
 
-As long as `editor_type` is 0, changing the `editor_seq` and `editor_frame` will not change how the sprite is displayed.
+As long as [editor_type()](../functions/editor-type.md) is 0, changing the [editor_seq()](../functions/editor-seq.md) and [editor_frame()](../functions/editor-frame.md) will not change how the sprite is displayed.

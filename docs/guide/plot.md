@@ -92,7 +92,7 @@ void talk(void)
 
 So, the first time Dink talks to the character, she will ask Dink to tell the other guy to shut up. Then it'll keep on reminding him of what to do until the &story variable changes.
 
-For the second character, we need to check if the `&story` variable is 1, and if it is, allow Dink to tell the character to shut up. We'll put it in a choice statement so the player has a choice whether to tell him to shut up or not.
+For the second character, we need to check if the `&story` variable is 1, and if it is, allow Dink to tell the character to shut up. We'll put it in a [choice statement](./npc.md#choice-menu) so the player has a choice whether to tell him to shut up or not.
 
 ```c
 // person2.c

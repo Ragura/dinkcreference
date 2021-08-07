@@ -22,11 +22,11 @@ void main(void)
 }
 ```
 
-And that's it. Every character should have, at the very least, a `sp_base_walk`, `sp_speed`, and `sp_brain`. With this, our character will walk, stop, look around, and walk again.
+And that's it. Every character should have, at the very least, a [sp_base_walk()](../functions/sp-base-walk.md), [sp_speed()](../functions/sp-speed.md), and [sp_brain()](../functions/sp-brain.md). With this, our character will walk, stop, look around, and walk again.
 
-If you notice that the character moves but doesn't animate, make sure the `sp_base_walk` is set.
+If you notice that the character moves but doesn't animate, make sure the [sp_base_walk()](../functions/sp-base-walk.md) is set.
 
-If you notice that the character doesn't move at all, make sure that it is not set as hard in the map editor and that it has a `sp_speed` and `sp_brain`.
+If you notice that the character doesn't move at all, make sure that it is not set as hard in the map editor and that it has a [sp_speed()](../functions/sp-speed.md) and [sp_brain()](../functions/sp-brain.md).
 
 ## Conversation
 
@@ -61,11 +61,11 @@ void talk(void)
 }
 ```
 
-It is always a good idea to freeze the player and the character before they start talking. Otherwise, the player or the character could just walk away during the conversation! That'd be quite rude.
+It is always a good idea to [freeze()](../functions/freeze.md) the player and the character before they start talking. Otherwise, the player or the character could just walk away during the conversation! That'd be quite rude.
 
-Saying and waiting are interlinked. If the characters just say stuff over and over without any pause, it just doesn't feel quite right. So we'll usually put a `wait(250);` or so between `say_stop()` statements. We'll also want to give the character a different color text than Dink, so the player can easily tell the difference between what Dink is saying and what the character is saying.
+Saying and waiting are interlinked. If the characters just say stuff over and over without any pause, it just doesn't feel quite right. So we'll usually put a [wait](../functions/wait.md)(250); or so between [say-stop()](../functions/say-stop.md) statements. We'll also want to give the character a different color text than Dink, so the player can easily tell the difference between what Dink is saying and what the character is saying.
 
-And finally, we'll unfreeze the characters at the end so the player and character can walk around freely.
+And finally, we'll [unfreeze()](../functions/unfreeze.md) the characters at the end so the player and character can walk around freely.
 
 ## Choice Menu
 
@@ -116,7 +116,7 @@ void talk(void)
 }
 ```
 
-Within the `choice_start()` and `choice_end` commands() are three choices the player can choose from. If the player chooses the first option, *"Say Hello"*, the required global variable `&result` will be 1. We use the if statement to check this, and to say the appropriate thing.
+Within the [choice_start()](../functions/choice-start.md) and [choice_end()](../functions/choice-end.md) commands() are three choices the player can choose from. If the player chooses the first option, *"Say Hello"*, the [required global variable](./variables.md#required-global-variables) `&result` will be 1. We use the if statement to check this, and to say the appropriate thing.
 
 The choice statement can support up to 20 different choices. If you specify so many that it can't display them all at once, the player can press down to scroll through all of them.
 
@@ -151,7 +151,7 @@ choice_end();
 
 `set_y` is used in case the title overlaps the choices. We can set the y coordinate to a greater value to make sure the choices appear underneath the title.
 
-`set_title_color` changes the color of the title text, using the `set_font_color` color numbers.
+`set_title_color` changes the color of the title text, using the [set_font_color()](../functions/set-font-color.md) color numbers.
 
 Finally, we can choose to display some choice statements and not others. For instance, say that we have a healing character. We only want it to display a choice to heal Dink if he's hurt. We'll do something like this:
 
@@ -182,7 +182,7 @@ void talk(void)
 }
 ```
 
-The parenthesis before the choice act like mini if statement conditions. The `&result` variable will contain the appropriate choice number even if some aren't visible.
+The parenthesis before the choice act like mini if statement [conditions](./control-structures.md#bumps). The `&result` variable will contain the appropriate choice number even if some aren't visible.
 
 It is also possible to stack these conditions on one choice.
 

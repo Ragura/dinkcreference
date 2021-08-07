@@ -27,7 +27,7 @@ This is the name of the bmp file. If you have an animated series, then label the
 
 ### `[seq]`
 
-This is the Sequence number that your new graphics are loaded into. Possible numbers technically range from 1 to 999, but many numbers have already been used, and others are dedicated to various graphics needed to run the map editor. For sprites that walk in 4 or 8 directions the sequences are grouped in a base of 10, and the `sp_base_walk()`, `sp_base_attack()`, `sp_base_idle()`, and `sp_base_death()` commands can access the correct graphics by if you adhere to the following convention:
+This is the Sequence number that your new graphics are loaded into. Possible numbers technically range from 1 to 999, but many numbers have already been used, and others are dedicated to various graphics needed to run the map editor. For sprites that walk in 4 or 8 directions the sequences are grouped in a base of 10, and the [sp_base_walk()](../functions/sp-base-walk.md), [sp_base_attack()](../functions/sp-base-attack.md), [sp_base_idle()](../functions/sp-base-idle.md), and [sp_base_death()](../functions/sp-base-death.md) commands can access the correct graphics by if you adhere to the following convention:
 
 | Base seq number | Direction  |
 |-----------------|------------|
@@ -55,7 +55,7 @@ load_sequence_now graphics\dink\walk\ds-w9- 79 43 38 72 -14 -9 14 9
 
 ### `[delay]`
 
-This number specifies the approximate delay between displaying one bmp file and the next. Units are milliseconds. In the example above, Dink walking has a "43" millisecond delay between each bmp file. See `sp_frame_delay()` for more information.
+This number specifies the approximate delay between displaying one bmp file and the next. Units are milliseconds. In the example above, Dink walking has a "43" millisecond delay between each bmp file. See [sp_frame_delay()](../functions/sp-frame-delay.md) for more information.
 
 ### `[X coord]` `[Y coord]`
 
@@ -85,7 +85,7 @@ You can see a similar hardness box mid game by activating the debug mode (pressi
 
 ## Loading graphics on the fly
 
-Note that you need to use the `init()` command to load new graphics during a game, and also that the the original `dink.ini` recommends that you load the graphics which have the most bmp files per sequence first.
+Note that you need to use the [init()](../functions/init.md) command to load new graphics during a game, and also that the the original `dink.ini` recommends that you load the graphics which have the most bmp files per sequence first.
 
 Sample code to load new graphics on the fly – from `item-sw1.c` original source file:
 
@@ -189,7 +189,7 @@ set_frame_frame 119 5 -1
 
 The first number is the graphic sequence, the second number the total bmp files in the sequence and the "-1" parameter sets the sequence into repeat by itself.
 
-Unfortunately the `init()` command doesn't let you have access to this `dink.ini` command mid game.
+Unfortunately the [init()](../functions/init.md) command doesn't let you have access to this `dink.ini` command mid game.
 
 ## set_frame_delay
 
@@ -203,13 +203,13 @@ The first number is the sequence.<br>
 The second number is the frame.<br>
 The third number is the delay
 
-I've tested this command and it actually holds the frame number up on screen for the specified time. If you want you can change the 100 to something like 800 to get a noticable freeze effect for an attack. Unfortunately the `init()` command doesn't let you have access to this `dink.ini` command mid game.
+I've tested this command and it actually holds the frame number up on screen for the specified time. If you want you can change the 100 to something like 800 to get a noticable freeze effect for an attack. Unfortunately the [init()](../functions/init.md) command doesn't let you have access to this `dink.ini` command mid game.
 
 ## set_frame_special
 
-This command is used to indicate which frame in the graphic sequence can attack Dink or another sprite. Unless this is specificed a sprite won't do any damage based on its sp_strength attribute when attacking Dink. This command is also used to specify which frames in Dink's attack sequence will impact on an enemy.
+This command is used to indicate which frame in the graphic sequence can attack Dink or another sprite. Unless this is specificed a sprite won't do any damage based on its [sp_strength()](../functions/sp-strength.md) attribute when attacking Dink. This command is also used to specify which frames in Dink's attack sequence will impact on an enemy.
 
-Without specifying which frame is "special" you can't hear the sound of the attack (that is the sound specified by `sp_attack_hit_sound()` command). Note that the graphics used to cast magic, don't have `set_frame_special` and thus make no sound when Dink casts magic and is close enough to "physically" hit the sprite.
+Without specifying which frame is "special" you can't hear the sound of the attack (that is the sound specified by [sp_attack_hit_sound()](../functions/sp-attack-hit-sound.md) command). Note that the graphics used to cast magic, don't have `set_frame_special` and thus make no sound when Dink casts magic and is close enough to "physically" hit the sprite.
 
 Example of the Dink hitting:
 
@@ -236,7 +236,7 @@ Third number (1) sets that frame to the "hit" status. This "hit attribute" is a 
 
 What is strange with the Dink hitting with a fist and/or the sword is that the bmp graphic for the hit with a first is the arm out stretched which makes sense, but the graphic in frame (slot) number 3 of the sword attack is of the sword being held over Dink's head. So Dink is really doing damage before the sword falls.
 
-Unfortunately the `init()` command doesn't let you have access to this `dink.ini` command mid game. Otherwise I'd expect to see it used to modify the hit frame for different weapons as you load them. To get around this you would have to resist the temptation to load new graphics into the same base sequence of 100.
+Unfortunately the [init()](../functions/init.md) command doesn't let you have access to this `dink.ini` command mid game. Otherwise I'd expect to see it used to modify the hit frame for different weapons as you load them. To get around this you would have to resist the temptation to load new graphics into the same base sequence of 100.
 
 ## set_sprite_info
 

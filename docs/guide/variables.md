@@ -2,7 +2,7 @@
 
 A variable is a word that stores a number. This word must always start with an ampersand `&` symbol. The number must be in the range −2,147,483,648 to +2,147,483,647. There is a limit of 249 local and global variables active at any given time.
 
-Each variable must be declared to some extent, and variables can have several mathematical operations performed on them. While variables can only store numbers, sometimes these numbers have a type with a deeper meaning.
+Each variable must be declared to some extent, and variables can have several mathematical [operations](#operations) performed on them. While variables can only store numbers, sometimes these numbers have a [type](#variable-types) with a deeper meaning.
 
 ## Local variables
 
@@ -21,7 +21,7 @@ void main(void)
 
 ## Global variables
 
-A global variable can be read and changed by every script. This is very useful for values that you want to remember all of the time, like Dink's gold amount. To declare a global variable, you must use the make_global_int function in main.c.
+A global variable can be read and changed by every script. This is very useful for values that you want to remember all of the time, like Dink's gold amount. To declare a global variable, you must use the [make_global_int()](../functions/make-global-int.md) function in main.c.
 
 ```c
 // Excerpt from main.c
@@ -35,7 +35,7 @@ make_global_int("&strength", 3);
 
 All global variables are automatically saved and loaded in save game files.
 
-For an example of using non-required global variables, see Plot.
+For an example of using non-required global variables, see [Plot](./plot.md).
 
 ## Required global variables
 
@@ -57,8 +57,8 @@ There are several global variables that are **required** by the Dink engine. The
 | `&magic_cost`     | Determines how long it takes to fill up the magic meter. Values less than 100 may crash the game.                                                   |
 | `&missile_target` | The last known target to be hit by a missile.                                                                                                       |
 | `&missle_source`  | The last known active sprite to attack something. In the case of missiles, will store the missile's sprite. And yes, missle is spelled incorrectly. |
-| `&player_map`     | The current map screen number. The screen will not change unless `load_screen()` and `draw_screen()` are called.                                    |
-| `&result`         | The result of a choice statement or `wait_for_button()`.                                                                                            |
+| `&player_map`     | The current map screen number. The screen will not change unless [load_screen()](../functions/load-screen.md) and [draw_screen()](../functions/draw-screen.md) are called.                                    |
+| `&result`         | The result of a choice statement or [wait_for_button()](../functions/wait-for-button.md).                                                                                            |
 | `&strength`       | The player's strength.                                                                                                                              |
 | `&update_status`  | If set to 1, the status bar will be updated.                                                                                                        |
 | `&vision`         | The current vision. Reset to 0 every time a new screen is loaded, and only has an effect if changed in the base script of a screen.                 |
@@ -95,7 +95,7 @@ There are several mathematical operations you can perform on variables. Each ope
 &variable <operation> <value>;
 ```
 
-&variable is a variable name, operation is one of the operations below, and value is a number, another variable, or an internal function.
+&variable is a variable name, operation is one of the operations below, and value is a number, another variable, or an [internal function](../functions/).
 
 | Operation | Description                                               |
 |-----------|-----------------------------------------------------------|
@@ -122,7 +122,7 @@ You have to split it off into single statements, like this:
 &life += &temp; 
 ```
 
-Also note that you can insert variable names in most internal functions that accept string input (like `say()` and `say_stop()`). Each variable will be displayed as the number it represents.
+Also note that you can insert variable names in most [internal function](../functions/) that accept string input (like [say()](../functions/say.md) and `say_stop()`). Each variable will be displayed as the number it represents.
 
 ```c
 say("You have &life life points, Dink.", &current_sprite);
@@ -136,10 +136,10 @@ Now, besides storing plain numbers, variables can be used to store several diffe
 
 | Name          | Description                                                                                           | Range |
 |---------------|-------------------------------------------------------------------------------------------------------|-------|
-| Editor sprite | A sprite placed in a map editor. Useful to save `editor_seq` and `editor_frame` information.          | 1-99  |
+| Editor sprite | A sprite placed in a map editor. Useful to save [editor_seq()](../functions/editor-seq.md) and [editor_frame()](../functions/editor-frame.md) information.          | 1-99  |
 | Active sprite | A sprite that is currently on the screen. It will usually be different from the editor sprite number. | 1-299 |
 | Map           | A map screen                                                                                          | 1-768 |
-| Sound number  | A sound loaded using `load_sound()`.                                                                  | 1-99  |
+| Sound number  | A sound loaded using [load_sound()](../functions/load-sound.md).                                                                  | 1-99  |
 | Soundbank     | A currently playing sound.                                                                            | 1-20  |
 | Script number | A currently executing script.                                                                         | 1-199 |
 
@@ -154,6 +154,6 @@ The active sprite number 1 will always refer to the player.
 say_stop("Hi.", 1);
 ```
 
-The active sprite number 1000 can only be used with `script_attach()`. Active sprite 1000 isn't a real sprite, but the Dink engine will make any scripts attached to it survive when the player changes screens.
+The active sprite number 1000 can only be used with [script_attach()](../functions/script-attach.md). Active sprite 1000 isn't a real sprite, but the Dink engine will make any scripts attached to it survive when the player changes screens.
 
-Similarly the active sprite number 0 can only be used with `script_attach()`. Active sprite 0 isn't a real sprite either, and it can be used to force a sprite to terminate when the player changes screens.
+Similarly the active sprite number 0 can only be used with [script_attach()](../functions/script-attach.md). Active sprite 0 isn't a real sprite either, and it can be used to force a sprite to terminate when the player changes screens.

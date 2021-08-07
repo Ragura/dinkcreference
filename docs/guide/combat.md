@@ -34,7 +34,7 @@ if (&hits < 0)
 }
 ```
 
-**Step 3.** Make sure the sprite cannot always get off scott-free (this algorithm is used in hurt and when Dink gets hit; it does not seem to always apply to Dink hitting a monster, especially when he hits it with magic):
+**Step 3.** Make sure the sprite cannot always get off scott-free (this algorithm is used in [hurt()](../functions/hurt.md) and when Dink gets hit; it does not seem to always apply to Dink hitting a monster, especially when he hits it with magic):
 
 ```c
 if (&hits == 0)
@@ -52,4 +52,4 @@ if (&health <= 0)
     die();          // note: Dink's die() is in script "dinfo"
 ```
 
-The mock code above is only given to help show the interrelationships between strength and defense in battle. It must be noted that Dink's attributes are kept in variables: `&strength` instead of `sp_strength`; `&defense` instead of `sp_defense`; `&life` instead of `sp_hitpoints`.
+The mock code above is only given to help show the interrelationships between strength and defense in battle. It must be noted that Dink's attributes are kept in variables: `&strength` instead of [sp_strength()](../functions/sp-strength.md); `&defense` instead of [sp_defense()](../functions/sp-defense.md); `&life` instead of [sp_hitpoints()](../functions/sp-hitpoints.md).

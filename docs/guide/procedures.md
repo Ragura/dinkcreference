@@ -1,12 +1,12 @@
 # Procedures
 
-Procedures are containers, and there are several different types: Predefined, Custom, and Global. You can also perform some advanced operations on procedures, such as passing and returning variables.
+Procedures are [containers](#containers), and there are several different types: [Predefined](#predefined-procedures), [Custom](#custom-procedures), and [Global](#global-procedures). You can also perform some advanced operations on procedures, such as passing and returning variables.
 
 ## Containers
 
 A procedure is merely a container for actions. Thankfully, procedures tell you exactly what they're supposed to do.
 
-You've already seen a procedure in the recipe example: `main()`. A `main()` procedure is run when the script is first executed. So if you have a script attached to a Bonca, everything in the `main()` procedure is run through when the Bonca first appears on the screen.
+You've already seen a procedure in the recipe example: `main()`. A `main()` procedure is run when the script is first executed. So if you have a script [Attachment](#attachment) to a Bonca, everything in the `main()` procedure is run through when the Bonca first appears on the screen.
 
 A procedure introduction usually looks like this:
 
@@ -27,6 +27,8 @@ void main(void)
 }
 ```
 
+## Predefined Procedures
+
 There are several predefined procedure names. The Dink Engine will call one of these procedures when the specified event happens to the sprite the script is attached to. So if Dink hits a Bonca, that triggers the `hit()` procedure in the Bonca script.
 
 | Name            | Applies to        | Event                                                                                                                                                                           |
@@ -35,11 +37,11 @@ There are several predefined procedure names. The Dink Engine will call one of t
 | `push()`        | All sprites       | When Dink pushes the sprite, and starts the pushing animation.                                                                                                                  |
 | `touch()`       | All sprites       | When Dink touches the sprite.                                                                                                                                                   |
 | `talk()`        | All sprites       | When Dink talks to the sprite.                                                                                                                                                  |
-| `buttonon()`    | All sprites       | Called if the sprite has a `sp_brain` of 14 and Dink walks on top of its hardbox.                                                                                               |
-| `buttonoff()`   | All sprites       | Called if the sprite has a `sp_brain` of 14 and Dink walks off top of its hardbox.                                                                                              |
-| `attack()`      | Enemy sprites     | When the sprite attacks (only for sprites that have a `sp_brain` of 10 or `sp_base_attack` and a `sp_brain` of 9, touch-damage doesn't count).                                  |
+| `buttonon()`    | All sprites       | Called if the sprite has a [sp_brain()](../functions/sp-brain.md) of 14 and Dink walks on top of its hardbox.                                                                                               |
+| `buttonoff()`   | All sprites       | Called if the sprite has a [sp_brain()](../functions/sp-brain.md) of 14 and Dink walks off top of its hardbox.                                                                                              |
+| `attack()`      | Enemy sprites     | When the sprite attacks (only for sprites that have a [sp_brain()](../functions/sp-brain.md) of 10 or [sp_base_attack()](../functions/sp-base-attack.md) and a [sp_brain()](../functions/sp-brain.md) of 9, touch-damage doesn't count).                                  |
 | `hit()`         | Enemy sprites     | When the sprite is hit by another sprite.                                                                                                                                       |
-| `die()`         | Enemy sprites     | When the sprite dies in combat. Killing a sprite with `sp_kill()` or `sp_active()` will not trigger the die procedure. When Dink dies, the die procedure is run from `dinfo.c`. |
+| `die()`         | Enemy sprites     | When the sprite dies in combat. Killing a sprite with [sp_kill()](../functions/sp-kill.md) or [sp_active()](../functions/sp-active.md) will not trigger the die procedure. When Dink dies, the die procedure is run from `dinfo.c`. |
 | `damage()`      | Missile sprites   | When the missile hits another sprite.                                                                                                                                           |
 | `pickup()`      | Item scripts      | When the item is added to the player's inventory.                                                                                                                               |
 | `arm()`         | Item scripts      | When the item is armed.                                                                                                                                                         |
@@ -87,7 +89,7 @@ void say_banana(void)
 }
 ```
 
-This one is slightly more complicated. Here, `banana2.c` is attached to a sprite, and it runs through the `main()` procedure when it is first displayed on the screen. It calls the predefined procedure external. We tell external to open the `bananax.c` script, and launch the `say_banana()` procedure. It does so, and causes Dink to say *'Banana!'*
+This one is slightly more complicated. Here, `banana2.c` is attached to a sprite, and it runs through the `main()` procedure when it is first displayed on the screen. It calls the predefined procedure [external()](../functions/external.md). We tell [external()](../functions/external.md) to open the `bananax.c` script, and launch the `say_banana()` procedure. It does so, and causes Dink to say *'Banana!'*
 
 ::: warning
 <VersionInfo dink="1.08" freedink="all"></VersionInfo>
@@ -99,7 +101,7 @@ The following should be noted about custom procedures:
 
 ## Global procedures
 
-It is possible to create custom procedures that are global. Similar to a global variable, this allows you to reference it from anywhere in the script, without using the external function. Note that it acts the same as external, but it is a bit more convenient.
+It is possible to create custom procedures that are global. Similar to a global variable, this allows you to reference it from anywhere in the script, without using the [external()](../functions/external.md) function. Note that it acts the same as [external()](../functions/external.md), but it is a bit more convenient.
 
 To create a global procedure, add a line like the following to main.c:
 
@@ -129,7 +131,7 @@ Global Procedures are broken. You can declare one Global Procedure and it will w
 
 One of the most important features of procedures is the ability to give it values and return a value. This capability was added to 1.08+, and won't work in previous versions.
 
-There are two ways to give variables to procedures: by calling a procedure directly or by using the external command. Note that this is also compatible with global procedures.
+There are two ways to give variables to procedures: by calling a procedure directly or by using the [external()](../functions/external.md) command. Note that this is also compatible with global procedures.
 
 ```c
 // passing.c
@@ -151,9 +153,9 @@ void say_stuff()
 }
 ```
 
-By listing numbers or variables after a procedure call, these values are copied into the `&arg` pseudo variables. Neat, eh? If no value is specified, it defaults to 0.
+By listing numbers or variables after a procedure call, these values are copied into the `&arg` [pseudo variables](./variables.md#pseudo-variables). Neat, eh? If no value is specified, it defaults to 0.
 
-It is also possible for custom procedures to return values. Note that it is not possible to get the return value of a custom procedure like an internal function. You must use the &return pseudo variable.
+It is also possible for custom procedures to return values. Note that it is not possible to get the return value of a custom procedure like an internal function. You must use the &return [pseudo variable](./variables.md#pseudo-variables).
 
 ```c
 // Works!
@@ -182,7 +184,7 @@ void add_stuff()
 }
 ```
 
-However, if you're returning the result of an internal function, there are two ways to handle this. First, you can use the `return` keyword followed by the internal function, without parentheses.
+However, if you're returning the result of an [internal function](../functions/), there are two ways to handle this. First, you can use the `return` keyword followed by the internal function, without parentheses.
 
 ```c
 void add_stuff_absolute()
@@ -193,7 +195,7 @@ void add_stuff_absolute()
 }
 ```
 
-You can also put the internal function on the line above the return line.
+You can also put the [internal function](../functions/) on the line above the return line.
 
 ```c
 void add_stuff_absolute()

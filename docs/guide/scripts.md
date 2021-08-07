@@ -86,23 +86,23 @@ This limit does not apply in certain specific circumstances and does not apply i
 
 Let's say you've created the `grocery.c` example script in your D-Mod's `STORY` directory. That's all fine and good... but how might the game know about `grocery.c`? Or any script?
 
-There are three simple concepts that the engine uses to link scripts to the game: Attachment, Calling, and Summoning.
+There are three simple concepts that the engine uses to link scripts to the game: [Attachment](#attachment), [Calling](#calling), and [Summoning](#summoning).
 
 ### Attachment
 
 Scripts can be linked to sprites (monsters, people, houses, etc) and screens through a process called attachment.
 
-Usually this is done in the map editor, but you can also use the internal function sp_script to attach a script to a sprite while the game is running.
+Usually this is done in the map editor, but you can also use the internal function [sp_script()](../functions/sp-script.md) to attach a script to a sprite while the game is running.
 
-An attached script defines the behaviour of the sprite or screen by automatically running several predefined procedures under certain circumstances, such as when the script is first run.
+An attached script defines the behaviour of the sprite or screen by automatically running several [predefined procedures](./procedures.md#predefined-procedures) under certain circumstances, such as when the script is first run.
 
 If you create a sprite in the map editor and attach our grocery.c script to it, Dink will say the grocery list whenever he first sees that sprite in the game.
 
 ### Calling
 
-Calling is when a script creates and executes another script. This is done using the external and spawn internal functions.
+Calling is when a script creates and executes another script. This is done using the [external()](../functions/external.md) and [spawn()](../functions/spawn.md) internal functions.
 
-Using external is almost like engaging in a telephone conversation, where the caller script will wait until the other script is done before continuing on:
+Using [external()](../functions/external.md) is almost like engaging in a telephone conversation, where the caller script will wait until the other script is done before continuing on:
 
 ```c
 // caller.c
@@ -131,13 +131,13 @@ void main(void)
 }
 ```
 
-Note that the above example is a bit flawed... scripts that are spawned will survive forever unless explicitly killed with `kill_this_task()`. To fix this, we could add `kill_this_task();` after the `unfreeze(1);` line of `grocery.c`.
+Note that the above example is a bit flawed... scripts that are [spawn()](../functions/spawn.md)ed will survive forever unless explicitly killed with [kill_this_task()](../functions/kill-this-task.md). To fix this, we could add [kill_this_task()](../functions/kill-this-task.md); after the [unfreeze](../functions/kill-this-task.md)(1); line of `grocery.c`.
 
 ### Summoning
 
-Sometimes the game itself will summon some scripts in response to specific events or input by the player. This includes item and magic scripts that are added to the player's inventory with `add_item()` and `add_magic()`.
+Sometimes the game itself will summon some scripts in response to specific events or input by the player. This includes item and magic scripts that are added to the player's inventory with [add_item](../functions/add-item.md) and [add_magic](../functions/add-magic.md).
 
-Take a look at the list of all scripts summoned by the game (except input, magic and item scripts). Usually these summoned scripts will run forever unless explicitly killed with `kill_this_task()`. Also, the engine will usually attempt to run the `main` procedure, though exceptions are noted for `lraise` and `dinfo`.
+Take a look at the list of all scripts summoned by the game (except input, magic and item scripts). Usually these summoned scripts will run forever unless explicitly killed with [kill_this_task()](../functions/kill-this-task.md). Also, the engine will usually attempt to run the `main` procedure, though exceptions are noted for `lraise` and `dinfo`.
 
 | Script     | When is it run?                                                         |
 |------------|-------------------------------------------------------------------------|

@@ -1,6 +1,6 @@
 # Screenlock
 
-The original game used an interesting technique to screenlock screens. All enemies on a screen would have a `screenlock(1)` command in their `main()`, and this in their `die()` procedure:
+The original game used an interesting technique to [screenlock()](../functions/screenlock.md) screens. All enemies on a screen would have a [screenlock](../functions/screenlock.md)(1); command in their `main()`, and this in their `die()` procedure:
 
 ```c
 if (get_sprite_with_this_brain(9, &current_sprite) == 0)
@@ -11,9 +11,9 @@ if (get_sprite_with_this_brain(9, &current_sprite) == 0)
 }
 ```
 
-So, once all of the monsters on the screen were dead, the screenlock would be removed.
+So, once all of the monsters on the screen were dead, the [screenlock()](../functions/screenlock.md) would be removed.
 
-This worked well enough... but it is rather annoying to make special screenlock-versions of existing enemy scripts.
+This worked well enough... but it is rather annoying to make special [screenlock()](../functions/screenlock.md)-versions of existing [enemies](./enemies.md) scripts.
 
 There is a better way to do this. In the map editor, attach the following script to a normal sprite in the scene. Note that the sprite will be made invisible, so you don't just attach it to an existing tree or something.
 
@@ -46,9 +46,9 @@ void main(void)
 }
 ```
 
-Then, if you have a screen with monsters on it, it will automatically perform a screenlock and remove the screenlock if all of the monsters are killed. That's as good as we can get, right?
+Then, if you have a screen with monsters on it, it will automatically perform a [screenlock()](../functions/screenlock.md) and remove the [screenlock()](../functions/screenlock.md) if all of the monsters are killed. That's as good as we can get, right?
 
-In fact, we can do this a little better. Screenlocks can be a little bit annoying, so what if we had a screenlock that only appeared the first time the player entered the screen? Thanks to `editor_type()`, we can do this easily.
+In fact, we can do this a little better. Screenlocks can be a little bit annoying, so what if we had a [screenlock()](../functions/screenlock.md) that only appeared the first time the player entered the screen? Thanks to [editor_type()](../functions/editor-type.md), we can do this easily.
 
 ```c
 // scrnlk1.c
