@@ -6,7 +6,7 @@ Procedures are [containers](#containers), and there are several different types:
 
 A procedure is merely a container for actions. Thankfully, procedures tell you exactly what they're supposed to do.
 
-You've already seen a procedure in the recipe example: `main()`. A `main()` procedure is run when the script is first executed. So if you have a script [Attachment](#attachment) to a Bonca, everything in the `main()` procedure is run through when the Bonca first appears on the screen.
+You've already seen a procedure in the recipe example: `main()`. A `main()` procedure is run when the script is first executed. So if you have a script [attached](./scripts.md#attachment) to a Bonca, everything in the `main()` procedure is run through when the Bonca first appears on the screen.
 
 A procedure introduction usually looks like this:
 

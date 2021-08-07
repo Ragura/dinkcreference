@@ -216,7 +216,7 @@ void talk(void)
 }
 ```
 
-One way to fix this is to add a `wait()` statement. The `wait()` statement allows other events to occur, such as player input.
+One way to fix this is to add a [wait()](../functions/wait.md) statement. The [wait()](../functions/wait.md) statement allows other events to occur, such as player input.
 
 ```c
 void talk(void)

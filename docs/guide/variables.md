@@ -122,7 +122,7 @@ You have to split it off into single statements, like this:
 &life += &temp; 
 ```
 
-Also note that you can insert variable names in most [internal function](../functions/) that accept string input (like [say()](../functions/say.md) and `say_stop()`). Each variable will be displayed as the number it represents.
+Also note that you can insert variable names in most [internal function](../functions/) that accept string input (like [say()](../functions/say.md) and [say_stop()](../functions/say-stop.md)). Each variable will be displayed as the number it represents.
 
 ```c
 say("You have &life life points, Dink.", &current_sprite);
