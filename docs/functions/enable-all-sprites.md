@@ -2,7 +2,7 @@
 
 <Prototype>void enable_all_sprites(void)</Prototype>
 
-`enable_all_sprites()` is supposed to enables all sprites after they have been disabled with [disable_all_sprites()](./disable-all-sprites.md) or [sp_diabled()](./sp-disabled.md). This function does not work as intended.
+`enable_all_sprites()` is supposed to enable all sprites after they have been disabled with [disable_all_sprites()](./disable-all-sprites.md) or [sp_diabled()](./sp-disabled.md). This function does not work as intended.
 
 Here is a nice work around that will accomplish the true intention of this command, and will enable all sprites instantly.
 

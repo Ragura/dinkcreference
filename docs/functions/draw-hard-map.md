@@ -39,4 +39,4 @@ void push( void )
 }
 ```
 
-If you just want need to modify the hardness of a single sprite, you might want to try `draw_hard_sprite()`.
+If you just want need to modify the hardness of a single sprite, you might want to try [draw_hard_sprite()](./draw-hard-sprite.md).
