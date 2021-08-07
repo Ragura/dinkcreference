@@ -4,8 +4,8 @@
 
 `add_exp()` adds amount experience and creates a text-sprite to float above `active_sprite`.
 
-<VersionInfo dink="< 1.07"></VersionInfo> 
-Requires that `active_sprite` was last hit by Dink.<br>
+|<VersionInfo dink="< 1.07"></VersionInfo><br>Requires that `active_sprite` was last hit by Dink.<br>|
+---------------------------------------------------------
 
 <VersionInfo dink="1.08" freedink="all"></VersionInfo> 
 Will work with any `active_sprite`.
