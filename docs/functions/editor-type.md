@@ -8,10 +8,10 @@
 |------|-------------------------------------------------------------------------|
 | 0    | Normal sprite, drawn on screen.                                         |
 | 1    | Kill sprite completely.                                                 |
-| 2    | Draw `editor_seq/editor_frame` as a sprite without hardness.            |
-| 3    | Draw `editor_seq/editor_frame` as a background sprite without hardness. |
-| 4    | Draw `editor_seq/editor_frame` as a sprite with hardness.               |
-| 5    | Draw `editor_seq/editor_frame` as a background sprite with hardness.    |
+| 2    | Draw [editor_seq()](./editor-seq.md)/[editor_frame()](./editor-frame.md) as a sprite without hardness.            |
+| 3    | Draw [editor_seq()](./editor-seq.md)/[editor_frame()](./editor-frame.md) as a background sprite without hardness. |
+| 4    | Draw [editor_seq()](./editor-seq.md)/[editor_frame()](./editor-frame.md) as a sprite with hardness.               |
+| 5    | Draw [editor_seq()](./editor-seq.md)/[editor_frame()](./editor-frame.md) as a background sprite with hardness.    |
 | 6    | Sprite will return after 5 minutes.                                     |
 | 7    | Sprite will return after 3 minutes.                                     |
 | 8    | Sprite will return after 1 minute.                                      |

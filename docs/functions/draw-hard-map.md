@@ -2,7 +2,7 @@
 
 <Prototype>void draw_hard_map(void)</Prototype>
 
-`draw_hard_map()` recalculates all hardness for tiles and sprites on the current screen. By default, hardness is only calculated when the screen is first entered. So if you remove or change any hardness from the screen, you will need to call `draw_hard_map()` or `draw_hard_sprite()` so these changes take effect.
+`draw_hard_map()` recalculates all hardness for tiles and sprites on the current screen. By default, hardness is only calculated when the screen is first entered. So if you remove or change any hardness from the screen, you will need to call `draw_hard_map()` or [draw_hard_sprite()](./draw-hard-sprite.md) so these changes take effect.
 
 This command is commonly used to recalculate hardness when removing a sprite with hardness:
 

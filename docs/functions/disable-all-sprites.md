@@ -2,4 +2,31 @@
 
 <Prototype>void disable_all_sprites(void)</Prototype>
 
-`disable_all_sprites()` disables all sprites on the current screen. Use enable_all_sprites to enable them. This is equivalent to setting `sp_disabled` to 1 for all sprites.
+`disable_all_sprites()` is supposed to disable all sprites on the current screen but does not work as intended. The equivalent of this function is setting [sp_disabled()](./sp-disabled.md) to 1 for all sprites.
+
+Here is a nice work around that will accomplish the true intention of this command, and will disable all sprites instantly.
+
+```c
+ //there can be a maximum of 299 actve sprite numbers
+ //we'll start at 2 to exlude Dink.
+ //If you want to disable Dink as well, change the following line to 'int &getsp = 1;'
+ int &getsp = 2;
+ int &sprite_exist;
+loop:
+ //check if a sprite exists with this active sprite number
+ &sprite_exist = sp_active(&getsp, -1);
+ if (&sprite_exist > 0)
+ {
+  //this sprite exists - so disable it.
+  sp_disabled(&getsp, 1);
+ }
+ if (&getsp < 299)
+ {
+  //increment active sprite number '&getsp' and loop.
+  &getsp += 1;
+  goto loop;
+ }
+ ```
+
+
+To re-enable all disabled sprites, check out [enable_all_sprites()](./enable-all-sprites.md).

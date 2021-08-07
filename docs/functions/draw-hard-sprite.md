@@ -24,7 +24,7 @@ void push(void)
 }
 ```
 
-Of course, you could just call `draw_hard_map()` once after the rock was moved.
+Of course, you could just call [draw_hard_map()](./draw-hard-map.md) once after the rock was moved.
 
 This could be useful if you needed to draw a lot of custom hardness on the screen without using hard-tiles, like an invisible maze.
 

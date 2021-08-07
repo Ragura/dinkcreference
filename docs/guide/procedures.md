@@ -91,12 +91,12 @@ void say_banana(void)
 
 This one is slightly more complicated. Here, `banana2.c` is attached to a sprite, and it runs through the `main()` procedure when it is first displayed on the screen. It calls the predefined procedure [external()](../functions/external.md). We tell [external()](../functions/external.md) to open the `bananax.c` script, and launch the `say_banana()` procedure. It does so, and causes Dink to say *'Banana!'*
 
-::: warning
+::: warning Common bug when callin custom procedures
 <VersionInfo dink="1.08" freedink="all"></VersionInfo>
 The following should be noted about custom procedures:
 - Custom procedures called both externally and from within the same script will run on their own script number. Called procedures will not have access to previously declared local variables.
 
-- Calling custom procedures can randomly cause the calling script to continue past `}` and into code afterwards. In some cases it may even continue past a `return;`. A solution to this is using `goto` at the end of the calling procedure, and jump to the end of the script. Check out [Jumps](./control-structures.md#Jumps) for how to use `goto`
+- Calling custom procedures can randomly cause the calling script to continue past `}` and into code afterwards. In some cases it may even continue past a `return;`. A solution to this is using `goto` at the end of the calling procedure, and jump to the end of the script. Check out [Jumps](./control-structures.md#Jumps) for how to use `goto`.
 :::
 
 ## Global procedures
