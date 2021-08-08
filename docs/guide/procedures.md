@@ -92,11 +92,17 @@ void say_banana(void)
 This one is slightly more complicated. Here, `banana2.c` is attached to a sprite, and it runs through the `main()` procedure when it is first displayed on the screen. It calls the predefined procedure [external()](../functions/external.md). We tell [external()](../functions/external.md) to open the `bananax.c` script, and launch the `say_banana()` procedure. It does so, and causes Dink to say *'Banana!'*
 
 ::: warning Common bug when callin custom procedures
-<VersionInfo dink="1.08" freedink="all"></VersionInfo>
+
+<VersionInfo dink="1.08" freedink="all">
+
 The following should be noted about custom procedures:
+
 - Custom procedures called both externally and from within the same script will run on their own script number. Called procedures will not have access to previously declared local variables.
 
 - Calling custom procedures can randomly cause the calling script to continue past `}` and into code afterwards. In some cases it may even continue past a `return;`. A solution to this is using `goto` at the end of the calling procedure, and jump to the end of the script. Check out [Jumps](./control-structures.md#Jumps) for how to use `goto`.
+
+</VersionInfo>
+
 :::
 
 ## Global procedures
@@ -123,8 +129,13 @@ void talk(void)
 Once a global procedure is defined, you can reference the procedure name without specifying the script name.
 
 ::: warning
-<VersionInfo dink="1.08" freedink="all"></VersionInfo>
+
+<VersionInfo dink="1.08" freedink="all">
+
 Global Procedures are broken. You can declare one Global Procedure and it will work fine, but declaring anymore will make none of them work(including the first one), and might cause the game to crash.
+
+</VersionInfo>
+
 :::
 
 ## Advanced Procedures

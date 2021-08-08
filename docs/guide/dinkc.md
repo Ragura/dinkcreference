@@ -16,8 +16,13 @@ If an object has a script [attached](./scripts.md#attachment) to it, and that ob
 Run with the `-DEBUG` command-line option, Dink.exe will report all errors/debug strings in `DEBUG.TXT`.
 
 ::: warning Bloated DEUBG.TXT in FreeDink
-<VersionInfo freedink="109.6"></VersionInfo>Note that when DEBUG is active the DEBUG.TXT file will quickly grow in size and become bloated by several "Surface doesn't have a colorkey" reports.
-:::
 
+<VersionInfo freedink="109.6">
+
+Note that when `DEBUG` is active the `DEBUG.TXT` file will quickly grow in size and become bloated by several *"Surface doesn't have a colorkey"* reports.
+
+</VersionInfo>
+
+:::
 
 You will be writing DinkC scripts that control the events and underlying rules of your D-Mod. If you have a firm grasp on programming language basics, you might want to skim along these introductory sections to understand the limitations of DinkC.

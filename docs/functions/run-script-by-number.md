@@ -14,5 +14,14 @@ if (&junk > 0)
 }
 ```
 
-<VersionInfo dink="< 1.08">If the procedure cannot be found it will still attempt to run the script, and will ruin the last procedure in the script.</VersionInfo><br>
-<VersionInfo dink="1.08">The script will only be run if the procedure is found.</VersionInfo>
+<VersionInfo dink="< 1.08">
+
+If the procedure cannot be found it will still attempt to run the script, and will ruin the last procedure in the script.
+
+</VersionInfo>
+
+<VersionInfo dink="1.08">
+
+The script will only be run if the procedure is found.
+
+</VersionInfo>

@@ -18,4 +18,8 @@ wait(500);
 set_callback_random("", 500, 0);
 ```
 
-<VersionInfo dink="1.08"></VersionInfo>`set_callback_random()` returns a callback number which can be used to kill the callback later in the script using `callback_kill()`.
+<VersionInfo dink="1.08">
+
+`set_callback_random()` returns a callback number which can be used to kill the callback later in the script using `callback_kill()`.
+
+</VersionInfo>

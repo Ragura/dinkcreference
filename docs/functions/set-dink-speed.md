@@ -13,6 +13,14 @@
 | 0     | N/A                   | No change                                        |
 | -1    | 0                     | Player stuck in place, but can still turn around |
 
-<VersionInfo dink="< 1.08"></VersionInfo> Timing issues would cause Dink's speed to change rather noticeably in comparison to monsters, and his `sp_speed()` return value could vary wildly.
+<VersionInfo dink="< 1.08">
 
-<VersionInfo dink="1.08"></VersionInfo> Locks Dink's speed value to the `sp_speed()` equivalents in the table.
+Timing issues would cause Dink's speed to change rather noticeably in comparison to monsters, and his `sp_speed()` return value could vary wildly.
+
+</VersionInfo>
+
+<VersionInfo dink="1.08">
+
+Locks Dink's speed value to the `sp_speed()` equivalents in the table.
+
+</VersionInfo>

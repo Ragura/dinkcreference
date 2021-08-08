@@ -2,7 +2,11 @@
 
 <Prototype>void playavi(string avi_file[9])</Prototype>
 
-<VersionInfo dink="1.08">Removed from the game</VersionInfo>
+<VersionInfo dink="1.08">
+
+Removed from the game
+
+</VersionInfo>
 
 In early development versions of Dink Smallwood, this command was used to call an external `dplay.exe` file to play avi movies. However, this was not implemented in the final game as it didn't work very well.
 

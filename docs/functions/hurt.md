@@ -6,5 +6,14 @@
 
 If the `active_sprite` is hurt, blood spurts are added, free of charge.
 
-<VersionInfo dink="< 1.08">A negative damage value would cause the game to freeze.</VersionInfo>
-<VersionInfo dink="1.08">Ignores the command safely.</VersionInfo>
+<VersionInfo dink="< 1.08">
+
+A negative damage value would cause the game to freeze.
+
+</VersionInfo>
+
+<VersionInfo dink="1.08">
+
+Ignores the command safely.
+
+</VersionInfo>

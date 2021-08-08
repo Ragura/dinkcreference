@@ -4,11 +4,17 @@
 
 `add_exp()` adds amount experience and creates a text-sprite to float above `active_sprite`.
 
-|<VersionInfo dink="< 1.07"></VersionInfo><br>Requires that `active_sprite` was last hit by Dink.<br>|
----------------------------------------------------------
+<VersionInfo dink="< 1.08">
 
-<VersionInfo dink="1.08" freedink="all"></VersionInfo> 
+Requires that `active_sprite` was last hit by Dink.
+
+</VersionInfo>
+
+<VersionInfo dink="1.08" freedink="all">
+
 Will work with any `active_sprite`.
+
+</VersionInfo>
 
 For most situations [sp_exp()](./sp-exp.md) will work well enough and will automatically add and display the experience addition properly. However, if you change a monster's brain when it dies, Dink won't get the experience points. Here is an example of a work-around:
 

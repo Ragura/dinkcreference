@@ -16,14 +16,22 @@ say("`4Hello!", 1); // Orange!
 
 By default, the color code will be `` `$ `` (yellow).
 
-<VersionInfo dink="< 1.08"></VersionInfo>There were some problems using the `` `% `` color tag directly followed by certain letters (such as I, D, and J).
+<VersionInfo dink="< 1.08">
+
+There were some problems using the `` `% `` color tag directly followed by certain letters (such as I, D, and J).
 
 ```c
 say("`%drama queen", 1); // used to not be displayed properly
 ```
 
-<VersionInfo dink="< 1.08"></VersionInfo> Dink would not interpret lines with a colon correctly, like so:
+</VersionInfo>
+
+<VersionInfo dink="< 1.08">
+
+Dink would not interpret lines with a colon correctly, like so:
 
 ```c
 say("bonus: 5 points", 1); // used to not display any text at all!
 ```
+
+</VersionInfo>

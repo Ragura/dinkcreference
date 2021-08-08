@@ -6,4 +6,8 @@
 
 An equivalent is the fourth parameter (ignore_hardness) for the `move()` and `move_stop()` commands.
 
-<VersionInfo dink="< 1.08"></VersionInfo> The `move_no_hard` value only had an effect when the `active_sprite` was actively moving (through `move()` and `move_stop()` commands).
+<VersionInfo dink="< 1.08">
+
+The `move_no_hard` value only had an effect when the `active_sprite` was actively moving (through `move()` and `move_stop()` commands).
+
+</VersionInfo>
