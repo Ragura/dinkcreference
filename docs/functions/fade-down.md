@@ -10,6 +10,6 @@ When the screen has faded to black, all text will appear as white, and all white
 
 <VersionInfo freedink="all">
 
-When the game is in fullscreen mode, or the window is resized in window mode, text will be barely visible. A work around for this is to warp Dink to a screen with no sprites, filled with black tiles, and make Dink invisible using [sp_nodraw()](./sp-nodraw.md). Then do [fade_up()](./fade-up.md) and create your text.
+When the game is in fullscreen mode, or the window is resized in window mode, text will be barely visible. A work around for this is to warp Dink to an empty screen filled with black tiles and make Dink invisible using [sp_nodraw()](./sp-nodraw.md). Then do [fade_up()](./fade-up.md) and create your text.
 
 </VersionInfo>

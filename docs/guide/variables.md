@@ -19,6 +19,20 @@ void main(void)
 }
 ```
 
+Note: A script cannot define a local variable with the same name as a global variable. Any attempt to do so results in the local variable being ignored and the [global variable](#gloabl-variables) being used instead.
+
+<VersionInfo dink="< 1.08">
+
+A local variable name cannot be a global variable's name with a suffix. For example, if a script tries to declare a local variable &goldguard, no local variable is created. Instead, all references to &goldguard are treated as references to the global variable &gold.
+
+</VersionInfo>
+
+<VersionInfo dink="1.08" freedink="all">
+
+The above limitation does not apply in 1.08 and FreeDink - A variable name can be a global variable's name with a suffix.
+
+</VersionInfo>
+
 ## Global variables
 
 A global variable can be read and changed by every script. This is very useful for values that you want to remember all of the time, like Dink's gold amount. To declare a global variable, you must use the [make_global_int()](../functions/make-global-int.md) function in main.c.
@@ -84,6 +98,7 @@ There are also several fake variables which aren't declared as local or global. 
 | `&current_sprite` | The active sprite number attached to the current script.                                    |
 | `&return`         | The last known return value from a function or procedure.                                   |
 | `&savegameinfo`   | Represents the line of information describing a save game. Only valid in choice statements. |
+
 
 ## Operations
 
