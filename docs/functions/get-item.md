@@ -12,3 +12,5 @@ if (&temp > 0)
     arm_weapon();
 }
 ```
+
+For more information, see [Items](../guide/items.md)

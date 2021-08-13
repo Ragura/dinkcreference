@@ -2,7 +2,7 @@
 
 <Prototype small>bool inside_box(int x, int y, int left, int top, int right, int bottom)</Prototype>
 
-`inside_box()` returns 1 if the `x` and `y` coordinates are inside the box defined by `left`, `top`, `right`, and `bottom`.
+`inside_box()` returns 1 if the `x` and `y` coordinates are inside the box defined by `left`, `top`, `right`, and `bottom`. 
 
 ```c
 // excerpt from item-pig.c to check if Dink is in the pig pen

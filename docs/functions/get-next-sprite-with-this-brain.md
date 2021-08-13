@@ -4,7 +4,7 @@
 
 `get_next_sprite_with_this_brain()` returns the first active sprite number starting with `active_sprite_start_with` that is on the screen with `sp_brain` brain. It will not include `active_sprite_ignore`, so a sprite can check for other brains of its type if needed.
 
-To make all sprites with brain 9 say 'Banana', try this:
+To make all sprites with brain 9 [say](./say.md) 'Banana', try this:
 
 ```c
 int &sprite = 0;
