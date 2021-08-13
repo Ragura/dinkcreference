@@ -127,7 +127,6 @@ const functions = {
     "sp_attack_wait",
     "sp_base_attack",
     "sp_base_death",
-    "sp_base_death",
     "sp_base_die",
     "sp_base_idle",
     "sp_base_walk",
