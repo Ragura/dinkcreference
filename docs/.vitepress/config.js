@@ -7,6 +7,10 @@ module.exports = {
     repo: 'ragura/dinkcreference',
     docsDir: 'docs',
     docsBranch: 'main',
+    algolia: {
+      apiKey: 'd8bdd81d89b6732129066fbee21cd8c8',
+      indexName: 'dinkcreference'
+    },
     editLinks: true,
     editLinkText: 'Edit this page on GitHub',
     lastUpdated: 'Last Updated',

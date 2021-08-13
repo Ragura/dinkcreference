@@ -15,7 +15,7 @@ If an object has a script [attached](./scripts.md#attachment) to it, and that ob
 
 Run with the `-DEBUG` command-line option, Dink.exe will report all errors/debug strings in `DEBUG.TXT`.
 
-::: warning Bloated DEUBG.TXT in FreeDink
+::: warning Bloated DEBUG.TXT in FreeDink
 
 <VersionInfo freedink="109.6">
 
