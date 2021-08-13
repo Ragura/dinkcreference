@@ -12,7 +12,7 @@ If the `active_sprite` receives damage, blood spurts are added, free of charge.
 
 - A negative damage value would cause the game to freeze.
 
-- If the script that calls this function is attached to a sprite, [Required global variable](./variables.md#required-global-variables) `&enemy_sprite` will be updated to `&current_sprite`.
+- If the script that calls this function is attached to a sprite, [Required global variable](../guide/variables.md#required-global-variables) `&enemy_sprite` will be updated to `&current_sprite`.
 
 </VersionInfo>
 
@@ -20,6 +20,6 @@ If the `active_sprite` receives damage, blood spurts are added, free of charge.
 
 - Ignores the command safely.
 
-- If the script that calls this function is attached to a sprite, [Required global variables](./variables.md#required-global-variables) `&enemy_sprite` and `&missle_source` will be updated to `&current_sprite`.
+- If the script that calls this function is attached to a sprite, [Required global variables](../guide/variables.md#required-global-variables) `&enemy_sprite` and `&missle_source` will be updated to `&current_sprite`.
 
 </VersionInfo>

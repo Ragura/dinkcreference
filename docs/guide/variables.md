@@ -19,7 +19,7 @@ void main(void)
 }
 ```
 
-Note: A script cannot define a local variable with the same name as a global variable. Any attempt to do so results in the local variable being ignored and the [global variable](#gloabl-variables) being used instead.
+Note: A script cannot define a local variable with the same name as a global variable. Any attempt to do so results in the local variable being ignored and the [global variable](#global-variables) being used instead.
 
 <VersionInfo dink="< 1.08">
 
@@ -41,9 +41,9 @@ A global variable can be read and changed by every script. This is very useful f
 // Excerpt from main.c
 void main()
 {
-make_global_int("&exp",0);
-make_global_int("&strength", 3);
-// ...
+    make_global_int("&exp",0);
+    make_global_int("&strength", 3);
+    // ...
 }
 ```
 
@@ -53,33 +53,34 @@ For an example of using non-required global variables, see [Plot](./plot.md).
 
 ## Required global variables
 
-There are several global variables that are **required** by the Dink engine. These variables **must** be declared in main.c. If they are not declared, the game may randomly crash.
+There are several global variables that are **required** by the Dink engine. These variables **must** be declared in `main.c`. If they are not declared, the game may randomly crash.
 
-| Name              | Description                                                                                                                                         |
-|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
-| `&cur_magic`      | The magic slot the player currently has selected.                                                                                                   |
-| `&cur_weapon`     | The inventory slot the player currently has selected.                                                                                               |
-| `&defense`        | The player's defense.                                                                                                                               |
-| `&enemy_sprite`   | The last known active sprite to attack something. In the case of missiles, will store the player sprite (1).                                        |
-| `&exp`            | The player's experience.                                                                                                                            |
-| `&gold`           | The player's gold.                                                                                                                                  |
-| `&last_text`      | The active sprite number of the most recently created text sprite.                                                                                  |
-| `&level`          | The player's level.                                                                                                                                 |
-| `&life`           | The player's current life (hitpoints).                                                                                                              |
-| `&lifemax`        | The player's maximum life (hitpoints).                                                                                                              |
-| `&magic`          | The player's magic.                                                                                                                                 |
-| `&magic_cost`     | Determines how long it takes to fill up the magic meter. Values less than 100 may crash the game.                                                   |
-| `&missile_target` | The last known target to be hit by a missile.                                                                                                       |
-| `&missle_source`  | The last known active sprite to attack something. In the case of missiles, will store the missile's sprite. And yes, missle is spelled incorrectly. |
-| `&player_map`     | The current map screen number. The screen will not change unless [load_screen()](../functions/load-screen.md) and [draw_screen()](../functions/draw-screen.md) are called.                                    |
-| `&result`         | The result of a choice statement or [wait_for_button()](../functions/wait-for-button.md).                                                                                            |
-| `&strength`       | The player's strength.                                                                                                                              |
-| `&update_status`  | If set to 1, the status bar will be updated.                                                                                                        |
-| `&vision`         | The current vision. Reset to 0 every time a new screen is loaded, and only has an effect if changed in the base script of a screen.                 |
+| Name              | Description                                                                                                                                                                |
+|-------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `&cur_magic`      | The magic slot the player currently has selected.                                                                                                                          |
+| `&cur_weapon`     | The inventory slot the player currently has selected.                                                                                                                      |
+| `&defense`        | The player's defense.                                                                                                                                                      |
+| `&enemy_sprite`   | The last known active sprite to attack something. In the case of missiles, will store the player sprite (1).                                                               |
+| `&exp`            | The player's experience.                                                                                                                                                   |
+| `&gold`           | The player's gold.                                                                                                                                                         |
+| `&last_text`      | The active sprite number of the most recently created text sprite.                                                                                                         |
+| `&level`          | The player's level.                                                                                                                                                        |
+| `&life`           | The player's current life (hitpoints).                                                                                                                                     |
+| `&lifemax`        | The player's maximum life (hitpoints).                                                                                                                                     |
+| `&magic`          | The player's magic.                                                                                                                                                        |
+| `&magic_cost`     | Determines how long it takes to fill up the magic meter. Values less than 100 may crash the game.                                                                          |
+| `&missile_target` | The last known target to be hit by a missile.                                                                                                                              |
+| `&missle_source`  | The last known active sprite to attack something. In the case of missiles, will store the missile's sprite. And yes, missle is spelled incorrectly.                        |
+| `&player_map`     | The current map screen number. The screen will not change unless [load_screen()](../functions/load-screen.md) and [draw_screen()](../functions/draw-screen.md) are called. |
+| `&result`         | The result of a choice statement or [wait_for_button()](../functions/wait-for-button.md).                                                                                  |
+| `&strength`       | The player's strength.                                                                                                                                                     |
+| `&update_status`  | If set to 1, the status bar will be updated.                                                                                                                               |
+| `&vision`         | The current vision. Reset to 0 every time a new screen is loaded, and only has an effect if changed in the base script of a screen.                                        |
 
 Previously, it was thought that the `&speed` and `&timing` variables were also required, but they are not used by the Dink engine.
 
-::: note &missle_source behaviour
+::: tip &missle_source behaviour
+
 <VersionInfo dink="< 1.08">
 
 `&missle_source` will store and hold the last missile to hit something. It *will not* store any other sprite that attacks.
@@ -91,6 +92,8 @@ Previously, it was thought that the `&speed` and `&timing` variables were also r
 `&missle_source` is accurate to the description in the table above.
 
 </VersionInfo>
+
+:::
 
 ## Pseudo variables
 
@@ -112,7 +115,6 @@ There are also several fake variables which aren't declared as local or global. 
 | `&return`         | The last known return value from a function or procedure.                                   |
 | `&savegameinfo`   | Represents the line of information describing a save game. Only valid in choice statements. |
 
-
 ## Operations
 
 Operations
@@ -123,7 +125,7 @@ There are several mathematical operations you can perform on variables. Each ope
 &variable <operation> <value>;
 ```
 
-&variable is a variable name, operation is one of the operations below, and value is a number, another variable, or an [internal function](../functions/).
+`&variable` is a variable name, operation is one of the operations below, and value is a number, another variable, or an [internal function](../functions/).
 
 | Operation | Description                                               |
 |-----------|-----------------------------------------------------------|
