@@ -8,7 +8,7 @@ If the magic is currently armed, it will run the magic script's `holdingdrop()`,
 
 If the magic is not armed, it will only run the magic script's `drop()` procedure.
 
-It is not necessary for the named script to actually exist. As long as the same script name is used as was specified by `add_magic()`, the magic will be removed.
+It is not necessary for the named script to actually exist. As long as the same script name is used as was specified by [add_magic()](./add-magic.md), the magic will be removed.
 
 <br>
 

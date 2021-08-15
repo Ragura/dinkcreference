@@ -8,8 +8,8 @@ In fact, if `kill_this_task()` is used with a script attached to a normal sprite
 
 It should be used in the following scripts to ensure that they are killed appropriately:
 
-- Scripts summoned by the engine (`key-##`, `button6`, etc).
-- Scripts created by `spawn()`.
-- Scripts that use `script_attach(1000)`
+- Scripts [summoned](../guide/scripts.md#summoning) by the engine (`key-##`, `button6`, etc).
+- Scripts created by [spawn()](./spawn.md).
+- Scripts that use [script_attach()](./script-attach.md)(1000);
 
 Failure to use `kill_this_task()` when appropriate is to risk running out of an extremely finite resource: variables.
