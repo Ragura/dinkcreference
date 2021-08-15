@@ -169,7 +169,7 @@ Now, besides storing plain numbers, variables can be used to store several diffe
 | Editor sprite | A sprite placed in a map editor. Useful to save [editor_seq()](../functions/editor-seq.md) and [editor_frame()](../functions/editor-frame.md) information.          | 1-99  |
 | Active sprite | A sprite that is currently on the screen. It will usually be different from the editor sprite number. | 1-299 |
 | Map           | A map screen                                                                                          | 1-768 |
-| Sound number  | A sound loaded using [load_sound()](../functions/load-sound.md).                                                                  | 1-99  |
+| Sound number  | A sound loaded using [load_sound()](../functions/load-sound.md).                                      | 1-99  |
 | Soundbank     | A currently playing sound.                                                                            | 1-20  |
 | Script number | A currently executing script.                                                                         | 1-199 |
 

@@ -8,10 +8,11 @@
 // Modified excerpt from dam-fire.c
 void damage( void )
 {
+    //sound effect
     playsound(18, 8000,0,0,0);
-    // sound effect
-    kill_shadow(&current_sprite);
+
     // kill just the fireball's shadow
-    // ...
+    // ...    
+    kill_shadow(&current_sprite);
 }
 ```

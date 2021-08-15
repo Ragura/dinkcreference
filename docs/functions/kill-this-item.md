@@ -8,4 +8,7 @@ If the item is currently armed, it will run the item script's `holdingdrop()`, `
 
 If the item is not armed, it will only run the item script's `drop()` procedure.
 
-It is not necessary for the named script to actually exist. As long as the same script name is used as was specified by `add_item()`, the item will be removed.
+It is not necessary for the named script to actually exist. As long as the same script name used was specified by `add_item()`, the item will be removed.
+
+
+For more information, see [Items](../guide/items.md)
