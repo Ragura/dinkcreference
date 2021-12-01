@@ -4,6 +4,10 @@
 
 `make_global_function()` allows you to declare a shortcut to a function. After declaring it, you can use procedure as a function call without specifying script using `external()`.
 
+::: danger Flawed
+`make_global_function()` does not work if you declare more than one global function. If you declare just one it will work fine, but if you declare more than one, none of them will work.
+:::
+
 ```c
 // test.c
 void my_function(void)

@@ -2,7 +2,7 @@
 
 <Prototype>void playavi(string avi_file[9])</Prototype>
 
-<VersionInfo dink="1.08">
+<VersionInfo dink="1.08" freedink="all">
 
 Removed from the game
 
