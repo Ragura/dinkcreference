@@ -2,7 +2,7 @@
 
 <Prototype small>void sp_attack_hit_sound_speed(int active_sprite, int sound_speed[-1])</Prototype>
 
-`sp_attack_hit_sound_speed()` gets or sets the attack hit `sound_speed` for the `active_sprite`. The attack hit sound speed is the hertz the sound number set with `sp_attack_hit_sound()` will be played every time the sprite hits something using its attack sequence, or in the case of a missile causing damage.
+`sp_attack_hit_sound_speed()` gets or sets the attack hit `sound_speed` for the `active_sprite`. The attack hit sound speed is the hertz the sound number set with [sp_attack_hit_sound()](./sp-attack-hit-sound.md) will be played every time the sprite hits something using its attack sequence, or in the case of a missile causing damage.
 
 Note that unlike most sprite functions, `sp_attack_hit_sound_speed()` works equally well for Dink.
 

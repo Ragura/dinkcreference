@@ -8,7 +8,7 @@ The following information is stored in the save game file:
 
 Global variables, editor information (type, seq, and frame for 99 sprites on 768 screens), Dink's position, sequence, frame, direction, base hit, base walk, and base idle, and the time the player has been playing the game.
 
-<VersionInfo dink="1.08">
+<VersionInfo dink="1.08" freedink="all">
 
 It also stores the `map.dat`, `dink.dat`, palette, tiles, and the global functions.
 

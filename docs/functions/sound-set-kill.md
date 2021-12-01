@@ -12,3 +12,11 @@ int &soundbank = playsound(87, 22050, 0, 0, 1);
 wait(1000);
 sound_set_kill(&soundbank);
 ```
+
+::: warning
+<VersionInfo freedink="109.6">
+
+Playsound will return the soundbank number plus 1. To get the actual soundbank number of the sound, you must minus 1 from the returned value.
+
+</VersionInfo>
+:::

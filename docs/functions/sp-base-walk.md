@@ -8,6 +8,6 @@ If a walk `base_sequence` is set, this sprite will choose the sequence closest t
 
 If no walk `base_sequence` is set, the sprite will play through its last sequence or stay frozen at its last frame when moving.
 
-To disable a sprite's walk base sequence, use a `base_sequence` of -1. This function affects all sprites that move, either on their own volition or through `move()` and `move_stop()` commands.
+To disable a sprite's walk base sequence, use a `base_sequence` of -1. This function affects all sprites that move, either on their own volition or through [move()](./move.md) and [move_stop()](./move-stop.md) commands.
 
 `sp_base_walk()` will always return the `base_sequence` value that is passed to it.

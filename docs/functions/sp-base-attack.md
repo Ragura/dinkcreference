@@ -8,6 +8,6 @@ A sprite that attacks is one that plays another sequence (such as the enemy hitt
 
 To disable a sprite's ability to attack, use a `base_sequence` of -1.
 
-This function only affects sprites with a `sp_brain` of 9.
+This function only affects sprites with a [sp_brain()](./sp-brain.md) of 9.
 
 `sp_base_attack()` will always return the `base_sequence` value that is passed to it.

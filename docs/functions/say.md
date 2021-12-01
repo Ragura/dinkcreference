@@ -8,7 +8,7 @@ If the `active_sprite` was already talking, the old text will be erased (so they
 
 If you need to know the active sprite number of a certain text sprite, you can check `&last_text` at any time.
 
-To make the text a different color, use the <kbd>\`</kbd> character (the reverse apostrophe, left of the <kbd>1</kbd> key) followed by a special color character. See `set_font_color()` for a list of the default colors.
+To make the text a different color, use the <kbd>\`</kbd> character (the reverse apostrophe, left of the <kbd>1</kbd> key) followed by a special color character. See [set_font_color()](./set-font-color.md) for a list of the default colors.
 
 ```c
 say("`4Hello!", 1); // Orange!
