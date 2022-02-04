@@ -54,7 +54,5 @@ void get_map_tile_index()
 }
 ```
 
-There also exists a google sheet that will let you input tilescreen(0-9 and 'U'), tileset (1-4), column (1-12), and row (1-11), and it will output the `tile_index`. This can be found below, you an either make a copy or input the values directly on the sheet:
+There also exists a google sheet that will let you input tilescreen(0-9 and 'U'), tileset (1-4), column (1-12), and row (1-11), and it will output the `tile_index`:
 [Get Tile Index Google Sheet](https://docs.google.com/spreadsheets/d/1JwalayHW7WAync6zBnyCuPjXRKO45iR_vueJyC3Cy2k/edit?usp=sharing)
-
-Keep in mind that if you choose to input values on the sheet directly, without making a copy, on the off chance someone else is also doing the same, you will be fighting with each other on value input, since it's a publicly shared spreadsheet.

@@ -13,5 +13,5 @@ See [Advanced Procedures](../guide/procedures.md#advanced-procedures) for more i
 </VersionInfo>
 
 ::: warning Common error
-Calling a procedure with `external()` can randomly cause the calling script to continue past `}` and into code afterwards. In some cases it may even continue past a `return;`. A solution to this is using `goto` at the end of the calling procedure, and jump to the end of the script. Check out [Jumps](../guide/control-structures.md#Jumps) for how to use `goto`
+Calling a procedure with `external()` can randomly cause the calling script to continue past `}` and into code afterwards.
 :::
