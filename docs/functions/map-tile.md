@@ -6,7 +6,7 @@
 
 The `tile_position` refers to a tile on the current screen. See [map_hard_tile](./map-hard-tile.md) for more information.
 
-The `tile_index` will range from 0 to 5247. `tile_index` 0 is the tile in the upper-left corner of tileset 1, tile 128 is the tile in the upper-left corner of tileset 2, and so on.
+The `tile_index` will range from 0 to 5215. `tile_index` 0 is the tile in the upper-left corner of tileset 1, tile 128 is the tile in the upper-left corner of tileset 2, and so on.
 
 You must use `draw_background()` or `draw_screen()` in order for the tiles to be visibly updated.
 
@@ -14,7 +14,8 @@ You must use `draw_background()` or `draw_screen()` in order for the tiles to be
 Although the maximum size of a tileset can be 600x550, with 11 rows, and a maximum of 8 tiles on the 11th row, all available map editors at the time of writing this do not have the capability to view tilesets of this size.
 Thus, if you were looking at the tiles as they are available in the editors (maximum of 8 rows visible), the bottom right tile of tileset 1 would be `tile_index` 95.
 
-You do not have to stick to the visible limit imposed by the map editors! You can make tilesets of 11 rows and place the extra tiles using `map_tile`.
+You do not have to stick to the visible limit imposed by the map editors! You can make tilesets of 11 rows and place the extra tiles using `map_tile`. 
+The only exception this is tileset 41 - it can have a maximum of 8 rows.
 :::
 
 It is recommended that you either use the `map_tile()` to get the value of a tile you already know, or to create your own function to do the conversion for you:
