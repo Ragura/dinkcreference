@@ -8,4 +8,4 @@ When a sprite is attacked, it will subtract the defense value from the attack st
 
 To set Dink's defense, use the `&defense` required global variable.
 
-If the `active_sprite` is a text sprite (`sp_brain` of 8), the defense `value` stores the y-offset of the text from the parent sprite's `sp_y` coordinate. By default it is set to 100 plus a value related to the depth dot and hardbox, so the text appears roughly 100 pixels above the sprite's head.
+If the `active_sprite` is a text sprite ([sp_brain()](./sp-brain.md) of 8), the defense `value` stores the y-offset of the text from the parent sprite's [sp_y()](./sp-y.md) coordinate. By default it is set to 100 plus a value related to the depth dot and hardbox, so the text appears roughly 100 pixels above the sprite's head.
