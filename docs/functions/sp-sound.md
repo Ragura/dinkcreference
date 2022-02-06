@@ -6,7 +6,13 @@
 
 Setting a sound is equivalent to `playsound(sound_number, 22050, 0, active_sprite, 1)` Note that the sound will repeat, and will be attached to the `active_sprite`.
 
-<VersionInfo dink="1.08">
+<VersionInfo dink="< 1.08">
+
+Trying to retrieve the sound number by passing -1 would crash the game.
+
+</VersionInfo>
+
+<VersionInfo dink="1.08" freedink="all">
 
 No longer crashes the game when attempting to retrieve the sound number by passing a -1.
 

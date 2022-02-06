@@ -4,9 +4,9 @@
 
 `sp_freeze()` gets or sets the `frozen` value of the `active_sprite`.
 
-A `frozen` value of 1 is equivalent to the `freeze()` function (which disables the sprite's brain indefinitely).
+A `frozen` value of 1 is equivalent to the [freeze()](./freeze.md) function (which disables the sprite's brain indefinitely).
 
-A `frozen` value of 0 is equivalent to the `unfreeze()` function (which enables the sprite's brain).
+A `frozen` value of 0 is equivalent to the [unfreeze()](./unfreeze.md) function (which enables the sprite's brain).
 
 However, unlike the freeze and unfreeze functions, `sp_freeze()` also returns the current frozen status. This is useful to see if Dink (or another sprite) is able to do or say something without interrupting a cutscene.
 
@@ -20,7 +20,7 @@ void main(void)
     loop:
     if (&poisoned == 0)
         kill_this_task();
-    &isfrozen = sp_freeze(&current_sprite, -1);
+    &isfrozen = sp_freeze(1, -1);
     if (&isfrozen == 0)
         say("I'm poisoned...", 1);
     wait(5000);
@@ -28,4 +28,4 @@ void main(void)
 }
 ```
 
-Freezing only has an effect if `active_sprite` has a `sp_brain` of 0, 1, 3, 4, 9, 10, or 16.
+Freezing only has an effect if `active_sprite` has a [sp_brain()](./sp-brain.md) of 0, 1, 3, 4, 9, 10, or 16.

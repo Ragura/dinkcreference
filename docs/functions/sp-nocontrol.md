@@ -6,7 +6,7 @@
 
 If `no_control` is 1, the player cannot move until the current animation sequence has finished.
 
-The same behavior could be accomplished using `freeze()` to stop the player before the sequence and `unfreeze()` to allow the player to move again, but that requires the developer to know exactly how long the animation sequence will last. This is fairly easy to determine (`sp_frame_delay` * number of frames), but it can change, and `sp_nocontrol()` is easier to use.
+The same behavior could be accomplished using [freeze()](./freeze.md) to stop the player before the sequence and [unfreeze()](./unfreeze.md) to allow the player to move again, but that requires the developer to know exactly how long the animation sequence will last. This is fairly easy to determine ([sp_frame_delay()](./sp-frame-delay.md) * number of frames), but it can change, and `sp_nocontrol()` is easier to use.
 
 It is often used in weapon animation sequences.
 

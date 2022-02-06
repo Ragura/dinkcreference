@@ -4,12 +4,14 @@
 
 `sp_script()` kills any scripts currently owned by `active_sprite`, sets the script for the `active_sprite` and returns the script number of the new script.
 
-It is not a good idea for a sprite to replace its own script. Odd things will happen. There is a nice work-around, though:
+<VersionInfo dink=" 1.08">
 
-```c
-// Example from Ted Shutes
-int &cave = &current_sprite;
-script_attach(0);
-sp_script(&cave, "cavewarp");
-kill_this_task();
-```
+If a sprite replaced it's own script, there was a chance odd things would happen.
+
+</VersionInfo>
+
+<VersionInfo dink="1.08" freedink="all">
+
+A sprite can replace it's own script without issues.
+
+</VersionInfo>

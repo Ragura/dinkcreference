@@ -25,3 +25,25 @@ void touch(void)
     sp_touch_damage(&current_sprite, -1);
 }
 ```
+
+<br>
+The oversight mentioned above can also be useful to determine when Dink has stepped off the fish:
+
+```c
+// Dink steps on and off a fish.
+void main(void)
+{
+    sp_touch_damage(&current_sprite, -1);
+}
+
+void touch(void)
+{
+    // Don't disable touching here.
+    say("I'm stepping on a fish!", 1);
+    
+    //A wait here will make it so the touch procedure won't go any further until Dink is no longer touching the sprite.
+    //this works because the touch procedure will keep being called, starting it over, until he steps off.
+    wait(1);
+    say("I've trampled that poor fish for long enough, I think.", 1);
+}
+```

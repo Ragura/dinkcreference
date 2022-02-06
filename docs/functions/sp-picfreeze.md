@@ -6,11 +6,11 @@
 
 If `frame_freeze` is 0 (default), the `active_sprite` will behave as normal.
 
-If `frame_freeze` is 1, the engine will freeze the `active_sprite's` frame upon movement even if it has a valid `sp_base_walk` value.
+If `frame_freeze` is 1, the engine will freeze the `active_sprite's` frame upon movement even if it has a valid [sp_base_walk()](./sp-base-walk.md) value.
 
 It is not that useful.
 
-It was used in (and created for) *Mystery Island* to move a boat that had a `sp_base_walk` of 0. This caused the boat to play another sequence when it was moved. If the `sp_base_walk` had been set to -1, it would not be a problem.
+It was used in (and created for) *Mystery Island* to move a boat that had a [sp_base_walk()](./sp-base-walk.md) of 0. This caused the boat to play another sequence when it was moved. If the [sp_base_walk()](./sp-base-walk.md) had been set to -1, it would not be a problem.
 
 ```c
 // Modified excerpt from s1-geton.c

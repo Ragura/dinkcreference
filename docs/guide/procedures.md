@@ -99,7 +99,7 @@ The following should be noted about custom procedures:
 
 - Custom procedures called both externally and from within the same script will run on their own script number. Called procedures will not have access to previously declared local variables.
 
-- Calling custom procedures can randomly cause the calling script to continue past `}` and into code afterwards.
+- Calling custom procedures will cause the calling script to continue past `}` and into code afterwards.
 
 </VersionInfo>
 

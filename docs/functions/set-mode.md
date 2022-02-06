@@ -15,7 +15,7 @@ set_mode(2);
 |------|--------------|----------------------------------------------------------------------------------------------------------------------------|
 | 0    | Startup      | When the game first starts. Will automatically change to Mode 1.                                                           |
 | 1    | Title-screen | When the player interacts with the title screen. Must receive DinkC command to go onto Mode 2.                             |
-| 2    | Intermediary | Loads the current screen, gets rid of the mouse object if `set_keep_mouse()` was not set. Automatically changes to Mode 3. |
+| 2    | Intermediary | Loads the current screen, gets rid of the mouse object if [set_keep_mouse()](./set-keep-mouse.md) was not set. Automatically changes to Mode 3. |
 | 3    | Normal       | WNormal gameplay commences.                                                                                                |
 
 ::: warning

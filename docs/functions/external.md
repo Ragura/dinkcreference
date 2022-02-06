@@ -13,5 +13,5 @@ See [Advanced Procedures](../guide/procedures.md#advanced-procedures) for more i
 </VersionInfo>
 
 ::: warning Common error
-Calling a procedure with `external()` can randomly cause the calling script to continue past `}` and into code afterwards.
+Calling a procedure with `external()` will cause the calling script to continue past `}` and into code afterwards.
 :::

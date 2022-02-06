@@ -17,6 +17,6 @@ If range is 0 (default), the range will be 28 for left and right, and 36 for up 
 
 So, the `range` value essentially extends the hardboxes so that they're easier to hit based on the `active_sprite's` current direction. If the `active_sprite` is facing right and attacks, the hardboxes of all sprites are temporarily extended left range pixels (among other changes).
 
-For `sp_brain` 11 and 17 (missiles), range pixels are added around the missile's hardbox to make it more likely to hit enemies.
+For [sp_brain()](./sp-brain.md) 11 and 17 (missiles), range pixels are added around the missile's hardbox to make it more likely to hit enemies.
 
 It is possible to see `sp_range` deformed hardboxes in debug mode.
