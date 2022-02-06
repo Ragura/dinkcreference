@@ -2,7 +2,7 @@
 
 <Prototype>int sp_script(int active_sprite, string script[9])</Prototype>
 
-`sp_script()` kills any scripts currently owned by `active_sprite`, sets the script for the `active_sprite` and returns the script number of the new script.
+`sp_script()` kills any scripts currently owned by `active_sprite`, sets the script for the `active_sprite`, executes the `main` procedure of the script, and returns the script number of the new script.
 
 <VersionInfo dink=" 1.08">
 

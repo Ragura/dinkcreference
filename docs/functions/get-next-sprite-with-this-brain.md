@@ -14,7 +14,7 @@ if (&sprite > 0)
 {
     say("Banana!", &sprite);
     //Increment &sprite so we start with the next sprite
-    &sprite++;
+    &sprite += 1;
     goto loop;
 }
 ```

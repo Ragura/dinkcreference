@@ -139,11 +139,64 @@ Sometimes the game itself will summon some scripts in response to specific event
 
 Take a look at the list of all scripts summoned by the game (except input, magic and item scripts). Usually these summoned scripts will run forever unless explicitly killed with [kill_this_task()](../functions/kill-this-task.md). Also, the engine will usually attempt to run the `main` procedure, though exceptions are noted for `lraise` and `dinfo`.
 
-| Script     | When is it run?                                                         |
-|------------|-------------------------------------------------------------------------|
-| `dinfo`    | When Dink dies. `die()` procedure.                                      |
-| `dnomagic` | When Dink tries to use magic, but doesn't have any magic armed.         |
-| `dnotalk`  | When Dink talks and no talking sprites are around.                      |
-| `lraise`   | When Dink gains enough experience to gain a level. `raise()` procedure. |
-| `main`     | When the game first starts up or `restart_game()` is called.                  |
-| `start`    | When the game first starts up or `restart_game()` is called. After Main.c     |
+::: tip
+
+Note that the below list is accurate to Dink Smallwood 1.08.
+There are some differences in FreeDink 109.6. 
+
+The main alphabetical (A-Z) keys should all be the same as the below list, but some other keys such as the numpad keys and `F#` keys differ in there script name.
+
+If you would like to use some of the less common keys and need to confirm the script for that key, start the game with debug, press that key and then find it in the debug.txt
+
+:::
+
+| Script     | When is it run?                                                         | Script | When is it run?   |
+|------------|-------------------------------------------------------------------------|------- |-------------------|
+| `button4`   | `Enter`     |                                   `key 84`                                |  `T`      |
+| `button6`   | `M`, `6`, or Gamepad Button 6    |              `key-85`                        |          `U`      |
+| `button7`  | Gamepad Button 7 |                               `key-86`                       |           `V`      |
+| `button8`  | Gamepad Button 8 |                               `key-87`                                |  `W`      |
+| `button9`  | Gamepad Button 9 |                               `key-88`                                |  `X`                 |
+| `button10` | Gamepad Button 10 |                              `key-89`                                |  `Y`                 |
+| `dinfo`    | When Dink dies. `die()` procedure.                                      | `key-90`        | `Z`                  |
+| `dnomagic` | When Dink tries to use magic, but doesn't have any magic armed.         | `key-96`       |  `Numpad 0`                 |
+| `dnotalk`  | When Dink talks and no talking sprites are around.                      | `key-97`       |  `Numpad 1`                 |
+| `lraise`   | When Dink gains enough experience to gain a level. `raise()` procedure. | `key-98`       |  `Numpad 2`                 |
+| `main`     | When the game first starts up or `restart_game()` is called.            | `key-99`       |  `Numpad 3`                 |
+| `start`    | When the game first starts up or `restart_game()` is called. After Main.c | `key-100`     | `Numpad 4`                  |
+| `Escape`   | `Escape`     |                                    `key-101`                               | `Numpad 5`                 |
+| `key-33`     | `Page up`     |                                 `key-102`                               | `Numpad 6`                  |
+| `key-34`     | `Page down`   |                                 `key-103`                               | `Numpad 7`                  |
+| `key-35`     | `End`         |                                 `key-104`                               | `Numpad 8`                  |
+| `key-36`     | `Home`        |                                 `key-105`                               | `Numpad 9`                  |
+| `key-44`     | `Print Screen` |                                `key-106`                               | `Numpad *`                  |
+| `key-45`     | `Insert`      |                                 `key-107`                               | `Numpad +`                  |
+| `key-46`     | `Delete`      |                                 `key-109`                               | `Numpad -`                  |
+| `key-48`     | `0`      |                                      `key-110`                            |    `Numpad .`               |
+| `key-49`     | `1`      |                                      `key-111`                            |    `Numpad /`               |
+| `key-50`     | `2`      |                                      `key-112`                            |    `F1`               |
+| `key-51`     | `3`      |                                      `key-113`                            |    `F2`               |
+| `key-52`     | `4`      |                                      `key-114`                            |    `F3`               |
+| `key-53`     | `5`      |                                      `key-115`                            |    `F4`               |
+| `key-54`     | `6`      |                                      `key-116`                            |    `F5`               |
+| `key-55`     | `7`      |                                      `key-117`                            |    `F6` 
+| `key-56`     | `8`      |                                      `key-118`                            |    `F7`         |
+| `key-57`     | `9`      |                                      `key-119`                            |    `F8`        |
+| `key-65`     | `A`      |                                      `key-120`                            |    `F9` |
+| `key-66`     | `B`      |                                      `key-121`                            |    `F10` |
+| `key-67`     | `C`      |                                      `key-122`                            |    `F11` |
+| `key-68`     | `D`      |                                      `key-123`                            |    `F12` |
+| `key-69`     | `E`      |                                      `key-144`                            |    `Num Lock` |
+| `key-70`     | `F`      |                                      `key-145`                            |    `Scroll Lock` |
+| `key-71`     | `G`      |                                      `key-186`                            |    `;` |
+| `key-72`     | `H`      |                                      `key-187`                            |    `=` |
+| `key-73`     | `I`      |                                      `key-188`                            |    `,`  |
+| `key-74`     | `J`      |                                      `key-189`                            |    `-`  |
+| `key-75`     | `K`      |                                      `key-190`                            |    `.`  |
+| `key-76`     | `L`      |                                      `key-191`                            |    `/`  |
+| `key-78`     | `N`      |                                      `key-192`                            |    ` |
+| `key-79`     | `O`      |                                      `key-219`                            |    `[`  |
+| `key-80`     | `P`      |                                      `key-220`                            |    `\`  |
+| `key-81`     | `Q`      |                                      `key-221`                           |     `]`  |
+| `key-82`     | `R`      |                                      `key-222`                            |    `'`  |
+| `key-83`     | `S`      |                                                                  |                     |       |

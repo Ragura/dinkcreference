@@ -7,7 +7,7 @@
 A D-Mod normally has, or at least has access to, three `load_game()` commands:
 
 1. `start-2.c`, which drives the "Continue" button or its counterpart on the D-Mod's opening screen.
-2. `escape.c`, run when the player presses the <kbd>sscape</kbd> key.
+2. `escape.c`, run when the player presses the <kbd>escape</kbd> key.
 3. `dinfo.c`, Dink's `die()` procedure.
 
 All running scripts are cancelled by `load_game()`. Period, even if the load fails. It is unclear what happens in that case, but the script that did the `load_game()` does not continue running no matter what. Use [game_exist](./game-exists.md) first so that a failed load can be anticipated and prevented.

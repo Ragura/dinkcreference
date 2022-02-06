@@ -21,6 +21,6 @@ It should be noted that if you are using `script_attach` to attach actual sprite
 However the scripts survival will be tethered to the new sprite.
 
 To delve into this deeper and get a full understanding of the difference between an active sprite number attached to a script, and vice-versa see the following thread on the Dink Network:
-[Testing a demonstration of proper workings of script_attach()](https://www.dinknetwork.com/forum.cgi?MID=206887#206887)
+[Testing and demonstration of proper workings of script_attach()](https://www.dinknetwork.com/forum.cgi?MID=206887#206887)
 
 
