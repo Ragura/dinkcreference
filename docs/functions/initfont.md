@@ -30,3 +30,6 @@ Only Truetype fonts(*.ttf) are compatible with `initfont()`
 | *.otf     | <VersionInfo dink="all">File name</versioninfo>                           |
 | *.fon     | <VersionInfo dink="all">Font name</versioninfo>                    |
 | *.ttc     | <VersionInfo dink="all">Font name</versioninfo>    |
+
+
+Sticking to the above should get fonts to work most of the time. It seems that Different versions of the Dink engine refuses to accept certain fonts though.
