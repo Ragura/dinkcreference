@@ -150,9 +150,9 @@ If you would like to use some of the less common keys and need to confirm the sc
 
 :::
 
-| Script     | When is it run?                                                         | Script | When is it run?   |
-|------------|-------------------------------------------------------------------------|------- |-------------------|
-| `button4`   | `Enter`     |                                   `key 84`                                |  `T`      |
+| Script     | When is it run?                          | Script        | When is it run?   |
+|------------|------------------------------------------|---------------|-------------------|
+| `button4`   | `Enter`     |                                   `key-84`                                |  `T`      |
 | `button6`   | `M`, `6`, or Gamepad Button 6    |              `key-85`                        |          `U`      |
 | `button7`  | Gamepad Button 7 |                               `key-86`                       |           `V`      |
 | `button8`  | Gamepad Button 8 |                               `key-87`                                |  `W`      |
