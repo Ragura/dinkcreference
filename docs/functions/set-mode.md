@@ -16,7 +16,7 @@ set_mode(2);
 | 0    | Startup      | When the game first starts. Will automatically change to Mode 1.                                                           |
 | 1    | Title-screen | When the player interacts with the title screen. Must receive DinkC command to go onto Mode 2.                             |
 | 2    | Intermediary | Loads the current screen, gets rid of the mouse object if [set_keep_mouse()](./set-keep-mouse.md) was not set. Automatically changes to Mode 3. |
-| 3    | Normal       | WNormal gameplay commences.                                                                                                |
+| 3    | Normal       | Normal gameplay commences.                                                                                                |
 
 ::: warning
 Please note that `set_mode(2)` will trigger a [draw_screen()](./draw-screen.md), but it will not occur until the next [wait()](./wait.md) line. This can cause some issues when loading from the title screen in some circumstances.
