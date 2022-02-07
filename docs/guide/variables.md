@@ -117,8 +117,6 @@ There are also several fake variables which aren't declared as local or global. 
 
 ## Operations
 
-Operations
-
 There are several mathematical operations you can perform on variables. Each operation must have the following syntax:
 
 ```c
