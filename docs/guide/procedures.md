@@ -91,7 +91,7 @@ void say_banana(void)
 
 This one is slightly more complicated. Here, `banana2.c` is attached to a sprite, and it runs through the `main()` procedure when it is first displayed on the screen. It calls the predefined procedure [external()](../functions/external.md). We tell [external()](../functions/external.md) to open the `bananax.c` script, and launch the `say_banana()` procedure. It does so, and causes Dink to say *'Banana!'*
 
-::: warning Common bug when callin custom procedures
+::: warning Common bug when calling custom procedures
 
 <VersionInfo dink="1.08" freedink="all">
 
