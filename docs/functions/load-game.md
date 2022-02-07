@@ -10,7 +10,7 @@ A D-Mod normally has, or at least has access to, three `load_game()` commands:
 2. `escape.c`, run when the player presses the <kbd>escape</kbd> key.
 3. `dinfo.c`, Dink's `die()` procedure.
 
-All running scripts are cancelled by `load_game()`. Period, even if the load fails. It is unclear what happens in that case, but the script that did the `load_game()` does not continue running no matter what. Use [game_exist](./game-exists.md) first so that a failed load can be anticipated and prevented.
+All running scripts are cancelled by `load_game()`. Period, even if the load fails. It is unclear what happens in that case, but the script that did the `load_game()` does not continue running no matter what. Use [game_exist](./game-exist.md) first so that a failed load can be anticipated and prevented.
 
 As stated, all currently-running scripts are cancelled by `load_game()`, but these are started to replace them:
 
