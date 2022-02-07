@@ -116,7 +116,7 @@ void talk(void)
 }
 ```
 
-Within the [choice_start()](../functions/choice-start.md) and [choice_end()](../functions/choice-end.md) commands() are three choices the player can choose from. If the player chooses the first option, *"Say Hello"*, the [required global variable](./variables.md#required-global-variables) `&result` will be 1. We use the if statement to check this, and to say the appropriate thing.
+Within the [choice_start()](../functions/choice-start.md) and [choice_end()](../functions/choice-end.md) commands are three choices the player can choose from. If the player chooses the first option, *"Say Hello"*, the [required global variable](./variables.md#required-global-variables) `&result` will be 1. We use the if statement to check this, and to say the appropriate thing.
 
 The choice statement can support up to 20 different choices. If you specify so many that it can't display them all at once, the player can press down to scroll through all of them.
 
