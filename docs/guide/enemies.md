@@ -44,7 +44,7 @@ void die(void)
 }
 ```
 
-At the start, it uses the same commands as a [character](./npc.md), except that it has a [sp_brain()](../functions/sp-brain.md) of 9. That means it's constantly moving, which makes more sense for little bugs and the like. The [sp_touch-damage()](../functions/sp-touch-damage.md) makes it so that it can actually harm Dink, the [sp_hitpoints()](../functions/sp-hitpoints.md) makes sure that it can die, and if it does, Dink will get a bit of experience courtesy of [sp_exp()](../functions/sp-exp.md).
+At the start, it uses the same commands as a [character](./npc.md), except that it has a [sp_brain()](../functions/sp-brain.md) of 9. That means it's constantly moving, which makes more sense for little bugs and the like. The [sp_touch_damage()](../functions/sp-touch-damage.md) makes it so that it can actually harm Dink, the [sp_hitpoints()](../functions/sp-hitpoints.md) makes sure that it can die, and if it does, Dink will get a bit of experience courtesy of [sp_exp()](../functions/sp-exp.md).
 
 When the pillbug dies, we make it so it will disappear for five minutes thanks to [editor_type()](../functions/editor-type.md), and we'll randomly create a powerup. This assumes that we have the `&save_x` and `&save_y` global variables defined. The original game includes the `emake.c` script, which has several functions that will randomly drop powerups for us.
 
@@ -110,13 +110,13 @@ void die(void)
 }
 ```
 
-As you can see, an attacker is fairly similar to a [touchers](#touchers), just with more commands.
+As you can see, an attacker is fairly similar to a [toucher](#touchers), just with more commands.
 
 In the main procedure, we define the [sp_base_attack()](../functions/sp-base-attack.md), [sp_strength()](../functions/sp-strength.md), [sp_distance()](../functions/sp-distance.md), and [sp_range()](../functions/sp-range.md) to make sure that the Bonca will attack correctly. We also make it [sp_target()](../functions/sp-target.md) Dink right away.
 
-Next we create a new procedure that wasn't in the pillbug script: attack. This is run whenever the Bonca tries to attack Dink. We make it so the Bonca can't attack over and over again with [sp_attack_wait()](../functions/sp-attack-wait.md): it must wait a random time between 0 and 4 seconds before it can attack.
+Next we create a new procedure that wasn't in the pillbug script: `attack`. This is run whenever the Bonca tries to attack Dink. We make it so the Bonca can't attack over and over again with [sp_attack_wait()](../functions/sp-attack-wait.md): it must wait a random time between 0 and 4 seconds before it can attack.
 
-The die procedure is almost the same, except we give the player a bit better of an award in `emake.c`.
+The `die` procedure is almost the same, except we give the player a bit better of an award in `emake.c`.
 
 We could make it a bit cooler by making it randomly [sp_target()](../functions/sp-target.md) Dink, target any enemies that attack it, give it some [sp_defense()](../functions/sp-defense.md), or use [playsound()](../functions/playsound.md) when it's hit. Check out `en-bonc.c` in the original source to see how that works.
 
