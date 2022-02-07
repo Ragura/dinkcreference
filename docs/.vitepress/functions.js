@@ -1,7 +1,7 @@
 const functions = {
   "game": [
     "debug",
-    "game_exists",
+    "game_exist",
     "get_burn",
     "get_time_game",
     "get_truecolor",

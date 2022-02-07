@@ -1,4 +1,4 @@
-# game_exists
+# game_exist
 
 <Prototype>bool game_exist(int save_game_number)</Prototype>
 
