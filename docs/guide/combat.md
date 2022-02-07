@@ -10,7 +10,7 @@ int &hits = math_mod(&hit_work, 2);
 &hit_work / 2;
 int &add_remainder = &hit_work;
 &add_remainder += &hits;
-&hits = random( &add_remainder , &hit_work );
+&hits = random(&add_remainder, &hit_work);
 &hits += 1;
 ```
 
@@ -27,7 +27,7 @@ int &hits = random(&hit_work, &hit_work);
 **Step 2.** Now the defense of the sprite that got hit is figured in:
 
 ```c
-&hits -= sp_defense( <sprite-getting-hit>, -1 );
+&hits -= sp_defense(<sprite-getting-hit>, -1);
 if (&hits < 0)
 {
     &hits = 0;
@@ -39,15 +39,16 @@ if (&hits < 0)
 ```c
 if (&hits == 0)
 {
-    &hits = random( 2, 0 ); // random() returns 0 or 1
+    &hits = random(2, 0); // random() returns 0 or 1
 }
 ```
 
 **Step 4.** Finally, apply the hit:
 
 ```c
-int &health = sp_hitpoints( <sprite-getting-hit>, -1 );
-&health -= &hits; sp_hitpoints( <sprite-getting-hit>, &health );
+int &health = sp_hitpoints(<sprite-getting-hit>, -1);
+&health -= &hits; 
+sp_hitpoints(<sprite-getting-hit>, &health);
 if (&health <= 0)
     die();          // note: Dink's die() is in script "dinfo"
 ```
