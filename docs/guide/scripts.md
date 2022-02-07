@@ -144,7 +144,7 @@ Take a look at the list of all scripts summoned by the game (except input, magic
 Note that the below list is accurate to Dink Smallwood 1.08.
 There are some differences in FreeDink 109.6. 
 
-The main alphabetical (A-Z) keys should all be the same as the below list, but some other keys such as the numpad keys and `F#` keys differ in there script name.
+The main alphabetical (A-Z) keys should all be the same as the below list, but some other keys such as the numpad keys and `F#` keys differ in their script name.
 
 If you would like to use some of the less common keys and need to confirm the script for that key, start the game with debug, press that key and then find it in the debug.txt
 
