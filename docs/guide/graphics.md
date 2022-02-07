@@ -80,7 +80,7 @@ In this case the depth dot is 38 pixels across from the top left hand corner and
 ### `[hardbox]`
 
 These last four numbers at the end of the `load` command are the X and then Y coordinates for the top left hand corner of the hardness box for the bmp and then the X and Y coordinates of the bottom right hand corner of the hardness box, all relative to the depth dot (see above).
-Note: The X and Y co-ordinates used in game for the bottom right hand corner, will be your specified value *minus* 1. It's too small to notice in almost any situation situation, but if you're requiring a dead-accurate hardbox for some reason, simply add one to the X and Y coordinates of the bottom right hand corner.
+Note: The X and Y co-ordinates used in game for the bottom right hand corner, will be your specified value *minus* 1. It's too small to notice in almost any situation, but if you're requiring a dead-accurate hardbox for some reason, simply add one to the X and Y coordinates of the bottom right hand corner.
 
 ```txt
 load_sequence_now graphics\dink\walk\ds-w1- 71 43 38 72
