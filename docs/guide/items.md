@@ -16,7 +16,7 @@ As soon as an [add_item()](../functions/add-item.md) or [add_magic()](../functio
 
 First it looks for the `arm()` procedure and runs this. This is where you would add 8 to the strength or change the player attack animation using [init()](../functions/init.md) commands.
 
-Second, it looks for the `armmovie()` procedure - any special thing like Dink saying, *"wow, I just armed so and so"* is said here. This is only called if the *player* arms the weapon. It is not called if [add_magic()](../functions/arm-weapon.md) is used.
+Second, it looks for the `armmovie()` procedure - any special thing like Dink saying, *"wow, I just armed so and so"* is said here. This is only called if the *player* arms the weapon. It is not called if [arm_weapon()](../functions/arm-weapon.md) is used.
 
 When the item is disarmed, it runs the `disarm()` procedure from the item's script. Use a [kill_this_task()](../functions/kill-this-task.md) at the end of it to make sure the item script dies.
 
