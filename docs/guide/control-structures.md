@@ -78,7 +78,8 @@ If you want to check if more than one condition is true, you can put if statemen
 void talk(void)
 {
     freeze(1);
-    if (&life == &lifemax) {
+    if (&life == &lifemax) 
+    {
         if (&strength > 10)
         {
             say_stop("I feel super good!", 1);
