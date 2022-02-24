@@ -259,6 +259,6 @@ The second number (11) is the frame number (of the bmp file).<br>
 The next two numbers (30 24) define the depth dot relative to the top left corner of the bmp file.<br>
 The last four numbers (-32 -22 20 3) define the hardness box relative to the depth dot.
 
-Things to note about the `SET_SPRITE_INFO` commands, is that with the standard dink engine there is a limit of 787 lines. After that number is passed, no new lines are read. To make matters worse you can have redundant lines in which you've set the sprite info once, then gone back and changed it again. There is a line for both occurances in the `dink.ini` file (but the last one is the one that is used) and so for one sprite you can waste more than 1 of the 640 odd `SET_SPRITE_INFO` lines allocated.
+Things to note about the `SET_SPRITE_INFO` commands, is that with the standard dink engine there is a limit of 787 lines. After that number is passed, no new lines are read. To make matters worse you can have redundant lines in which you've set the sprite info once, then gone back and changed it again. There is a line for both occurances in the `dink.ini` file (but the last one is the one that is used) and so for one sprite you can waste more than 1 of the 787 `SET_SPRITE_INFO` lines allocated.
 
 There is a trick you can use to exceed the `SET_SPRITE_INFO` limit. You can use the [init()](../functions/init.md) function to execute additional `SET_SPRITE_INFO` lines. They won't count towards the limit, and will be initialised without any errors, even if you've reached the 787 line limit in `dink.ini`.
