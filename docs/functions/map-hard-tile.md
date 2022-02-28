@@ -8,4 +8,4 @@ The `tile_position` refers to a tile on the current screen. Tile 1 is in the upp
 
 ![Tile table](./images/tile_table.png)
 
-The `hard_tile_index` will be in the range 0 to 799. `draw_hard_map()` is required in order to draw this hardness.
+The `hard_tile_index` will be in the range 1 to 799. `draw_hard_map()` is required in order to draw this hardness.
