@@ -76,7 +76,7 @@
 </script>
 
 <template>
-  <div class="colorblock">
+  <div class="colorblock" :style="{backgroundColor: backgroundColor}">
   </div>
 </template>
 
@@ -86,7 +86,7 @@
     width: 1rem;
     height: 1rem;
     border-radius: 50%;
-    background-color: v-bind(backgroundColor);
+    /* background-color: v-bind(backgroundColor); */
     margin-right: 0.25rem;
     vertical-align: -0.1rem;
   }
