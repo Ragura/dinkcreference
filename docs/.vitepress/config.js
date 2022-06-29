@@ -1,6 +1,6 @@
-const functions = require("./functions")
+import { functions } from "./functions"
 
-module.exports = {
+export default {
   title: 'DinkC Reference Guide',
   description: 'Documentation site for the DinkC scripting language for the game Dink Smallwood.',
   themeConfig: {
@@ -8,7 +8,8 @@ module.exports = {
     docsDir: 'docs',
     docsBranch: 'main',
     algolia: {
-      apiKey: 'd8bdd81d89b6732129066fbee21cd8c8',
+      appId: 'V50FHKJ4OW',
+      apiKey: '7ed2b7527d96d573bb2caa2dd8f86ab7',
       indexName: 'dinkcreference'
     },
     editLinks: true,
