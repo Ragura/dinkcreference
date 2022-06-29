@@ -37,7 +37,7 @@ function getGuideSidebar() {
   return [
     {
       text: 'DinkC language',
-      children: [
+      items: [
         { text: 'Introduction', link: '/' },
         { text: 'What is DinkC?', link: '/guide/dinkc' },
         { text: 'Scripts', link: '/guide/scripts' },
@@ -48,7 +48,7 @@ function getGuideSidebar() {
     },
     {
       text: 'Techniques',
-      children: [
+      items: [
         { text: 'Non-player characters', link: '/guide/npc' },
         { text: 'Plot', link: '/guide/plot' },
         { text: 'Enemies', link: '/guide/enemies' },
@@ -69,7 +69,7 @@ function generateFunctionList() {
   Object.keys(functions).sort().forEach(key => {
     functionList.push({
       text: key.charAt(0).toUpperCase() + key.slice(1),
-      children: functions[key].map(functionName => {
+      items: functions[key].map(functionName => {
         return {
           text: functionName,
           link: `/functions/${functionName.replace(/_/g, "-")}`
