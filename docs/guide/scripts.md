@@ -88,7 +88,7 @@ Let's say you've created the `grocery.c` example script in your D-Mod's `STORY` 
 
 There are three simple concepts that the engine uses to link scripts to the game: [Attachment](#attachment), [Calling](#calling), and [Summoning](#summoning).
 
-### Attachment
+## Attachment
 
 Scripts can be linked to sprites (monsters, people, houses, etc) and screens through a process called attachment.
 
@@ -98,7 +98,7 @@ An attached script defines the behaviour of the sprite or screen by automaticall
 
 If you create a sprite in the map editor and attach our grocery.c script to it, Dink will say the grocery list whenever he first sees that sprite in the game.
 
-### Calling
+## Calling
 
 Calling is when a script creates and executes another script. This is done using the [external()](../functions/external.md) and [spawn()](../functions/spawn.md) internal functions.
 
@@ -133,7 +133,7 @@ void main(void)
 
 Note that the above example is a bit flawed... scripts that are [spawn](../functions/spawn.md)ed will survive forever unless explicitly killed with [kill_this_task()](../functions/kill-this-task.md). To fix this, we could add [kill_this_task()](../functions/kill-this-task.md); after the [unfreeze](../functions/unfreeze.md)(1); line of `grocery.c`.
 
-### Summoning
+## Summoning
 
 Sometimes the game itself will summon some scripts in response to specific events or input by the player. This includes item and magic scripts that are added to the player's inventory with [add_item](../functions/add-item.md) and [add_magic](../functions/add-magic.md).
 

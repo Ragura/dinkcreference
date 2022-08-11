@@ -115,6 +115,18 @@ There are also several fake variables which aren't declared as local or global. 
 | `&return`         | The last known return value from a function or procedure.                                   |
 | `&savegameinfo`   | Represents the line of information describing a save game. Only valid in choice statements. |
 
+::: warning &arg4 - &arg9 inconsistency in FreeDink 109.6 on Linux
+
+<VersionInfo freedink="109.6 Linux">
+
+Note that FreeDink 109.6 on Linux can have issues when calling procedures that pass more than 3 arguments.
+When &arg4 - &arg9 are not specified in a procedure call, rather than defaulting to '0', they will pass the last known value(for that respective argument number) that was previously passed to a procedure.
+This can be rectified by passing 0's for those arguments, instead of leaving them unspecified.
+
+</VersionInfo>
+
+:::
+
 ## Operations
 
 There are several mathematical operations you can perform on variables. Each operation must have the following syntax:
