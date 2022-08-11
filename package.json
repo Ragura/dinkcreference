@@ -17,6 +17,6 @@
   "author": "Steven Schoovaerts",
   "license": "ISC",
   "devDependencies": {
-    "vitepress": "^0.20.4"
+    "vitepress": "^1.0.0-alpha.4"
   }
 }

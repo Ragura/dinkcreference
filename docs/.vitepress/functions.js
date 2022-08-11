@@ -1,4 +1,4 @@
-const functions = {
+export const functions = {
   "game": [
     "debug",
     "game_exist",
@@ -215,5 +215,3 @@ const functions = {
     "title_end",
   ],  
 }
-
-module.exports = functions
