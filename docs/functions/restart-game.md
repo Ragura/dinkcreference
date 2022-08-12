@@ -1,4 +1,4 @@
-# reset_timer
+# restart_game
 
 <Prototype>void restart_game(void)</Prototype>
 
