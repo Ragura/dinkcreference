@@ -13,7 +13,7 @@ export const functions = {
     "load_tile",
     "playavi",
     "reset_timer",
-    "restart_game"
+    "restart_game",
     "save_game",
     "set_mode",
     "set_smooth_follow",
