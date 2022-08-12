@@ -18,5 +18,3 @@ if (&version < 108)
     kill_game();
 }
 ```
-
-Note: FreeDink Engine versions are not returned using this function, it will only return `108` (Or `107` if running in 1.07 mode). If you need to get the FreeDink engine version, this can be accomplished through DinkC, check out: [Version Checker](https://www.dinknetwork.com/file/version_checker/) on [The Dink Network](http://www.dinknetwork.com)
