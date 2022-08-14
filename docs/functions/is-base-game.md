@@ -1,7 +1,8 @@
 # is_base_game
 
-<VersionInfo Dink Smallwood="HD">
-</VersionInfo>
+::: tip
+Dink Smallwood HD only
+:::
 
 <Prototype>bool is_base_game(void)</Prototype>
 

@@ -1,8 +1,8 @@
 # set_disable_savestates
 
-<VersionInfo Dink="HD">
- 
-</VersionInfo>
+::: tip
+Dink Smallwood HD only
+:::
 
 <Prototype>bool set_disable_savestates(bool states_disabled[-1])</Prototype>
 

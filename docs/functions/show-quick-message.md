@@ -1,7 +1,8 @@
 # show_quick_message
 
-<VersionInfo Dink Smallwood="HD">
-</VersionInfo>
+::: tip
+Dink Smallwood HD only
+:::
 
 <Prototype>int show_quick_message(string message[88])</Prototype>
 
