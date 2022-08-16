@@ -18,14 +18,8 @@ The game will automatically load any sequences on-the-fly without delay. However
 
 If `preload_seq()` is used in the `main()` procedure of a screen's base script (before any [wait()](./wait.md) commands), the *Please Wait* banner will be displayed as the game loads the necessary graphics.
 
-::: warning
+::: tip
 
-If a sprite loaded with load_sequence is added using create_sprite(), there is a rare chance it will be created with the wrong hardbox. Any attempt to redraw the hardness will not rectify this. This bug can be avoided by preloading the sequence.
-
-This is a random occuring bug, meaning that it might work ok when you test your dmod, but then when someone else plays it, there is still a chance the hardbox will be wrong, so best to use `preload_seq` to avoid this.
-
-This bug will not occur:
-- With sprites loaded using load_sequence_now.
-- With sprites placed in the editor.
+If you experience certain sprites with incorrect hardboxes in any Dink engine (sometimes it mat happen in FreeDink but not DinkHD, or vise-versa), preload the sequence with the messed up hardbox with `preload_seq` to fix the issue.
 
 :::
