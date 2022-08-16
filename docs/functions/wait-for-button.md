@@ -30,7 +30,7 @@ void main( void )
         say("You pressed button 5 [or the Esc key]", 1);
 
     if (&result == 6)
-        say("You pressed button 6 [or the '6' key]", 1);
+        say("You pressed button 6 [or the 'M' key]", 1);
 
     if (&result == 7)
         say("You pressed button 7 [or the '7' key]", 1);
