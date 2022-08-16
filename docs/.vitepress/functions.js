@@ -3,6 +3,7 @@ export const functions = {
     "debug",
     "game_exist",
     "get_burn",
+    "get_client_version",
     "get_time_game",
     "get_truecolor",
     "get_version",
