@@ -20,6 +20,6 @@ If `preload_seq()` is used in the `main()` procedure of a screen's base script (
 
 ::: tip
 
-If you experience certain sprites with incorrect hardboxes in any Dink engine (sometimes it mat happen in FreeDink but not DinkHD, or vise-versa), preload the sequence with the messed up hardbox with `preload_seq` to fix the issue.
+If you experience a bug where certain sprites have incorrect hardboxes in any Dink engine (sometimes it may happen in FreeDink but not DinkHD, or vise-versa), preload the sequence `preload_seq` to fix the issue.
 
 :::
