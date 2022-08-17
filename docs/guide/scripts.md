@@ -142,7 +142,7 @@ Take a look at the list of all scripts summoned by the game (except input, magic
 ::: tip
 
 Note that the below list is accurate to Dink Smallwood 1.08.
-There are some differences in FreeDink 109.6. 
+There are some differences in FreeDink 109.6 and DinkHD.
 
 The main alphabetical (A-Z) keys should all be the same as the below list, but some other keys such as the numpad keys and `F#` keys differ in their script name.
 
