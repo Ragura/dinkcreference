@@ -91,7 +91,7 @@ void say_banana(void)
 
 This one is slightly more complicated. Here, `banana2.c` is attached to a sprite, and it runs through the `main()` procedure when it is first displayed on the screen. It calls the predefined procedure [external()](../functions/external.md). We tell [external()](../functions/external.md) to open the `bananax.c` script, and launch the `say_banana()` procedure. It does so, and causes Dink to say *'Banana!'*
 
-::: warning Common bug when calling custom procedures
+::: warning Common bugs and things to note
 
 <VersionInfo dink="1.08" freedink="all">
 
@@ -101,6 +101,7 @@ The following should be noted about custom procedures:
 
 - Calling custom procedures will cause the calling script to continue past `}` and into code afterwards.
 
+- Calling a procedure when a screen is first loaded(immediately, before any waits), will cause the called procedure to stop executing when it reaches any `wait` or command similar to wait, and further to this; if the summoned script contains a `main()` procedure, that will then execute when the called procedure stops. This can be avoided by making sure you have a `wait(0)` BEFORE calling a custom procedure immediately on a new screen.
 </VersionInfo>
 
 :::
