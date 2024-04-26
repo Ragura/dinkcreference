@@ -2,6 +2,8 @@
 
 <Prototype small>int playsound(int sound_number, int min_speed, int rand_speed_to_add, int active_sprite, bool repeat)</Prototype>
 
+test
+
 `playsound()` will play the sound loaded with [load_sound()](./load-sound.md) into the given `sound_number`.
 
 The sound will play at speed `min_speed` plus a random value between 0 and `rand_speed_to_add`. The overall speed is in hertz (typical values are 16000 and 22050 Hz). To play a sound at normal speed, enter a `min_speed` of the `.wav` file's recorded hertz, and set the `rand_speed_to_add` to 0.
