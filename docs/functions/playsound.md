@@ -20,9 +20,11 @@ Playsound will return the soundbank number plus 1. To get the actual soundbank n
 </VersionInfo>
 :::
 
+::: tip Note
+When `active_sprite` is greater than 1, and `repeat` is set to 1, a sound will NOT play unless `active_sprite` has a soundbank number attached to it. This is set using [sp_sound()](./sp-sound.md), and does not have to be a real soundbank number.
+See example below.
+:::
 
-Note that when `active_sprite` is greater than 1, and `repeat` is set to 1, a sound will NOT play unless `active_sprite` has a soundbank number attached to it. This is set using [sp_sound()](./sp-sound.md), and does not have to be a real soundbank number.
-See example below:
 ```c
 //To make an active sprite play a repeating sound, first we must set a soundbank number
 void main( void )
