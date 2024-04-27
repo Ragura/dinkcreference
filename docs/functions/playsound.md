@@ -12,14 +12,6 @@ If `repeat` is set to 1, the sound will repeat until it dies. Typically this wil
 
 `playsound()` returns a soundbank number which can be used in other sound-related functions.
 
-::: warning
-<VersionInfo freedink="109.6">
-
-Playsound will return the soundbank number plus 1. To get the actual soundbank number of the sound, you must minus 1 from the returned value.
-
-</VersionInfo>
-:::
-
 ::: tip Note
 When `active_sprite` is greater than 1, and `repeat` is set to 1, a sound will NOT play unless `active_sprite` has a soundbank number attached to it. This is set using [sp_sound()](./sp-sound.md), and does not have to be a real soundbank number.
 See example below.
@@ -36,3 +28,11 @@ void main( void )
  playsound(24, 22050, 0, &current_sprite, 1);
 }
 ```
+
+::: warning
+<VersionInfo freedink="109.6">
+
+Playsound will return the soundbank number plus 1. To get the actual soundbank number of the sound, you must minus 1 from the returned value.
+
+</VersionInfo>
+:::

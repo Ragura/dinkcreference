@@ -15,7 +15,7 @@
 
 <VersionInfo dink="< 1.08">
 
-Timing issues would cause Dink's speed to change rather noticeably in comparison to monsters, and his [sp_speed()](./sp-speed.md) return value could vary wildly.
+Timing issues would cause Dink's speed to change rather noticeably in comparison to monsters.
 
 </VersionInfo>
 
@@ -24,3 +24,17 @@ Timing issues would cause Dink's speed to change rather noticeably in comparison
 Locks Dink's speed value to the [sp_speed()](./sp-speed.md) equivalents in the table.
 
 </VersionInfo>
+
+::: warning Dink speed return value
+<VersionInfo dink="all" freedink="all">
+
+Determining Dink's current speed using the [sp_speed()](./sp-speed.md) return value is unreliable, the returned value can randomly vary, resulting in a returned value other than his current sp_speed equivelant value.
+
+</VersionInfo>
+
+<VersionInfo dink="HD">
+
+Dink's sp_speed return value is reliable and accurate.
+
+</VersionInfo>
+:::
