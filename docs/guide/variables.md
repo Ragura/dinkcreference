@@ -86,7 +86,7 @@ Previously, it was thought that the `&speed` and `&timing` variables were also r
 `&missle_source` will store and hold the last missile to hit something. It *will not* store any other sprite that attacks.
 
 </VersionInfo>
-
+<br>
 <VersionInfo dink="1.08" freedink="all">
 
 `&missle_source` is accurate to the description in the table above.

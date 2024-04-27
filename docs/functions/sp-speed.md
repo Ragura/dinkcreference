@@ -11,7 +11,7 @@ Dink's speed can not be altered using `sp_speed()`. See [set-dink-speed()](./set
 ::: warning Dink speed return value
 <VersionInfo dink="all" freedink="all">
 
-Determining Dink's current speed using the [sp_speed()](./sp-speed.md) return value is unreliable, the returned value can randomly vary, resulting in a returned value other than his current sp_speed equivelant value.
+Determining Dink's current speed using the [sp_speed()](./sp-speed.md) return value is unreliable, the returned value can randomly vary, resulting in a returned value other than dink's current [sp_speed()](./sp-speed.md) equivelant value.
 
 </VersionInfo>
 
