@@ -3,6 +3,7 @@
 .vite_opt_cache
 dist
 node_modules
+cache
 TODOs.md
 .vscode
 .*.local
