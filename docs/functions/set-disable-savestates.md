@@ -1,7 +1,7 @@
 # set_disable_savestates
 
-::: tip
-Dink Smallwood HD only
+::: tip Version:
+Dink HD
 :::
 
 <Prototype>bool set_disable_savestates(bool states_disabled[-1])</Prototype>

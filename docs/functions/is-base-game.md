@@ -1,7 +1,7 @@
 # is_base_game
 
-::: tip
-Dink Smallwood HD only
+::: tip Version:
+Dink HD
 :::
 
 <Prototype>bool is_base_game(void)</Prototype>

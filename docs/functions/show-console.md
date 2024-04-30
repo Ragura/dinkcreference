@@ -1,5 +1,9 @@
 # show_console
 
+::: tip Version:
+Dink 1.08, FreeDink, YeOldeDink
+:::
+
 <Prototype>void show_console(void)</Prototype>
 
 `show_console()` will bring up the console that allows the player to type in DinkC commands. When the console is active, the player will not be able to control Dink with the keyboard. However, joystick/gamepad control will continue to work.

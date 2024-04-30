@@ -17,9 +17,3 @@ The game will automatically load any sequences on-the-fly without delay. However
 </VersionInfo>
 
 If `preload_seq()` is used in the `main()` procedure of a screen's base script (before any [wait()](./wait.md) commands), the *Please Wait* banner will be displayed as the game loads the necessary graphics.
-
-::: tip
-
-If you experience a bug where certain sprites have incorrect hardboxes in any Dink engine (sometimes it may happen in FreeDink but not DinkHD, or vise-versa), preload the sequence with `preload_seq` to fix the issue.
-
-:::

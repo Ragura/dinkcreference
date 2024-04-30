@@ -10,6 +10,15 @@ When the screen has faded to black, all text will appear as white, and all white
 
 <VersionInfo freedink="all">
 
-When the game is in fullscreen mode, or the window is resized in window mode, text will be barely visible. A work around for this is to warp Dink to an empty screen filled with black tiles and make Dink invisible using [sp_nodraw()](./sp-nodraw.md). Then do [fade_up()](./fade-up.md) and create your text.
+When the game is in fullscreen mode, or the window is resized in window mode, text will be barely visible.
 
 </VersionInfo>
+
+<VersionInfo dink="HD">
+
+The status bar will not fade down unless &update_status is set to 0 before the `fade_down()`. Text will also not be visible after a `fade_down()`
+
+</VersionInfo>
+
+Please see the following thread on the Dink Network for a simple to use work-around, making `fade_down()` more consistent across all engines. This work around allows a full fade down, read-able text and any text colour after the screen is faded:
+[Custom fade_down and fade_up procedures](https://www.dinknetwork.com/forum.cgi?MID=209911&Posts=1)

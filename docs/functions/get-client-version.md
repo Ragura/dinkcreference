@@ -1,9 +1,9 @@
 # get_client_version
 
-::: tip
-Dink Smallwood HD only
+::: tip Version:
+Dink HD, YeOldeDink
 :::
 
 <Prototype>int get_client_version(void)</Prototype>
 
-`get_client_version` will return the actual client version Dink Smallwood HD.
+`get_client_version` will return the actual client version of the Dink engine.

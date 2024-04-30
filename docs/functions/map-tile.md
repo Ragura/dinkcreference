@@ -6,7 +6,7 @@
 
 The `tile_position` refers to a tile on the current screen. See [map_hard_tile](./map-hard-tile.md) for more information.
 
-The `tile_index` will range from 0 to 5215. `tile_index` 0 is the tile in the upper-left corner of tileset 1, tile 128 is the tile in the upper-left corner of tileset 2, and so on.
+The `tile_index` will range from 0 to 5247. `tile_index` 0 is the tile in the upper-left corner of tileset 1, tile 128 is the tile in the upper-left corner of tileset 2, and so on.
 
 You must use `draw_background()` or `draw_screen()` in order for the tiles to be visibly updated.
 
