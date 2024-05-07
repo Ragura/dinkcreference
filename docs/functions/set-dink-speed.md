@@ -9,7 +9,7 @@
 | 4+    | 1                     | Slow                                             |
 | 3     | 3                     | Normal                                           |
 | 2     | 6                     | Fast (Herb Boots)                                |
-| 1     | 9                     | Super fast                                       |
+| 1     | 12                     | Super fast                                       |
 | 0     | N/A                   | No change                                        |
 | -1    | 0                     | Player stuck in place, but can still turn around |
 

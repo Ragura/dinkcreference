@@ -8,10 +8,10 @@ The specified bmp will cover the background-area of the screen (status bar and t
 
 [Drawing the background](./draw-background.md) will remove the bmp, reverting back to the original tiles. This is useful if you just want to use this function to change the palette without visibly showing the bmp on screen.
 
-<VersionInfo dink="all">
+<VersionInfo dink="1.08">
 
 - If a different palatte is used, it will only take effect if the game is in 256 colour full-screen mode.
-- If a save file is loaded after a palette change, all tiles will revert back to the Dink palette, but sprites will still be use the previously loaded palette. Also, further palette changes might not take effect.
+- If a save file is loaded after a palette change, all tiles will revert back to the Dink palette, but sprites will still use the previously loaded palette. Also, further palette changes might not take effect.
 
 </VersionInfo>
 
