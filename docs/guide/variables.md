@@ -196,4 +196,4 @@ say_stop("Hi.", 1);
 
 The active sprite number 1000 can only be used with [script_attach()](../functions/script-attach.md). Active sprite 1000 isn't a real sprite, but the Dink engine will make any scripts attached to it survive when the player changes screens.
 
-Similarly the active sprite number 0 can only be used with [script_attach()](../functions/script-attach.md). Active sprite 0 isn't a real sprite either, and it can be used to force a sprite to terminate when the player changes screens.
+Similarly the active sprite number 0 can only be used with [script_attach()](../functions/script-attach.md). Active sprite 0 isn't a real sprite either, and it can be used to force a script to terminate when the player changes screens.
