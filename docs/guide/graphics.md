@@ -33,7 +33,7 @@ This is the folder structure needed to locate the bmp file. If you only have a f
 
 ### `[filename]`
 
-This is the name of the bmp file. If you have an animated series, then label the files `filenameXX.bmp` where XX are sequential numbers from 01 to 50. Keep the length of the name to at most 6 characters so that the name plus the XX makes a total of 8 characters (the old DOS 8.3 filename format). Of note is the default format of using `filename-XX.bmp` while the `-` is optional, it does make for easy reading of file names, although now your name is down to 5 characters in length.
+This is the name of the bmp file. If you have an animated series, then label the files `filenameXX.bmp` where XX are sequential numbers from 01 to 50. Of note is the default format of using `filename-XX.bmp` while the `-` is optional, it does make for easy reading of file names, although now your name is down to 5 characters in length.
 
 ### `[seq]`
 

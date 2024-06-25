@@ -4,13 +4,9 @@
 
 `sp_kill_wait()` will remove (or kill) the wait time for the `active_sprite`.
 
-The wait time is the internal counter that determines when the next frame of animation will be displayed. So if you need something to happen right now, use `sp_kill_wait()`.
+The wait time relates to the timing value, which is the interval when the brain functions will next be called. 
 
 `sp_kill_wait()`, while similar in name, has absolutely nothing to do with [sp_kill()](./sp-kill.md).
 
-This is used in the weapon scripts to make sure that Dink punches right away, so the script and animation are in sync.
+You'll see this used a lot in the weapon scripts in Dink Smallwood to "make Dink punch right away". In fact, `sp_kill_wait` doesn't do anything for `active_sprite` 1; by default the player sprite has no timing value set.
 
-```c
-// excerpt from item-fst.c
-sp_kill_wait(1); //make sure dink will punch right away
-```
