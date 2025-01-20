@@ -2,7 +2,8 @@
     const props = defineProps({
         dink: String,
         freedink: String,
-        dinkhd: String
+        dinkhd: String,
+        yedink: String,
     })
 </script>
 
@@ -31,6 +32,14 @@
                 </div>
                 <div class="number">
                     {{ props.dinkhd }}
+                </div>
+            </div>
+            <div class="version yedink" v-if="props.yedink" title="Yedink">
+                <div class="title">
+                    YeDink
+                </div>
+                <div class="number">
+                    {{ props.yedink }}
                 </div>
             </div>
         </div>
@@ -76,6 +85,9 @@
     }
     .dinkhd {
         background-color: #FF6B6B;
+    }
+    .yedink {
+        background-color: #6b32c5;
     }
 
     .title {
