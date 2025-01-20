@@ -2,7 +2,7 @@
 
 <Prototype>int random(int range, int base)</Prototype>
 
-random will return a random integer between base and base + range.
+random will return a random integer between base and base + range, inclusive of the base.
 
 ```c
 // returns 0 or 1

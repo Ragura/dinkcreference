@@ -6,6 +6,8 @@
 
 An equivalent is the fourth parameter (ignore_hardness) for the [move()](./move.md) and [move_stop()](./move-stop.md) commands.
 
+Note that if the script uses [set_callback_random()](./set-callback-random.md) or [wait()](./wait.md), the nohard will be reset when the callback is processed.
+
 <VersionInfo dink="< 1.08">
 
 The `move_no_hard` value only had an effect when the `active_sprite` was actively moving (through [move()](./move.md) and [move_stop()](./move-stop.md) commands).

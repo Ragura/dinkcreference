@@ -1,6 +1,6 @@
 # load_palette
 
-<Prototype>void load_palette(string[199] 256_color_bmp_file)</Prototype>
+<Prototype>void load_palette(string[49] 256_color_bmp_file)</Prototype>
 
 load_palette replaces the current palette with the palette found in `256_color_bmp_file`. This will only work in 256 color mode, so if you plan on using palettes extensively, you may wish to use [get_truecolor](./get-truecolor.md) in `start.c` to force this.
 

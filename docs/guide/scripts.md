@@ -37,6 +37,16 @@ This should make a tiny bit of sense. Maybe the 'void' words are odd, and there'
 
 All scripts are placed in the `STORY` directory in your D-Mod's folder. Typically, they're named in the format `blah.c`, where 'blah' is at most 8 letters and numbers. You can add scripts within subfolders in your `STORY` directory, but this is not recommended, as the engine only keeps track of the first 9 characters of the script name, and strange things may happen.
 
+::: tip Note
+
+<VersionInfo dink="1.08">
+
+Dink 1.08 has a character limit of 199 per line.
+
+</VersionInfo>
+
+:::
+
 ::: warning Common Error
 Scripts must have the `.c` extension. However, newer versions of Windows hide extensions by default, so if you save a script in Notepad as `blah.c` it really saves it as `blah.c.txt`.
 

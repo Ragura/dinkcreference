@@ -1,6 +1,6 @@
 # load_tile
 
-<Prototype>void load_tile(string[191] tile_bmp, int tile_index)</Prototype>
+<Prototype>void load_tile(string[49] tile_bmp, int tile_index)</Prototype>
 
 `load_tile()` replaces the tiles at `tile_index` with `tile_bmp`. By default, `TS01.bmp` through `TS41.bmp` are loaded into indexes 1-41. If the `tile_bmp` cannot be found, it will look in the `Dink` directory, using the same path specified.
 

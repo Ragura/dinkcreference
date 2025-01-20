@@ -40,7 +40,7 @@ void hit(void)
   //get a random value between 5 and 10 to add as critical damage bonus
   &crit = random(6, 5);
 
-  //briefly disable nohit so hurt doesn't trigger the hit procedure again
+  //briefly enable nohit so hurt doesn't trigger the hit procedure again
   //this brief change is too quick to affect or interrupt anything else, so this is safe to do.
   sp_nohit(&current_sprite, 1);
   
