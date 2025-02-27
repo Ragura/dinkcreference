@@ -10,7 +10,7 @@ If `active_sprite` is greater than 1, the sound will be attached to that sprite,
 
 If `repeat` is set to 1, the sound will repeat until it dies. Typically this will be once the sprite it is attached to dies, or when Dink changes screens.
 
-`playsound()` returns a soundbank number which can be used in other sound-related functions.
+`playsound()` returns a sound number which can be used in other sound-related functions.
 
 ::: tip Note
 When `active_sprite` is greater than 1, and `repeat` is set to 1, a sound will NOT play unless `active_sprite` has a soundbank number attached to it. This is set using [sp_sound()](./sp-sound.md), and does not have to be a real soundbank number.

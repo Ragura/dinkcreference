@@ -2,9 +2,13 @@
 
 <Prototype>void disable_all_sprites(void)</Prototype>
 
-`disable_all_sprites()` is supposed to disable all sprites on the current screen but does not work as intended. The equivalent of this function is setting [sp_disabled()](./sp-disabled.md) to 1 for all sprites.
+`disable_all_sprites()` disables all sprites on the current screen. The equivalent of this function is setting [sp_disabled()](./sp-disabled.md) to 1 for all sprites.
 
-Here is a nice work around that will accomplish the true intention of this command, and will disable all sprites instantly.
+<VersionInfo dink="all" freedink="all">
+In Dink Smallwood, DinkHD and FreeDink, this will not affect the most recently created sprite.
+</VersionInfo>
+
+Here is a nice work around that will accomplish the true intention of this command, and will disable all sprites instantly for those engines that don't do so correctly:
 
 ```c
  //there can be a maximum of 299 actve sprite numbers

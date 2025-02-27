@@ -6,6 +6,6 @@
 
 For more information, see [Items](../guide/items.md)
 
-<VersionInfo yedink="<= 0.94">
+<VersionInfo yedink="<= 0.94" freedink="all">
 In YeoldeDink <= 0.94 `count_magic()` also counts the first item slot. This shouldn't actually pose a problem since you shouldn't be searching for anything that would match the first item slot with `count_magic()`. 
 </VersionInfo>

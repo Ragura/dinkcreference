@@ -10,9 +10,16 @@ This command was recommended before playing a sequence or creating a sprite that
 
 </VersionInfo>
 
-<VersionInfo dink="1.08">
+<VersionInfo dink="1.08" freedink="all" yedink="all">
 
 The game will automatically load any sequences on-the-fly without delay. However, this will cause a slight pause as the game loads the sequences, so you may want to keep using `preload_seq()` in the `main()` procedure of sprites with several animations to prevent this small pause.
+
+</VersionInfo>
+
+::: tip Note:
+<VersionInfo dink="HD">
+
+n DinkHD `preload_seq()` does not do anything. However it may be required in some situations due to DinkHD reaching the graphics allocation limit and purging graphics from memory. As a work-around use [init()](./init.md) to load sequences before using them if you notice this happening.
 
 </VersionInfo>
 

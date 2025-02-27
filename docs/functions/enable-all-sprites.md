@@ -2,9 +2,13 @@
 
 <Prototype>void enable_all_sprites(void)</Prototype>
 
-`enable_all_sprites()` is supposed to enable all sprites after they have been disabled with [disable_all_sprites()](./disable-all-sprites.md) or [sp_diabled()](./sp-disabled.md). This function does not work as intended.
+`enable_all_sprites()` enables all sprites that have been disbled with [disable_all_sprites()](./disable-all-sprites.md) or [sp_diabled()](./sp-disabled.md). 
 
-Here is a nice work around that will accomplish the true intention of this command, and will enable all sprites instantly.
+<VersionInfo dink="all" freedink="all">
+In Dink Smallwood, DinkHD and FreeDink, this will not affect the most recently created sprite.
+</VersionInfo>
+
+Here is a nice work around that will accomplish the true intention of this command, and will disable all sprites instantly for those engines that don't do so correctly:
 
 ```c
 //there can be a maximum of 299 actve sprite numbers

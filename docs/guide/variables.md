@@ -79,17 +79,17 @@ There are several global variables that are **required** by the Dink engine. The
 
 Previously, it was thought that the `&speed` and `&timing` variables were also required, but they are not used by the Dink engine.
 
+::: tip &missile_target behaviour
+
+If a missile hits a sprite that has a script attached to it, &missile_taget will only store the target until the next [wait()](../functions/wait.md), then it's value will change to "1".
+
+:::
+
 ::: tip &missle_source behaviour
 
 <VersionInfo dink="< 1.08">
 
-`&missle_source` will store and hold the last missile to hit something. It *will not* store any other sprite that attacks.
-
-</VersionInfo>
-<br>
-<VersionInfo dink="1.08" freedink="all">
-
-`&missle_source` is accurate to the description in the table above.
+In Dink Smallwood version lower than 1.08, `&missle_source` will store and hold the last missile to hit something. It *will not* store any other sprite that attacks.
 
 </VersionInfo>
 

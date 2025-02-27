@@ -13,7 +13,7 @@ load_sequence_now [path]/[filename] [seq] [delay] [X coord] [Y coord] [hardbox]
 load_sequence [path]/[filename] [seq] [delay] [X coord] [Y coord] [hardbox]
 ```
 
-`load_sequence_now` puts those graphics straight into memory and is mainly used for the graphics associated with Dink and the status bar, but also include the burning pine tree – as it's nice to have that tree burn as soon as it's hit by a fireball. I would also recommend you using the `load_sequence_now` when loading graphics mid-game similar to what the original sword scripts do.
+`load_sequence_now` puts those graphics straight into memory and is mainly used for the graphics associated with Dink and the status bar, but also include the burning pine tree – as it's nice to have that tree burn as soon as it's hit by a fireball.
 
 `load_sequence` makes those graphics available to the Dink Engine or the map editor.
 
@@ -96,7 +96,9 @@ You can see a similar hardness box mid game by activating the debug mode (pressi
 
 ## Loading graphics on the fly
 
+<VersionInfo dink="< 1.08">
 Note that you need to use the [init()](../functions/init.md) command to load new graphics during a game, and also that the the original `dink.ini` recommends that you load the graphics which have the most bmp files per sequence first.
+</VersionInfo>
 
 Sample code to load new graphics on the fly – from `item-sw1.c` original source file:
 
