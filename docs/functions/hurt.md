@@ -55,7 +55,7 @@ void hit(void)
 
 <br>
 
-<VersionInfo dink="< 1.08">
+<VersionInfo dink="1.07">
 
 - A negative damage value would cause the game to freeze.
 

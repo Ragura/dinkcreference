@@ -29,7 +29,7 @@ void main ( void )
 }
 ```
 
-<VersionInfo dink="< 1.08">
+<VersionInfo dink="1.07">
 
 A couple bugs displaying the map dot: it would not be displayed properly if Dink was warped using DinkC or if he was on the 32nd screen of any row.
 

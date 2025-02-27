@@ -4,7 +4,7 @@
 
 `sp_script()` kills any scripts currently owned by `active_sprite`, sets the script for the `active_sprite`, executes the `main` procedure of the script, and returns the script number of the new script.
 
-<VersionInfo dink="< 1.08">
+<VersionInfo dink="1.07">
 
 If a sprite replaced it's own script, there was a chance odd things would happen.
 

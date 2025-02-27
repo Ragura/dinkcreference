@@ -6,7 +6,7 @@
 
 ::: tip Note
 
-<VersionInfo dink="< 1.08">
+<VersionInfo dink="1.07">
 
 `stopmidi()` restarts the currently playing midi.
 

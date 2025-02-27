@@ -4,7 +4,7 @@
 
 `preload_seq()` loads the specified graphic sequence into memory if it has not already been loaded.
 
-<VersionInfo dink="< 1.08">
+<VersionInfo dink="1.07">
 
 This command was recommended before playing a sequence or creating a sprite that may be new. Otherwise, the sprite could be invisible for a brief amount of time.
 

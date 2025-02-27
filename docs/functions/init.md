@@ -14,7 +14,7 @@ init("load_sequence_now graphics\dink\sword\walk\d-sw3- 73 43 28 69 -13 -9 13 9"
 init("load_sequence_now graphics\dink\sword\walk\d-sw4- 74 43 66 75 -14 -12 20 12");
 ```
 
-<VersionInfo dink="< 1.08">
+<VersionInfo dink="1.07">
 `init()` only works well if the graphics are in `dir.ff` format. If the graphics are plain bmps, and the replaced sequence is played, it may include frames from other sequences.
 
 If replacing sequences with different numbers of frames, the longest sequence should be loaded first in the `dink.ini`, otherwise it might replace frames in other sequences.

@@ -14,7 +14,7 @@ if (&junk > 0)
 }
 ```
 
-<VersionInfo dink="< 1.08">
+<VersionInfo dink="1.07">
 
 If the procedure cannot be found it will still attempt to run the script, and will run the last procedure in the script.
 

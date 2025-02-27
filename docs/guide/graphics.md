@@ -96,7 +96,7 @@ You can see a similar hardness box mid game by activating the debug mode (pressi
 
 ## Loading graphics on the fly
 
-<VersionInfo dink="< 1.08">
+<VersionInfo dink="1.07">
 Note that you need to use the [init()](../functions/init.md) command to load new graphics during a game, and also that the the original `dink.ini` recommends that you load the graphics which have the most bmp files per sequence first.
 </VersionInfo>
 

@@ -13,7 +13,7 @@
 | 0     | N/A                   | No change                                        |
 | -1    | 0                     | Player stuck in place, but can still turn around |
 
-<VersionInfo dink="< 1.08">
+<VersionInfo dink="1.07">
 
 Timing issues would cause Dink's speed to change rather noticeably in comparison to monsters.
 

@@ -16,7 +16,7 @@ say("`4Hello!", 1); // Orange!
 
 By default, the color code will be `` `$ `` (yellow).
 
-<VersionInfo dink="< 1.08">
+<VersionInfo dink="1.07">
 
 There were some problems using the `` `% `` color tag directly followed by certain letters (such as I, D, and J).
 
@@ -26,7 +26,7 @@ say("`%drama queen", 1); // used to not be displayed properly
 
 </VersionInfo>
 
-<VersionInfo dink="< 1.08">
+<VersionInfo dink="1.07">
 
 Dink would not interpret lines with a colon correctly, like so:
 

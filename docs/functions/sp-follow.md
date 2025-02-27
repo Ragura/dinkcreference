@@ -4,7 +4,7 @@
 
 `sp_follow()` will cause `active_sprite` to get within 40 pixels of `target_active_sprite`. The `active_sprite` will attempt to move towards its target, and will not be able to maneuver around obstacles.
 
-<VersionInfo dink="< 1.08">
+<VersionInfo dink="1.07">
 
 The sprite would always attempt to move in the directions up, down, left, and right.
 

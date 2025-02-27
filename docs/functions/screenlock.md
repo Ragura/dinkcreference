@@ -10,7 +10,7 @@
 
 </VersionInfo>
 
-<VersionInfo dink="< 1.08">
+<VersionInfo dink="1.07">
 
 It was possible to walk past hardness on the edge of a screenlocked screen.
 

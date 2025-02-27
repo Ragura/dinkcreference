@@ -21,7 +21,7 @@ void main(void)
 
 Note: A script cannot define a local variable with the same name as a global variable. Any attempt to do so results in the local variable being ignored and the [global variable](#global-variables) being used instead.
 
-<VersionInfo dink="< 1.08">
+<VersionInfo dink="1.07">
 
 A local variable name cannot be a global variable's name with a suffix. For example, if a script tries to declare a local variable &goldguard, no local variable is created. Instead, all references to &goldguard are treated as references to the global variable &gold.
 
@@ -87,7 +87,7 @@ If a missile hits a sprite that has a script attached to it, &missile_taget will
 
 ::: tip &missle_source behaviour
 
-<VersionInfo dink="< 1.08">
+<VersionInfo dink="1.07">
 
 In Dink Smallwood version lower than 1.08, `&missle_source` will store and hold the last missile to hit something. It *will not* store any other sprite that attacks.
 

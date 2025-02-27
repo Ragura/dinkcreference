@@ -4,7 +4,7 @@
 
 `compare_magic()` returns '1' if the currently armed magic is script. See [compare_weapon()](./compare-weapon.md) for example usage.
 
-<VersionInfo dink="< 1.08">
+<VersionInfo dink="1.07">
 
 `compare_magic()` was available but it did not work correctly.
 
