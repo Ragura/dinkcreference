@@ -4,4 +4,4 @@
 
 <Prototype>void playavi(string avi_file)</Prototype>
 
-`playavi` plays the video named `avi_file` in the current Dmod directory. This requires FFMPeg's FFPlay to be installed on the user's computer.
+`playavi` plays the video named `avi_file` in the root of the current Dmod directory. This requires FFMPeg's FFPlay to be installed on the user's computer.
