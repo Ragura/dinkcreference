@@ -1,8 +1,6 @@
 # show_console
 
-::: tip Version:
-Dink 1.08, FreeDink, YeOldeDink
-:::
+**Version:** <VersionInfo dink="1.08" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo yedink="" standalone />
 
 <Prototype>void show_console(void)</Prototype>
 

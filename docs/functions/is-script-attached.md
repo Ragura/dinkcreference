@@ -1,5 +1,7 @@
 # is_script_attached
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>int is_script_attached(int active_sprite)</Prototype>
 
 `is_script_attached()` returns the script number of `active_sprite`. If there is not a script attached to `active_sprite`, 0 is returned. This is only really useful if used in conjunction with [run_script_by_number()](./run-script-by-number.md).

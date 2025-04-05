@@ -1,5 +1,7 @@
 # sp_hard
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>bool sp_hard(int active_sprite, bool not_hard[-1])</Prototype>
 
 `sp_hard()` sets the `not_hard` value for the `active_sprite`. If `not_hard` is 1, the sprite does not have hardness. If it is 0, it has hardness.

@@ -1,5 +1,7 @@
 # sp_nohit
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>bool sp_nohit(int active_sprite, bool no_hit[-1])</Prototype>
 
 `sp_nohit()` gets or sets the `no_hit` value for the `active_sprite`.

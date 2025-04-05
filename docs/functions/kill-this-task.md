@@ -1,5 +1,7 @@
 # kill_this_task
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>void kill_this_task(void)</Prototype>
 
 `kill_this_task()` will kill the current script completely. Note that this isn't needed to kill normal scripts attached to sprites, which are killed automatically when the sprite is killed.

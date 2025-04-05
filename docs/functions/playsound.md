@@ -1,5 +1,7 @@
 # playsound
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype small>int playsound(int sound_number, int min_speed, int rand_speed_to_add, int active_sprite, bool repeat)</Prototype>
 
 `playsound()` will play the sound loaded with [load_sound()](./load-sound.md) into the given `sound_number`.
@@ -13,15 +15,15 @@ If `repeat` is set to 1, the sound will repeat until it dies. Typically this wil
 `playsound()` returns a sound number which can be used in other sound-related functions.
 
 ::: tip Note
-When `active_sprite` is greater than 1, and `repeat` is set to 1, a sound will NOT play unless `active_sprite` has a soundbank number attached to it. This is set using [sp_sound()](./sp-sound.md), and does not have to be a real soundbank number.
+When `active_sprite` is greater than 1, and `repeat` is set to 1, a sound will NOT play unless `active_sprite` has a sound number attached to it. This is set using [sp_sound()](./sp-sound.md), and does not have to be a real soundbank number.
 See example below.
 :::
 
 ```c
-//To make an active sprite play a repeating sound, first we must set a soundbank number
+//To make an active sprite play a repeating sound, first we must set a sound number
 void main( void )
 {
- //For this example we are using a fake soundbank number of 999
+ //For this example we are using a fake soundnumber of 999
  sp_sound(&current_sprite, 999);
  
  //now we can play a repeating sound attached to an active sprite
@@ -30,7 +32,7 @@ void main( void )
 ```
 
 ::: warning
-<VersionInfo freedink="109.6">
+<VersionInfo freedink="">
 
 Playsound will return the soundbank number plus 1. To get the actual soundbank number of the sound, you must minus 1 from the returned value.
 

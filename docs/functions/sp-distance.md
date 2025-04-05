@@ -1,5 +1,7 @@
 # sp_distance
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>int sp_distance(int active_sprite, int distance[-1])</Prototype>
 
 `sp_distance()` gets or sets the `distance` value for the `active_sprite`. This `distance` value serves a single purpose.

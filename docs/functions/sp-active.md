@@ -1,5 +1,7 @@
 # sp_active
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>int sp_active(int active_sprite, bool active[-1])</Prototype>
 
 `sp_active` gets or sets the active value of the `active_sprite`.  In this context, a sprite with an active attribute of 1 is a sprite that exists.  If a sprite is not active, it's gone, vamoose, getteratto.  It is not possible to resurrect an inactive sprite.<br>

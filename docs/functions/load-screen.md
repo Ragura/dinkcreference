@@ -1,5 +1,7 @@
 # load_screen
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>void load_screen(void)</Prototype>
 
 `load_screen()` loads the screen specified by `&player_map`.

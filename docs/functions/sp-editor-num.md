@@ -1,5 +1,7 @@
 # sp_editor_num
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>int sp_editor_num(int active_sprite)</Prototype>
 
 `sp_editor_num()` returns the editor sprite number of `active_sprite`. This editor sprite number is only used in the [editor_type()](./editor-type.md), [editor_seq()](./editor-seq.md), [editor_frame()](./editor-frame.md), and [sp()](./sp.md) commands.

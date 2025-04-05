@@ -1,5 +1,7 @@
 # sound_set_kill
 
+**Version:** <VersionInfo dink="1.05+" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>void sound_set_kill(int soundbank)</Prototype>
 
 `sound_set_kill()` will stop playing the sound using the given soundbank.
@@ -14,7 +16,7 @@ sound_set_kill(&soundbank);
 ```
 
 ::: warning
-<VersionInfo freedink="109.6">
+<VersionInfo freedink="">
 
 Playsound will return the soundbank number plus 1. To get the actual soundbank number of the sound, you must minus 1 from the returned value.
 

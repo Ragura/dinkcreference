@@ -1,5 +1,7 @@
 # stop_entire_game
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>void stop_entire_game(bool stop)</Prototype>
 
 `stop_entire_game()` will stop the entire game, except for choice statements, if `stop` is 1.

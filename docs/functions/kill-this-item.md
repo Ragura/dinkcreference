@@ -1,5 +1,7 @@
 # kill_this_item
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>void kill_this_item(string[9] script)</Prototype>
 
 `kill_this_item()` removes the first instance of the item using script from the player's inventory.

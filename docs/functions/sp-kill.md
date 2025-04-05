@@ -1,5 +1,7 @@
 # sp_kill
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>void sp_kill(int active_sprite, int kill_time)</Prototype>
 
 `sp_kill()` sets the `kill_time` value for the `active_sprite`.

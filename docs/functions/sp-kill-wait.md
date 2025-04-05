@@ -1,5 +1,7 @@
 # sp_kill_wait
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>void sp_kill_wait(int active_sprite)</Prototype>
 
 `sp_kill_wait()` will remove (or kill) the wait time for the `active_sprite`.

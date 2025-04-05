@@ -1,5 +1,7 @@
 # load_map
 
+**Version:** <VersionInfo dink="1.08" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>void load_map(string[49] map_dat, string[49] dink_dat)</Prototype>
 
 `load_map()` loads in a new map file using `map.dat` and `dink.dat`. The new map will not be visible until the player changes screens.

@@ -1,18 +1,14 @@
 # sp_custom
 
+**Version:** <VersionInfo dink="1.08" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>int sp_custom(string key[199], int active_sprite, int value[-1])</Prototype>
 
 `sp_custom()` gets or sets the custom `key` `value` for the `active_sprite`. Each sprite can store unlimited keys. 
 
-<VersionInfo dink="1.08" freedink="< 109.6">
+<VersionInfo dink="1.08">
 
 sp_custom will not work for sprite 1 (the player sprite).
-
-</VersionInfo>
-
-<VersionInfo freedink="109.6">
-
-sp_custom will work for any sprite, including sprite 1 (the player sprite).
 
 </VersionInfo>
 

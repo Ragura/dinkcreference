@@ -1,5 +1,7 @@
 # move_stop
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype small>void move_stop(int active_sprite, int direction, int destination_coordinate, bool ignore_hardness)</Prototype>
 
 `move_stop()` behaves the same as `move()`, except that the script will stop until the `active_sprite's` x or y coordinate meets or exceeds the `destination_coordinate`.

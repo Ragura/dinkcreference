@@ -1,5 +1,7 @@
 # fill_screen
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>void fill_screen(int dink_palette_index)</Prototype>
 
 `fill_screen()` fills the entire screen (tiles, background sprites, and status bar) with the color given by `dink_palette_index`. 0 is black, and 255 is white. All active sprites will remain unaffected.

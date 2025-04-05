@@ -1,5 +1,7 @@
 # sp_nodraw
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>bool sp_nodraw(int active_sprite, bool no_draw[-1])</Prototype>
 
 `sp_nodraw()` gets or sets the `no_draw` value for the `active_sprite`.

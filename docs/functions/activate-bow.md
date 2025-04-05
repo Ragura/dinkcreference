@@ -1,5 +1,7 @@
 # activate_bow
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>void activate_bow(void)</Prototype>
 
 `activate_bow()` allows bow-type weapons to charge up. The animation is hard-coded to base 100, uses all 8 directions, and each direction uses 6 frames. As the function name implies, it is used almost exclusively for the bow.

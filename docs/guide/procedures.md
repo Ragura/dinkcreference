@@ -93,17 +93,11 @@ This one is slightly more complicated. Here, `banana2.c` is attached to a sprite
 
 ::: warning Common bugs and things to note
 
-<VersionInfo dink="1.08" freedink="all">
-
 The following should be noted about custom procedures:
 
 - Custom procedures called both externally and from within the same script will run on their own script number. Called procedures will not have access to previously declared local variables.
 
-- Calling custom procedures will cause the calling script to continue past `}` and into code afterwards.
-
 - Calling a procedure when a screen is first loaded(immediately, before any waits), will cause the called procedure to stop executing when it reaches any `wait` or command similar to wait, and further to this; if the summoned script contains a `main()` procedure, that will then execute when the called procedure stops. This can be avoided by making sure you have a `wait(0)` BEFORE calling a custom procedure immediately on a new screen.
-</VersionInfo>
-
 :::
 
 ## Global procedures
@@ -131,7 +125,7 @@ Once a global procedure is defined, you can reference the procedure name without
 
 ::: warning
 
-<VersionInfo dink="1.08" freedink="all">
+<VersionInfo dink="" freedink="">
 
 Global Procedures are broken. You can declare one Global Procedure and it will work fine, but declaring anymore will make none of them work(including the first one), and might cause the game to crash.
 

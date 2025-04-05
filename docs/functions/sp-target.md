@@ -1,5 +1,7 @@
 # sp_target
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>int sp_target(int active_sprite, int target_active_sprite[-1])</Prototype>
 
 `sp_target()` gets or sets the `target_active_sprite` for the `active_sprite`.

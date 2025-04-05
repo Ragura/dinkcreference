@@ -1,5 +1,7 @@
 # sp_frame
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>int sp_frame(int active_sprite, int frame[-1])</Prototype>
 
 `sp_frame()` gets or sets the next animation `frame` for the `active_sprite`. In theory this sets the next frame of animation.

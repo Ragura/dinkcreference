@@ -1,8 +1,6 @@
 # set_disable_savestates
 
-::: tip Version:
-Dink HD
-:::
+**Version:** <VersionInfo dinkhd="1.97+" standalone />&nbsp;<VersionInfo yedink="0.95+" standalone />
 
 <Prototype>bool set_disable_savestates(bool states_disabled[-1])</Prototype>
 

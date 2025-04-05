@@ -1,5 +1,7 @@
 # move
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype small>void move(int active_sprite, int direction, int destination_coordinate, bool ignore_hardness)</Prototype>
 
 `move()` will move the active_sprite in the direction specified. Valid directions are 1-4 and 6-9. The direction relates directly to the numeric keypad, where 2 is down, 6 is right, etc.

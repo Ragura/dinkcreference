@@ -1,5 +1,7 @@
 # loopmidi
 
+**Version:** <VersionInfo dink="1.08" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>void loopmidi(bool loop_midi)</Prototype>
 
 `loopmidi()` sets whether or not midis will automatically loop. If `loop_midi` is 1, midis will loop, and if it is 0, midis will not loop.

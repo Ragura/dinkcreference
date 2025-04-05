@@ -1,5 +1,7 @@
 # sp_que
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>int sp_que(int active_sprite, int que[-1])</Prototype>
 
 `sp_que()` gets or sets the `que` value for the `active_sprite`.

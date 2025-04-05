@@ -1,5 +1,7 @@
 # sp_noclip
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>bool sp_noclip(int active_sprite, bool not_clipped[-1])</Prototype>
 
 `sp_noclip()` gets or sets the `not_clipped` value for the `active_sprite`.

@@ -1,8 +1,6 @@
 # get_platform
 
-::: tip Version:
-Dink HD, YeOldeDink
-:::
+**Version:** <VersionInfo yedink="0.7+" standalone />&nbsp;<VersionInfo dinkhd="" standalone />
 
 <Prototype>int get_platform(void)</Prototype>
 

@@ -1,5 +1,7 @@
 # sp_picfreeze
 
+**Version:** <VersionInfo dink="1.05+" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>bool sp_picfreeze(int active_sprite, bool frame_freeze[-1])</Prototype>
 
 `sp_picfreeze()` gets or sets the `frame_freeze` value for the `active_sprite`.

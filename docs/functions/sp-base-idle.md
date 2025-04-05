@@ -1,5 +1,7 @@
 # sp_base_idle
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>int sp_base_idle(int active_sprite, int base_sequence)</Prototype>
 
 `sp_base_idle()` sets the idle `base_sequence` for the `active_sprite`.

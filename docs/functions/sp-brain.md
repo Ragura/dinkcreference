@@ -1,5 +1,7 @@
 # sp_brain
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>int sp_brain(int active_sprite, int brain[-1])</Prototype>
 
 `sp_brain()` gets or sets the brain for the `active_sprite`.
@@ -26,3 +28,6 @@ A brain defines how a sprite behaves. Several sprite functions are only compatib
 | 15    | Shadow              | Mirrors the parent sprite's (stored in [sp_brain_parm()](./sp-brain-parm.md)) attributes x, y, and size. Will die automatically with the parent sprite.                                                                                                                                                                                                 |
 | 16    | Smart               | The sprite will walk around, stop, look around, and walk some more.                                                                                                                                                                                                                                                               |
 | 17    | Missile (once)      | Will play the current sequence once, damage sprites in range, and die.
+| 9000    | Repeat & Reverse     | <VersionInfo yedink=""> Similar to brain 6(Repeat), but when it gets to the first or last frame it will reverse. </VersionInfo>|
+| 9001    | Circle     | <VersionInfo yedink="">Moves around the centre of the screen according to [sp_brain_parm()](./sp-brain-parm.md) and [sp_brain_parm2()](./sp-brain-parm2.md) </VersionInfo>|
+| 9002    | Bounce (defined)     | <VersionInfo yedink="">A re-written bounce brain that uses dink.ini box parms instead of sprite bounding boxes to determine when to bounce back. </VersionInfo>|

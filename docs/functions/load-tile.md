@@ -1,5 +1,7 @@
 # load_tile
 
+**Version:** <VersionInfo dink="1.08" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>void load_tile(string[49] tile_bmp, int tile_index)</Prototype>
 
 `load_tile()` replaces the tiles at `tile_index` with `tile_bmp`. By default, `TS01.bmp` through `TS41.bmp` are loaded into indexes 1-41. If the `tile_bmp` cannot be found, it will look in the `Dink` directory, using the same path specified.

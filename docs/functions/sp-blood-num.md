@@ -1,5 +1,7 @@
 # sp_blood_num
 
+**Version:** <VersionInfo dink="1.08" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>int sp_blood_num(int active_sprite, int random[-1])</Prototype>
 
 `sp_blood_num()` sets the `random` number of sequences for the `active_sprite` to choose as blood when attacked, the return value is the value of [sp_blood_seq()](./sp-blood-seq.md). Using the default value of 3, the `active_sprite` will play a blood sequence between 187 (the default sp_blood_seq) and 189 (187 + 2).

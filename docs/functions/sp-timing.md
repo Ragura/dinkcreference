@@ -1,5 +1,7 @@
 # sp_timing
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>int sp_timing(int active_sprite, int timing[-1])</Prototype>
 
 `sp_timing()` gets or sets the `timing` value for the `active_sprite`.

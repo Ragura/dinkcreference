@@ -1,5 +1,7 @@
 # create_sprite
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>int create_sprite(int x, int y, int brain, int sequence, int frame)</Prototype>
 
 `create_sprite()` creates a new sprite with the given *x, y, brain, sequence,* and *frame*. It returns the active sprite number. Note that the sequence and frame are equivalent to [sp_pseq()](./sp-pseq.md) and [sp_pframe()](./sp-pframe.md).

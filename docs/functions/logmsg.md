@@ -1,8 +1,6 @@
 # logmsg
 
-::: tip Version:
-Dink HD
-:::
+**Version:** <VersionInfo dinkhd="" standalone />
 
 <Prototype>void logmsg(string line)</Prototype>
 

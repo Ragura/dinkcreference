@@ -1,5 +1,7 @@
 # sp_dir
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>int sp_dir(int active_sprite, int direction[-1])</Prototype>
 
 `sp_dir()` gets or sets the `direction` the `active_space` is facing. While a direction can be set for any active sprite, it will only affect sprites with a [sp_base_walk()](./sp-base-walk.md).

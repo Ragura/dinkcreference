@@ -1,11 +1,13 @@
 # enable_all_sprites
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>void enable_all_sprites(void)</Prototype>
 
 `enable_all_sprites()` enables all sprites that have been disbled with [disable_all_sprites()](./disable-all-sprites.md) or [sp_diabled()](./sp-disabled.md). 
 
-<VersionInfo dink="all" freedink="all">
-In Dink Smallwood, DinkHD and FreeDink, this will not affect the most recently created sprite.
+<VersionInfo dink="" freedink="">
+In Dink Smallwood 1.08 and FreeDink, this will not affect the most recently created sprite.
 </VersionInfo>
 
 Here is a nice work around that will accomplish the true intention of this command, and will disable all sprites instantly for those engines that don't do so correctly:

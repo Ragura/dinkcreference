@@ -1,5 +1,7 @@
 # arm_magic
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>void arm_magic(void)</Prototype>
 
 `arm_magic()` arms the magic spell in the magic inventory slot (1-8) specified in the `&cur_magic` [required global variable](../guide/variables.md#required-global-variables), or disarms magic if `&cur_magic` is 0. If another magic spell is currently armed, it will run that magic spell's `disarm()` procedure, and it will run the new magic spell's `arm()` procedure. This command does not update the status area: you will usually want to [draw_status()](./draw-status.md) after using this command. Example:
@@ -12,3 +14,9 @@ draw_status();
 ```
 
 For more information, see [Items](../guide/items.md)
+
+<VersionInfo dinkhd="">
+
+`arm_magic` updates the status area automatically.
+
+</VersionInfo>

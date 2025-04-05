@@ -1,5 +1,7 @@
 # sp_base_attack
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>int sp_base_attack(int active_sprite, int base_sequence)</Prototype>
 
 `sp_base_attack()` sets the attack `base_sequence` for the `active_sprite`. Setting this value will enable the sprite to attack other sprites using the given `base_sequence`.

@@ -1,8 +1,6 @@
 # show_popup
 
-::: tip Version:
-Dink HD
-:::
+**Version:** <VersionInfo dinkhd="" standalone />
 
 <Prototype>void show_popup(string rttex_file, int_delay)</Prototype>
 

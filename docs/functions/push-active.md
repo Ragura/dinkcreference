@@ -1,5 +1,7 @@
 # push_active
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>void push_active(bool dink_can_push)</Prototype>
 
 `push_active()` will allow Dink to push objects (and play the push sequence) if `dink_can_push` is 1. Dink is able to push things by default.

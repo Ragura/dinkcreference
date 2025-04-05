@@ -76,6 +76,7 @@ void touch(void)
 ```
 
 ::: warning
-When making a scripted warp attached to a sprite, make sure the "warp" sprite property is disabled in the editor. If you have both scripted warp and editor warp set on the same sprite, it has the random chance to cause a bug where it will warp the player to screen 0 instead of the actual intended location.
-This bug might be DinkHD specific.
+- When making a scripted warp attached to a sprite, make sure the "warp" sprite property is disabled in the editor. If you have both scripted warp and editor warp set on the same sprite, it has the random chance to cause a bug where it will warp the player to screen 0 instead of the actual intended location.
+
+- Brain 6 sprites set to warp in the editor can cause the game to freeze when the warp is triggered. Alternatively, use a scripted warp instead.
 :::

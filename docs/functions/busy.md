@@ -1,5 +1,7 @@
 # busy
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>int busy(int active_sprite)</Prototype>
 
 `busy()` returns the active sprite number of the text sprite the `active_sprite` is currently saying. If 0, `active_sprite` is not currently talking.

@@ -1,8 +1,12 @@
 # initfont
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>void initfont(string[31] font)</Prototype>
 
 `initfont()` will cause the game to use `font` for all current and future text. Note that the font must be installed as a normal font (in the Windows/Fonts folder on Windows). The default font is `'Arial'`.
+
+<VersionInfo yedink=""> Loading a new text typeface through initfont will check for a TTF file in the root of the Dmod directory as well. </VersionInfo>
 
 There are some differences in the way `font` is interpreted between Dink/Freedink, and also between font filetypes. 
 
@@ -18,18 +22,10 @@ The actual font filename is viewed in the file properites - Right Click on the f
 
 Below you will find the requirements for `string font` based on filetype and Dink Engine version.
 
-<VersionInfo freedink="all">
+<VersionInfo freedink="">
 
 Only Truetype fonts(*.ttf) are compatible with `initfont()`
 
 </versioninfo>
 
-| File Type | String `font` requirement                                   |
-|-----------|-----------------------------------------------------------|
-| *.ttf     | <VersionInfo dink="all">Font name</versioninfo> <br> <VersionInfo freedink="all">File Name</versioninfo>  |
-| *.otf     | <VersionInfo dink="all">File name</versioninfo>                           |
-| *.fon     | <VersionInfo dink="all">Font name</versioninfo>                    |
-| *.ttc     | <VersionInfo dink="all">Font name</versioninfo>    |
-
-
-Sticking to the above should get fonts to work most of the time. Sometimes fonts just won't work though - it's best to test them individually to make sure.
+Sometimes fonts just won't work - it's best to test them individually to make sure.

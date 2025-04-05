@@ -1,8 +1,6 @@
 # get_client_fork
 
-::: tip Version:
-YeOldeDink, Dink HD
-:::
+**Version:** <VersionInfo yedink="" standalone />&nbsp;<VersionInfo dinkhd="1.98+" standalone />
 
 <Prototype>int get_client_fork(void)</Prototype>
 

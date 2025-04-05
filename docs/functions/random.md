@@ -1,5 +1,7 @@
 # random
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>int random(int range, int base)</Prototype>
 
 random will return a random integer between base and base + range, inclusive of the base.

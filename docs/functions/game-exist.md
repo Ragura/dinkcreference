@@ -1,5 +1,7 @@
 # game_exist
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>bool game_exist(int save_game_number)</Prototype>
 
 `game_exist()` will return 1 if the given `save_game_number` exists.

@@ -1,5 +1,7 @@
 # add_item
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>void add_item(string script[9], int sequence, int frame)</Prototype>
 
 `add_item` adds an item to the weapons/items section of Dink's inventory. If the script argument names an existing script, it is loaded and executed as described in the chapter on [Procedures](../guide/procedures.md). Whether or not it names a real script, the script argument still serves to identify the item to the other commands in this category, such as [count_item()](./count-item.md) and [kill_this_item()](./kill-this-item.md).

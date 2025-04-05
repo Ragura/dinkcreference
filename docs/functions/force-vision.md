@@ -1,5 +1,7 @@
 # force_vision
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>void force_vision(int vision)</Prototype>
 
 ::: danger Flawed

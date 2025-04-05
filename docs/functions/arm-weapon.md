@@ -1,5 +1,7 @@
 # arm_weapon
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>void arm_weapon(void)</Prototype>
 
 `arm_weapon()` arms the item in the inventory slot (1-16) specified by `&cur_weapon`. If another item is currently armed, it will run that weapon's `disarm()` procedure, and then it will run the new weapon's `arm()` procedure.
@@ -12,3 +14,9 @@ arm_weapon();
 ```
 
 For more information, see [Items](../guide/items.md)
+
+<VersionInfo dinkhd="">
+
+`arm_weapon` updates the status area automatically.
+
+</VersionInfo>

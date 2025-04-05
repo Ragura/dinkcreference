@@ -6,10 +6,8 @@ Hey, look, some bullet points.
 
 - The format superficially resembles C/C++.
 - Supports procedural structure.
-- 249 concurrent variables at one time.
 - Both local and global dynamic variable creation with custom names. All globals you create are saved with the player data file automatically.
 - Ability to attach a DinkC script to an object, person, monster, or screen.
-- 199 DinkC scripts can be running at the same time.
 
 If an object has a script [attached](./scripts.md#attachment) to it, and that object is hit, talked to, killed, etc., it will automatically look in its script for [predefined procedures](./procedures.md#predefined-procedures) like `hit()`, `die()`, `attack()` or `talk()`.
 
@@ -19,7 +17,7 @@ Run with the `-DEBUG` command-line option, Dink.exe will report all errors/debug
 
 <VersionInfo freedink="109.6">
 
-Note that when `DEBUG` is active the `DEBUG.TXT` file will quickly grow in size and become bloated by several *"Surface doesn't have a colorkey"* reports.
+When `DEBUG` is active the `DEBUG.TXT` file will quickly grow in size and become bloated by several *"Surface doesn't have a colorkey"* reports.
 
 </VersionInfo>
 

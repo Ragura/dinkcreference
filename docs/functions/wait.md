@@ -1,5 +1,7 @@
 # wait
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>void wait(int period)</Prototype>
 
 `wait()` will cause the current script to pause at least `period` milliseconds before continuing.

@@ -1,5 +1,7 @@
 # sp_range
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>int sp_range(int active_sprite, int range[-1])</Prototype>
 
 `sp_range()` gets or sets the `range` value for the `active_sprite`.

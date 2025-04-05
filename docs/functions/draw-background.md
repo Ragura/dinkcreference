@@ -1,5 +1,7 @@
 # draw_background
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>void draw_background(void)</Prototype>
 
 `draw_background()` redraws the background (tiles and background sprites), leaving all active sprites intact. This is useful to restore a screen after a [fill_screen()](./fill-screen.md) or similar effect that draws over the background. Note that all active sprites drawn to the background (dead bodies, etc.) will be missing.

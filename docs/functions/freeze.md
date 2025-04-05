@@ -1,5 +1,7 @@
 # freeze
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>void freeze(int active_sprite)</Prototype>
 
 `freeze()` stops the [sp_brain](./sp-brain.md) the active_sprite, preventing it from moving or interacting on its own. [move()](./move.md) and [move_stop()](./move-stop.md) commands will still work.

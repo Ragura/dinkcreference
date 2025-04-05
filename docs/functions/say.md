@@ -1,5 +1,7 @@
 # say
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>int say(string dialogue[199], int active_sprite)</Prototype>
 
 `say()` will cause `active_sprite` to have the specified dialogue appear above it, and will return the active sprite number of the text sprite. The text sprite will live for at least 2700 milliseconds, or up to 72 milliseconds for every character, or until the player presses the space bar.
@@ -16,22 +18,19 @@ say("`4Hello!", 1); // Orange!
 
 By default, the color code will be `` `$ `` (yellow).
 
-<VersionInfo dink="1.07">
-
-There were some problems using the `` `% `` color tag directly followed by certain letters (such as I, D, and J).
-
-```c
-say("`%drama queen", 1); // used to not be displayed properly
-```
-
-</VersionInfo>
-
+<br>
 <VersionInfo dink="1.07">
 
 Dink would not interpret lines with a colon correctly, like so:
 
 ```c
 say("bonus: 5 points", 1); // used to not display any text at all!
+```
+
+There were some problems using the `` `% `` color tag directly followed by certain letters (such as I, D, and J).
+
+```c
+say("`%drama queen", 1); // used to not be displayed properly
 ```
 
 </VersionInfo>

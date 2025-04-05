@@ -1,5 +1,7 @@
 # sp_touch_damage
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>int sp_touch_damage(int active_sprite, int touch_damage)</Prototype>
 
 `sp_touch_damage()` sets the `touch_damage` value for the `active_sprite`. The `touch_damage` value is 0 by default.

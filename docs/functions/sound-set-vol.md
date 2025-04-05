@@ -1,5 +1,7 @@
 # sound_set_vol
 
+**Version:** <VersionInfo dink="1.05+" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>void sound_set_vol(int soundbank, int volume)</Prototype>
 
 `sound_set_vol()` will decrease the volume of the sound using the given soundbank based on volume. It cannot increase the volume of the sound.
@@ -15,7 +17,7 @@ sound_set_vol(&soundbank, -1500);
 ```
 
 ::: warning
-<VersionInfo freedink="109.6">
+<VersionInfo freedink="">
 
 Playsound will return the soundbank number plus 1. To get the actual soundbank number of the sound, you must minus 1 from the returned value.
 

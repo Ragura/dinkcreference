@@ -1,5 +1,7 @@
 # draw_screen
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>void draw_screen(void)</Prototype>
 
 `draw_screen()` draws the last screen loaded, either explicitly loaded by [load_screen()](./load-screen.md) or implicitly loaded when Dink walked onto the current screen. It also runs the `main()` procedures of any scripts attached to the screen or its sprites.

@@ -1,5 +1,7 @@
 # sp_freeze
 
+**Version:** <VersionInfo dink="1.08" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>bool sp_freeze(int active_sprite, bool frozen[-1])</Prototype>
 
 `sp_freeze()` gets or sets the `frozen` value of the `active_sprite`.

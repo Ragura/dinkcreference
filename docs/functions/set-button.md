@@ -1,5 +1,7 @@
 # set_button
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>void set_button(int button, int function)</Prototype>
 
 `set_button()` will set the specified button to act as a certain function. It is used in the `escape.c` script in most D-Mods, but it is unlikely that many people change their joystick/gamepad buttons every time they start the game.

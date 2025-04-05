@@ -1,5 +1,7 @@
 # get_sprite_with_this_brain
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>int get_sprite_with_this_brain(int brain, int active_sprite_ignore)</Prototype>
 
 `get_sprite_with_this_brain()` returns the first sprite number that is on the screen with [sp_brain()](./sp-brain.md) brain. It will not include `active_sprite_ignore`, so a sprite can check for other brains of its type if needed. If no matching sprite is found, 0 is returned.

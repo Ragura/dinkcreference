@@ -1,5 +1,7 @@
 # sp_size
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>int sp_size(int active_sprite, int size[-1])</Prototype>
 
 `sp_size()` gets or sets the `size` of the `active_sprite`. The `size` is a percentage.

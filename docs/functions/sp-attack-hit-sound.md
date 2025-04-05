@@ -1,5 +1,7 @@
 # sp_attack_hit_sound
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>int sp_attack_hit_sound(int active_sprite, int sound_number[-1])</Prototype>
 
 `sp_attack_hit_sound()` gets or sets the attack hit `sound_number` for the `active_sprite`. The attack hit sound number will be played every time the sprite hits something using its attack sequence, or in the case of a missile causing damage.

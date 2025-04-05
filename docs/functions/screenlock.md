@@ -1,17 +1,14 @@
 # screenlock
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>bool screenlock(bool is_screenlocked[-1])</Prototype>
 
-`screenlock()` will lock the screen so Dink is unable to walk off of it if `is_screenlocked` is 1. The sidebars will also be replaced with the screenlock graphics.
-
-<VersionInfo dink="1.08" freedink="all">
-
-`is_screenlocked` can be set to -1 to return whether or not the screen is currently locked.
-
-</VersionInfo>
+`screenlock()` will get or set the value of `is_screenlocked`. Dink is unable to walk off the screen if `is_screenlocked` is 1, the sidebars will also be replaced with the screenlock graphics.
 
 <VersionInfo dink="1.07">
 
-It was possible to walk past hardness on the edge of a screenlocked screen.
+- it was possible to walk past hardness on the edge of a screenlocked screen.
+- it was not possible to get the `is_screenlocked` value; you can only set it.
 
 </VersionInfo>

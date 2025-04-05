@@ -6,7 +6,7 @@ sidebarDepth: 2
 
 This section is dedicated to the dozens of internal functions provided by the Dink engine. Reading through them all probably won't be very useful. After reading this introduction section, you'll probably want to skip to Techniques.
 
-Each function lists one or more categories, which version it is available in, a prototype, and a description.
+Each function lists one or more categories, a prototype, version, and description. For version, if only a Dink Engine name is listed in the version tag with no version number, that means the function is available in *all* versions of that engine.
 
 A prototype tells you what kind of value the function returns, and what kind of values you can give the function. For example:
 

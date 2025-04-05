@@ -1,5 +1,7 @@
 # set_font_color
 
+**Version:** <VersionInfo dink="1.08" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>void set_font_color(int color_number, int red, int green, int blue)</Prototype>
 
 `set_font_color()` will change the color_number to the color specified by the red, green, and blue values. The color values must be in the range 0 to 255.

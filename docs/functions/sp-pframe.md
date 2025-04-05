@@ -1,5 +1,7 @@
 # sp_pframe
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>int sp_pframe(int active_sprite, int frame[-1])</Prototype>
 
 `sp_pframe()` gets or sets the currently displayed `frame` for the `active_sprite`.

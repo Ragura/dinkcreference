@@ -1,6 +1,8 @@
 # Variables
 
-A variable is a word that stores a number. This word must always start with an ampersand `&` symbol. The number must be in the range −2,147,483,648 to +2,147,483,647. There is a limit of 249 local and global variables active at any given time.
+A variable is a word that stores a number. This word must always start with an ampersand `&` symbol. The number must be in the range −2,147,483,648 to +2,147,483,647. There is a limit of 249 concurrent local and global variables active at any one time.
+
+<VersionInfo yedink="0.95+">The concurrent local and global variable limit is 500</VersionInfo>
 
 Each variable must be declared to some extent, and variables can have several mathematical [operations](#operations) performed on them. While variables can only store numbers, sometimes these numbers have a [type](#variable-types) with a deeper meaning.
 
@@ -24,12 +26,6 @@ Note: A script cannot define a local variable with the same name as a global var
 <VersionInfo dink="1.07">
 
 A local variable name cannot be a global variable's name with a suffix. For example, if a script tries to declare a local variable &goldguard, no local variable is created. Instead, all references to &goldguard are treated as references to the global variable &gold.
-
-</VersionInfo>
-
-<VersionInfo dink="1.08" freedink="all">
-
-The above limitation does not apply in 1.08 and FreeDink - A variable name can be a global variable's name with a suffix.
 
 </VersionInfo>
 
@@ -89,7 +85,7 @@ If a missile hits a sprite that has a script attached to it, &missile_taget will
 
 <VersionInfo dink="1.07">
 
-In Dink Smallwood version lower than 1.08, `&missle_source` will store and hold the last missile to hit something. It *will not* store any other sprite that attacks.
+`&missle_source` will store and hold the last missile to hit something. It *will not* store any other sprite that attacks.
 
 </VersionInfo>
 
@@ -119,7 +115,7 @@ There are also several fake variables which aren't declared as local or global. 
 
 <VersionInfo freedink="109.6 Linux">
 
-Note that FreeDink 109.6 on Linux can have issues when calling procedures that pass more than 3 arguments.
+FreeDink 109.6 on Linux can have issues when calling procedures that pass more than 3 arguments.
 When &arg4 - &arg9 are not specified in a procedure call, rather than defaulting to '0', they will pass the last known value(for that respective argument number) that was previously passed to a procedure.
 This can be rectified by passing 0's for those arguments, instead of leaving them unspecified.
 
@@ -146,6 +142,10 @@ There are several mathematical operations you can perform on variables. Each ope
 | /         | Divides the variable by the value.                        |
 | *=        | Multiplies the variable by the value. Supported in 1.08+. |
 | *         | Multiplies the variable by the value.                     |
+
+::: warning /= operator bug
+When using `/=`, if you use an [internal function](../functions/) as the divisor, the engine will divide by the last function to have been calculated, not the one you specify.
+:::
 
 Unlike almost any other scripting or programming language ever created, DinkC does not support any special math processing. That means if you want to do something like this:
 
@@ -174,14 +174,14 @@ This might cause the current sprite to say something like *"You have 15 life poi
 
 Now, besides storing plain numbers, variables can be used to store several different types of numbers used internally by the Dink engine.
 
-| Name          | Description                                                                                           | Range |
-|---------------|-------------------------------------------------------------------------------------------------------|-------|
-| Editor sprite | A sprite placed in a map editor. Useful to save [editor_seq()](../functions/editor-seq.md) and [editor_frame()](../functions/editor-frame.md) information.          | 1-99  |
-| Active sprite | A sprite that is currently on the screen. It will usually be different from the editor sprite number. | 1-299 |
+| Name          | Description                                                                                           | Range <div style="width:135px"></div>|
+|---------------|-------------------------------------------------------------------------------------------------------|---------------------------------- |
+| Editor sprite | A sprite placed in a map editor. Useful to save [editor_seq()](../functions/editor-seq.md) and [editor_frame()](../functions/editor-frame.md) information.          | 1-99 |
+| Active sprite | A sprite that is currently on the screen. It will usually be different from the editor sprite number. |<VersionInfo  dink="" freedink= "" dinkhd="">1-300</VersionInfo><br><VersionInfo yedink="">1-999</VersionInfo>|
 | Map           | A map screen                                                                                          | 1-768 |
-| Sound number  | A sound loaded using [load_sound()](../functions/load-sound.md).                                      | 1-99  |
-| Soundbank     | A currently playing sound.                                                                            | 1-20  |
-| Script number | A currently executing script.                                                                         | 1-199 |
+| Sound number  | A sound loaded using [load_sound()](../functions/load-sound.md).                                      | <VersionInfo dink="" freedink= "">1-99</VersionInfo><br><VersionInfo dinkhd="">1-200</VersionInfo><VersionInfo yedink="">1-400</VersionInfo>|
+| Soundbank     | A currently playing sound.                                                                            | <VersionInfo dink="" freedink= "">1-20</VersionInfo><br><VersionInfo dinkhd="">1-64</VersionInfo><VersionInfo yedink="">1-128</VersionInfo>|
+| Script number | A currently executing script.                                                                         | <VersionInfo dink="" freedink= "">1-199</VersionInfo><br><VersionInfo dinkhd="" yedink="">1-399</VersionInfo>|
 
 ## Special variables
 

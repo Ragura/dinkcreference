@@ -1,8 +1,6 @@
 # get_client_version
 
-::: tip Version:
-Dink HD, YeOldeDink
-:::
+**Version:** <VersionInfo yedink="0.8+" standalone />&nbsp;<VersionInfo dinkhd="1.97+" standalone />
 
 <Prototype>int get_client_version(void)</Prototype>
 

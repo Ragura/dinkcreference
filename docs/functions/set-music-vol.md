@@ -1,8 +1,6 @@
 # set_music_vol
 
-::: tip Version:
-YeOldeDink, Dink HD
-:::
+**Version:** <VersionInfo dinkhd="2.05+" standalone />&nbsp;<VersionInfo yedink="0.93+" standalone />
 
 <Prototype>void set_music_vol(int_volume)</Prototype>
 

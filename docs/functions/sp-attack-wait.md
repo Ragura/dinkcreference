@@ -1,5 +1,7 @@
 # sp_attack_wait
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>int sp_attack_wait(int active_sprite, int wait_period)</Prototype>
 
 `sp_attack_wait()` sets the attack `wait_period` for the `active_sprite`. In order for `sp_attack_wait()` to work with [sp_brain()](./sp-brain.md) 9 sprites, they must have [sp_base_attack()](./sp-base-attack.md) sequences, such as boncas, slayers, and stone giants. By default, an attacking sprite will play its attack sequence over and over without delay if its enemy is in range. This command will force the monster to wait for at least `wait_period` milliseconds before trying to attack again.
@@ -20,4 +22,4 @@ For sprites with a [sp_brain()](./sp-brain.md) of 10, the sprite will call the a
 
 This function only affects sprites with a [sp_brain()](./sp-brain.md) of 9 and a `sp_base_attack` not equal to -1 or sprites with a [sp_brain()](./sp-brain.md) of 10.
 
-`sp_attack_wait()` returns the raw time at which the sprite is able to attack next. It is not entirely useful.
+`sp_attack_wait()` returns the games raw millisecond tick, regardless of active_sprite.

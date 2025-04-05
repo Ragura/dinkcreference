@@ -1,5 +1,7 @@
 # get_version
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>int get_version(void)</Prototype>
 
 `get_version()` returns the current DinkC version number times 100. This is very useful if you use functions or features that aren't supported in earlier versions of Dink.

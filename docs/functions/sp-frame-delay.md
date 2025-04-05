@@ -1,5 +1,7 @@
 # sp_frame_delay
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>int sp_frame_delay(int active_sprite, int delay[-1])</Prototype>
 
 `sp_frame_delay()` gets or sets the `delay` for the `active_sprite`. The `delay` is the number of milliseconds between frames of animation.

@@ -1,5 +1,7 @@
 # inside_box
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype small>bool inside_box(int x, int y, int left, int top, int right, int bottom)</Prototype>
 
 `inside_box()` returns 1 if the `x` and `y` coordinates are inside the box defined by `left`, `top`, `right`, and `bottom`. 

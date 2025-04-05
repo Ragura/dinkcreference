@@ -1,5 +1,7 @@
 # make_global_int
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>void make_global_int(string name[18], int default_value)</Prototype>
 
 `make_global_int()` declares a global integer. The `default_value` is only applied to it if this is the first time it has been initialized and it doesn't already exist in the save game file. However, `make_global_int()` is almost always used in the `main.c` script.

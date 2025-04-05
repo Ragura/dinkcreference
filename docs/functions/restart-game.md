@@ -1,5 +1,7 @@
 # restart_game
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>void restart_game(void)</Prototype>
 
 `restart_game()` will restart the game and return to the title screen. Everything will be re-initialised. 

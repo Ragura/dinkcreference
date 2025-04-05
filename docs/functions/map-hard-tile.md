@@ -1,5 +1,7 @@
 # map_hard_tile
 
+**Version:** <VersionInfo dink="1.08" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>int map_hard_tile(int tile_position, int hard_tile_index[-1])</Prototype>
 
 `map_hard_tile()` gets or sets the hardness tile for the tile at position `tile_position`.

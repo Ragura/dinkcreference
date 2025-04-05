@@ -1,5 +1,7 @@
 # compare_weapon
 
+**Version:** <VersionInfo dink="1.08" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>bool compare_weapon(string script[9])</Prototype>
 
 `compare_weapon()` returns '1' if the currently armed weapon is script. This could be used in a sprite's hit procedure to see if it was hit by a certain weapon, if used in conjunction with `&missle_source` and `&enemy_sprite`.

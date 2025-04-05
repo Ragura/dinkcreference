@@ -1,5 +1,7 @@
 # show_bmp
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype small>void show_bmp(string bmp_file[79], bool show_map_dot, int unused)</Prototype>
 
 `show_bmp()` will display the specified `bmp_file` to the screen and the game will be paused. The `bmp_file` should be a path relative to the D-Mod's root directory, and any directories (tiles, graphics, etc) should be specified. If the bmp file cannot be found, it will look in the main game's root directory.

@@ -1,5 +1,7 @@
 # free_items
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>int free_items(void)</Prototype>
 
 `free_items()` counts how many of the 16 weapon/item inventory slots remain unused. It is a good idea to check before calling [add_item()](./add-item.md).

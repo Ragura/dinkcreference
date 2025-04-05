@@ -1,5 +1,7 @@
 # sp_clip_left
 
+**Version:** <VersionInfo dink="1.08" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>int sp_clip_left(int active_sprite, int pixels[-1])</Prototype>
 
 `sp_clip_left()` gets or sets the number of `pixels` to clip off of the left of the `active_sprite's` sequence and frame. If the `active_sprite` changes sequence or frame, the clipping will remain.

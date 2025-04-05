@@ -1,5 +1,7 @@
 # sp_y
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>int sp_y(int active_sprite, int y_coordinate[-1])</Prototype>
 
 `sp_y()` gets or sets the `y_coordinate` of `active_sprite`.

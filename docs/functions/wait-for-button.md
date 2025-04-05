@@ -1,5 +1,7 @@
 # wait_for_button
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>void wait_for_button(void)</Prototype>
 
 `wait_for_button()` will redirect any input temporarily to perform certain events that follow it based on the `&result` variable. The player should be frozen with [freeze(1)](./freeze.md) before calling this command, otherwise the player can still move as normal.

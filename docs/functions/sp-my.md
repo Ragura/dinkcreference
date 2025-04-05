@@ -1,5 +1,7 @@
 # sp_my
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>int sp_my(int active_sprite, int pixels[-1])</Prototype>
 
 `sp_my()` gets or sets the number of `pixels` the sprite is moving vertically per [sp_timing()](./sp-timing.md) interval. This is used to make sprites move in directions other than the 8 used with [sp_dir()](./sp-dir.md), or to finely tune movement speed.

@@ -1,5 +1,7 @@
 # sp_base_walk
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>int sp_base_walk(int active_sprite, int base_sequence)</Prototype>
 
 `sp_base_walk()` sets the walk `base_sequence` for the `active_sprite`.

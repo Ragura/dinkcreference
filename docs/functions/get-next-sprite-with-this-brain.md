@@ -1,5 +1,7 @@
 # get_next_sprite_with_this_brain
 
+**Version:** <VersionInfo dink="1.08" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype small>int get_next_sprite_with_this_brain(int brain, int active_sprite_ignore, int active_sprite_start_with)</Prototype>
 
 `get_next_sprite_with_this_brain()` returns the first active sprite number starting with `active_sprite_start_with` that is on the screen with `sp_brain` brain. It will not include `active_sprite_ignore`, so a sprite can check for other brains of its type if needed.

@@ -1,5 +1,7 @@
 # sp_defense
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>int sp_defense(int active_sprite, int value[-1])</Prototype>
 
 `sp_defense()` will get or set the defense `value` for the `active_sprite`.

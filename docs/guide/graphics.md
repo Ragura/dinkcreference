@@ -2,7 +2,13 @@
 
 The `dink.ini` file is used to load graphics. To add new graphics to a D-Mod you will (probably) have to modify this file, unless you rename your new graphics to match some original graphics file names and replicate the file/folder structure of those original files.
 
-Graphics are referenced according to two numbers: A graphic sequence number and then a frame number. Each graphic sequence can have up to 50 frames, and each frame (slot) holds one bmp file. It is possible to go over the limit of 50 frames, but you cannot play more than 50 frames in an animated sequence, and having 50 or more bmp files in one sequence can cause serious problems when playing the game.
+Graphics are referenced according to two numbers: A graphic sequence number and then a frame number. Each graphic sequence can have several frames, and each frame (slot) holds one bmp file. <br>
+The maximum frames per sequence varies between Dink Engines:
+<VersionInfo dink="" freedink= "">1-50</VersionInfo>
+<br>
+<VersionInfo dinkhd="" yedink="">1-99</VersionInfo>
+
+It is possible to go over the limit of frames, but you cannot play more than the frame limit in an animated sequence, and exceeding the limit can cause serious problems when playing the game.
 
 ## load_sequence
 
@@ -17,14 +23,22 @@ load_sequence [path]/[filename] [seq] [delay] [X coord] [Y coord] [hardbox]
 
 `load_sequence` makes those graphics available to the Dink Engine or the map editor.
 
-::: tip load_sequence bug
+Setting the `X coord`, `Y coord` or `hardbox` paramaters individually to `0` will make that particular paramater be ignored and the engine will use the default internal algorithm to calculate it. In the case of `hardbox` if the left or right paramaters are `0` it will apply the default algorithm for both left and right even if the other is set. It also does this for both top and bottom, if top or bottom is set to `0`.
 
-If a sprite loaded with `load_sequence` is added using [create_sprite()](../functions/create-sprite.md), there is a rare chance it will be created with the wrong hardbox. Any attempt to redraw the hardness will **not** rectify this. This bug can be avoided by [pre-loading the sequence](../functions/preload-seq.md).
+Setting all parameters to `0` will cause the engine to use the default internal algorithm for each individual frame. This is different to not setting any info, where the default internal algorithm result of the first frame will be applied to the entire sequence.
 
-This bug will not occur:
-- With sprites loaded using `load_sequence_now`.
-- With sprites placed in the editor.
+The algorithms the Dink Engine uses to generate the depth dot position and hardbox when no paramaters are provided are:<br>
+**Depth dot X position:** (Image height / 4) - (image height / 30)<br>
+**Depth dot Y position:** (Image width / 2) - (image width / 6)<br>
+**Hardbox left side:** 0 - (image width / 4)<br>
+**Hardbox tight side:** 0 + (image width / 4)<br>
+**Hardbox top side:** 0 - (image height / 10)<br>
+**Hardbox bottom side:** 0 + (image height / 10)<br>
+<br>
+::: tip Note
+load_sequence bug
 
+If a sprite loaded with load_sequence is added using create_sprite(), it might be created with the wrong hardbox. This bug can be avoided by pre-loading the sequence.
 :::
 
 ### `[path]/`
@@ -37,7 +51,13 @@ This is the name of the bmp file. If you have an animated series, then label the
 
 ### `[seq]`
 
-This is the Sequence number that your new graphics are loaded into. Possible numbers technically range from 1 to 999, but many numbers have already been used, and others are dedicated to various graphics needed to run the map editor. For sprites that walk in 4 or 8 directions the sequences are grouped in a base of 10, and the [sp_base_walk()](../functions/sp-base-walk.md), [sp_base_attack()](../functions/sp-base-attack.md), [sp_base_idle()](../functions/sp-base-idle.md), and [sp_base_death()](../functions/sp-base-death.md) commands can access the correct graphics by if you adhere to the following convention:
+This is the Sequence number that your new graphics are loaded into.<br>
+The sequence range varies between Dink Engines:
+<VersionInfo dink="" freedink= "">1-999</VersionInfo><br>
+<VersionInfo dinkhd="">1-30000</VersionInfo><br>
+<VersionInfo yedink="">1-35000</VersionInfo>
+
+Some sequence numbers are dedicated to various graphics needed to run the map editor. For sprites that walk in 4 or 8 directions the sequences are grouped in a base of 10, and the [sp_base_walk()](../functions/sp-base-walk.md), [sp_base_attack()](../functions/sp-base-attack.md), [sp_base_idle()](../functions/sp-base-idle.md), and [sp_base_death()](../functions/sp-base-death.md) commands can access the correct graphics by if you adhere to the following convention:
 
 | Base seq number | Direction  |
 |-----------------|------------|
@@ -66,10 +86,12 @@ load_sequence_now graphics\dink\walk\ds-w9- 79 43 38 72 -14 -9 14 9
 ### `[delay]`
 
 This number specifies the approximate delay between displaying one bmp file and the next. Units are milliseconds. In the example above, Dink walking has a "43" millisecond delay between each bmp file. See [sp_frame_delay()](../functions/sp-frame-delay.md) for more information.
+You do not have to set a delay - you can leave this value out and the Dink Engine will still read all the other paramaters correctly, leaving out the delay.
 
 ### `[X coord]` `[Y coord]`
 
 These two numbers are used to set the depth dot for the bmp. This is important to get right so that Dink and other sprites walk around it in a somewhat realistic manner. The two numbers are referenced from the top left hand corner of the bmp file in terms of pixels.
+Note that negative values will not work.
 
 ```txt
 load_sequence_now graphics\dink\walk\ds-w1- 71 43 38 72 -14 -9 14 9
@@ -96,8 +118,10 @@ You can see a similar hardness box mid game by activating the debug mode (pressi
 
 ## Loading graphics on the fly
 
+You need to use the [init()](../functions/init.md) command to load new graphics during a game.
+
 <VersionInfo dink="1.07">
-Note that you need to use the [init()](../functions/init.md) command to load new graphics during a game, and also that the the original `dink.ini` recommends that you load the graphics which have the most bmp files per sequence first.
+It is recommended that you load the graphics which have the most bmp files per sequence first.
 </VersionInfo>
 
 Sample code to load new graphics on the fly – from `item-sw1.c` original source file:
@@ -261,6 +285,8 @@ The second number (11) is the frame number (of the bmp file).<br>
 The next two numbers (30 24) define the depth dot relative to the top left corner of the bmp file.<br>
 The last four numbers (-32 -22 20 3) define the hardness box relative to the depth dot.
 
-Things to note about the `SET_SPRITE_INFO` commands, is that with the standard dink engine there is a limit of 787 lines. After that number is passed, no new lines are read. To make matters worse you can have redundant lines in which you've set the sprite info once, then gone back and changed it again. There is a line for both occurances in the `dink.ini` file (but the last one is the one that is used) and so for one sprite you can waste more than 1 of the 787 `SET_SPRITE_INFO` lines allocated.
+Things to note about the `SET_SPRITE_INFO` commands, is that there is a limit on the amount you can have, except in Dink Smallwood HD, which does not have a limit:
+<VersionInfo dink="" freedink= "">600</VersionInfo><br>
+<VersionInfo yedink="">2000</VersionInfo>
 
-There is a trick you can use to exceed the `SET_SPRITE_INFO` limit. You can use the [init()](../functions/init.md) function to execute additional `SET_SPRITE_INFO` lines. They won't count towards the limit, and will be initialised without any errors, even if you've reached the 787 line limit in `dink.ini`.
+After that number is passed, no new lines are read. To make matters worse you can have redundant lines in which you've set the sprite info once, then gone back and changed it again. There is a line for both occurances in the `dink.ini` file (but the last one is the one that is used) and so for one sprite you can waste more than 1 of the `SET_SPRITE_INFO` lines allocated.

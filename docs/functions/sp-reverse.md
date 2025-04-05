@@ -1,5 +1,7 @@
 # sp_reverse
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>bool sp_reverse(int active_sprite, bool reverse[-1])</Prototype>
 
 `sp_reverse()` gets or sets the reverse animation value for `active_sprite`.

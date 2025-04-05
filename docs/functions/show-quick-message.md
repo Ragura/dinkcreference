@@ -1,8 +1,6 @@
 # show_quick_message
 
-::: tip Version:
-Dink HD
-:::
+<VersionInfo dinkhd="" standalone />
 
 <Prototype>void show_quick_message(string message[88])</Prototype>
 

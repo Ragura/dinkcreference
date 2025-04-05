@@ -12,6 +12,8 @@ Creating Dink add-ons is not for beginners. Knowledge of C is slightly helpful b
 
 The goal of this guide is to give you a foundation. The basic concepts of DinkC are explained, the internal functions are exposed, and simple examples are detailed. But, don't think that this is an exhaustive guide of everything DinkC can do. DinkC is so versatile that you may do something no-one ever tried before, and it may work wonderfully.
 
+New Dink Engines have popped up over the years, each have their own differences and features. This reference uses color tags to highlight engine and version specific differences. If you see any of those colored tags, the accompanying information is specific to that Engine, if no version number is present on the tag it applies to *all* versions.
+
 If you ever get stuck, you might want to visit [The Dink Network](http://www.dinknetwork.com). You'll be able to find further tutorials and friendly forums full of developers willing to help you.
 
 ## Contributors

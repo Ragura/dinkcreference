@@ -1,5 +1,7 @@
 # hurt
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>void hurt(int active_sprite, int damage)</Prototype>
 
 `hurt()` damages `active_sprite` with damage amount of damage. Note that it will damage an exact amount, but it does take defense into account. Also, there is still a chance of 1 damage if the defense of `active_sprite` is higher than `int damage`.
@@ -8,13 +10,8 @@ If the `active_sprite` receives damage, blood spurts are added, free of charge.
 
 This function will trigger the `hit()` procedure of `active_sprite` (even if no damage is dealt), unless `active_sprite` is set to [nohit](./sp-nohit.md)
 
-<br>
-
-::: warning Common error
-If `active_sprite` is currently executing a procedure when it is hurt using `hurt()`, and the `hit` procedure is called, the hit procedure will continue past `}` and into code afterwards.
-:::
-
-<br>
+If the script that calls this function is attached to a sprite, [Required global variables](../guide/variables.md#required-global-variables) `&enemy_sprite` and `&missle_source` will become `&current_sprite`.
+If the script that calls this function is not attached to a sprite [Required global variables](../guide/variables.md#required-global-variables) `&enemy_sprite` and `&missle_source` will become `0`.
 
 `hurt()` can be used to add damage to a previous attack, and the engine will treat it all as one attack (This will even cause only one damage text sprite to appear with `hurt` factored in).<br>
 For this to work, `hurt()` must be run inside a sprite's hit procedure, before any function that causes the script to "yield the floor", such as [wait()](./wait.md), [say()](./say.md), [say_stop()](./say-stop.md), or similar commands.<br><br>
@@ -59,18 +56,6 @@ void hit(void)
 
 - A negative damage value would cause the game to freeze.
 
-- If the script that calls this function is attached to a sprite, [Required global variable](../guide/variables.md#required-global-variables) `&enemy_sprite` will be updated to `&current_sprite`.
-
-- If the script that calls this function is not attached to a sprite [Required global variable](../guide/variables.md#required-global-variables) `&enemy_sprite` will be updated to `0`.
-
-</VersionInfo>
-
-<VersionInfo dink="1.08" freedink="all">
-
-- Ignores the command safely when a negative value is given.
-
-- If the script that calls this function is attached to a sprite, [Required global variables](../guide/variables.md#required-global-variables) `&enemy_sprite` and `&missle_source` will be updated to `&current_sprite`.
-
-- If the script that calls this function is not attached to a sprite [Required global variables](../guide/variables.md#required-global-variables) `&enemy_sprite` and `&missle_source` will be updated to `0`.
+- only `&enemy_sprite` will be updated when `hurt()` is run. `&missle_source` will not ever be updated.
 
 </VersionInfo>

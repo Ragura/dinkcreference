@@ -1,5 +1,7 @@
 # sp_disabled
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>bool sp_disabled(int active_sprite, bool disabled[-1])</Prototype>
 
 `sp_disabled()` gets or sets the `disabled` status of the `active_sprite`.

@@ -1,5 +1,7 @@
 # sp_strength
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>int sp_strength(int active_sprite, int strength[-1])</Prototype>
 
 `sp_strength()` gets or sets the `strength` of the `active_sprite`.

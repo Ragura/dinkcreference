@@ -7,11 +7,10 @@ In combat, strength, defense, and hitpoints interact about like this:
 ```c
 int &hit_work = sp_strength(<hitting-sprite> , -1);
 int &hits = math_mod(&hit_work, 2);
-&hit_work / 2;
-int &add_remainder = &hit_work;
-&add_remainder += &hits;
-&hits = random(&add_remainder, &hit_work);
-&hits += 1;
+&hit_work /= 2;
+&hits += &hit_work;
+int &damage = random(&hits, &hit_work);
+&damage += 1;
 ```
 
 While the above example is true for melee combat, the damage calculation works slightly different for missiles.
@@ -20,8 +19,8 @@ When the missile's strength is an *odd* value, it's maximum possible damage pote
 ```c
 int &hit_work = sp_strength(<hitting-sprite>, -1);
 &hit_work / 2;
-int &hits = random(&hit_work, &hit_work);
-&hits += 1;
+int &damage = random(&hit_work, &hit_work);
+&damage += 1;
 ```
 
 **Step 2.** Now the defense of the sprite that got hit is figured in:

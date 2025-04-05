@@ -1,15 +1,17 @@
 # make_global_function
 
+**Version:** <VersionInfo dink="1.08" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>void make_global_function(string script[9], string procedure[19])</Prototype>
 
 `make_global_function()` allows you to declare a shortcut to a function. After declaring it, you can use procedure as a function call without specifying script using `external()`.
 
-<VersionInfo dink="all" freedink="all">
-In these versions `make_global_function` does not work if you declare more than one global function. If you declare just one it will work fine, but if you declare more than one, none of them will work.
-</VersionInfo>
+You can declare a maximum of 99 global functions.
 
-<VersionInfo yedink=">= 0.93">
-YeOldeDink handles global functions correctly.
+<VersionInfo dink="" freedink="">
+
+`make_global_function` does not work correctly. If you declare more than global function, none of them will work.
+
 </VersionInfo>
 
 ```c

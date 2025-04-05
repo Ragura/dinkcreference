@@ -1,5 +1,7 @@
 # playmidi
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>void playmidi(string midi_file[14])</Prototype>
 
 `playmidi()` plays the `midi_file` found in the `sound` directory in the D-Mod. If it is not found, it will look in Dink's `sound` directory and play it if it exists there.

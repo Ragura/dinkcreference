@@ -1,5 +1,7 @@
 # load_game
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>void load_game(int slot)</Prototype>
 
 `load_game()` loads the save game with the filename in `SAVEslot.DAT`. The save game must exist in the D-Mod's directory. All variables and other pertinent information are replaced with the values in the save game file.

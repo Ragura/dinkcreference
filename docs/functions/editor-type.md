@@ -1,5 +1,7 @@
 # editor_type
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>int editor_type(int editor_sprite, int type)</Prototype>
 
 `editor_type()` sets the editor type value for the given `editor_sprite`. This value determines if the given sprite will be visible when the screen is next drawn, according to the following table.

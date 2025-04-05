@@ -1,5 +1,7 @@
 # sp_hitpoints
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>int sp_hitpoints(int active_sprite, int hitpoints[-1])</Prototype>
 
 `sp_hitpoints()` gets or sets the `hitpoints` of the `active_sprite`.

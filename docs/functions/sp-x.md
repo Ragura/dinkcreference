@@ -1,5 +1,7 @@
 # sp_x
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>int sp_x(int active_sprite, int x_coordinate[-1])</Prototype>
 
 `sp_x()` gets or sets the `x_coordinate` of `active_sprite`.

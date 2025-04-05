@@ -1,8 +1,6 @@
 # is_base_game
 
-::: tip Version:
-Dink HD
-:::
+**Version:** <VersionInfo dinkhd="" standalone />
 
 <Prototype>bool is_base_game(void)</Prototype>
 

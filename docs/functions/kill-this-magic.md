@@ -1,5 +1,7 @@
 # kill_this_magic
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>void kill_this_magic(string[9] script)</Prototype>
 
 `kill_this_magic()` removes the first instance of the magic spell using script from the player's inventory.

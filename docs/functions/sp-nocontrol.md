@@ -1,5 +1,7 @@
 # sp_nocontrol
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>bool sp_nocontrol(int active_sprite, bool no_control[-1])</Prototype>
 
 `sp_nocontrol()` gets or sets the `no_control` value for the `active_sprite`. Note that this only affects sprites with a `sp_brain` of 1 (the player).

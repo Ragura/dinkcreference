@@ -1,8 +1,10 @@
 # sp_notouch
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>bool sp_notouch(int active_sprite, bool no_touch[-1])</Prototype>
 
-`sp_notouch()` gets or sets the `no_touch` value for the `active_sprite`. It is primarily used for missiles and positive [sp_touch_damage()](./sp-touch-damage.md) internally, and is not known to be used in any DinkC scripts.
+`sp_notouch()` gets or sets the `no_touch` value for the `active_sprite`. It is primarily used for missiles and positive [sp_touch_damage()](./sp-touch-damage.md) internally, and is not known to be used in any DinkC base game scripts.
 
 If `no_touch` is 0 (default), the sprite is able to be hit by missiles and be hurt by touch damage.
 

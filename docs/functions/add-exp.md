@@ -1,5 +1,7 @@
 # add_exp
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>void add_exp(int amount, int active_sprite)</Prototype>
 
 `add_exp()` adds amount experience and creates a text-sprite to float above `active_sprite`.
@@ -7,12 +9,6 @@
 <VersionInfo dink="1.07">
 
 Requires that `active_sprite` was last hit by Dink.
-
-</VersionInfo>
-
-<VersionInfo dink="1.08" freedink="all">
-
-Will work with any `active_sprite`.
 
 </VersionInfo>
 

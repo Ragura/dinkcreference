@@ -1,5 +1,7 @@
 # draw_hard_sprite
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>void draw_hard_sprite(int active_sprite)</Prototype>
 
 If `active_sprite` is hard, `draw_hard_sprite()` will add or remove `active_sprite's` hardness to or from the screen.

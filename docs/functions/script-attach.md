@@ -1,5 +1,7 @@
 # script_attach
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>void script_attach(int active_sprite)</Prototype>
 
 `script_attach()` will attach the `active_sprite` number to the current script.

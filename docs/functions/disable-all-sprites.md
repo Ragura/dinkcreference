@@ -1,11 +1,13 @@
 # disable_all_sprites
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>void disable_all_sprites(void)</Prototype>
 
 `disable_all_sprites()` disables all sprites on the current screen. The equivalent of this function is setting [sp_disabled()](./sp-disabled.md) to 1 for all sprites.
 
-<VersionInfo dink="all" freedink="all">
-In Dink Smallwood, DinkHD and FreeDink, this will not affect the most recently created sprite.
+<VersionInfo dink="" freedink="">
+Will not affect the most recently created sprite.
 </VersionInfo>
 
 Here is a nice work around that will accomplish the true intention of this command, and will disable all sprites instantly for those engines that don't do so correctly:

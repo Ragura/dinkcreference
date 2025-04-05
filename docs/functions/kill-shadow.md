@@ -1,5 +1,7 @@
 # kill_shadow
 
+**Version:** <VersionInfo dink="" standalone />&nbsp;<VersionInfo freedink="" standalone />&nbsp;<VersionInfo dinkhd="" standalone />&nbsp;<VersionInfo yedink="" standalone />
+
 <Prototype>void kill_shadow(int active_sprite)</Prototype>
 
 `kill_shadow()` will remove any shadow sprites ([sp_brain()](./sp-brain.md) 15) attached to the `active_sprite`. See [sp_brain](./sp-brain.md) on how to create shadow sprites. This is only necessary if the shadow dies before the sprite with a shadow... when an active sprite dies, it will kill any shadows it has.
