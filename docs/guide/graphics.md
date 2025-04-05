@@ -28,8 +28,8 @@ Setting the `X coord`, `Y coord` or `hardbox` paramaters individually to `0` wil
 Setting all parameters to `0` will cause the engine to use the default internal algorithm for each individual frame. This is different to not setting any info, where the default internal algorithm result of the first frame will be applied to the entire sequence.
 
 The algorithms the Dink Engine uses to generate the depth dot position and hardbox when no paramaters are provided are:<br>
-**Depth dot X position:** (Image height / 4) - (image height / 30)<br>
-**Depth dot Y position:** (Image width / 2) - (image width / 6)<br>
+**Depth dot X position:** (image height / 4) - (image height / 30)<br>
+**Depth dot Y position:** (image width / 2) - (image width / 6)<br>
 **Hardbox left side:** 0 - (image width / 4)<br>
 **Hardbox tight side:** 0 + (image width / 4)<br>
 **Hardbox top side:** 0 - (image height / 10)<br>
