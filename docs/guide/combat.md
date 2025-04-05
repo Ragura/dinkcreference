@@ -26,19 +26,19 @@ int &damage = random(&hit_work, &hit_work);
 **Step 2.** Now the defense of the sprite that got hit is figured in:
 
 ```c
-&hits -= sp_defense(<sprite-getting-hit>, -1);
-if (&hits < 0)
+&damage -= sp_defense(<sprite-getting-hit>, -1);
+if (&damage < 0)
 {
-    &hits = 0;
+    &damage = 0;
 }
 ```
 
 **Step 3.** Make sure the sprite cannot always get off scott-free (this algorithm is used in [hurt()](../functions/hurt.md) and when Dink gets hit; it does not seem to always apply to Dink hitting a monster, especially when he hits it with magic):
 
 ```c
-if (&hits == 0)
+if (&damage == 0)
 {
-    &hits = random(2, 0); // random() returns 0 or 1
+    &damage = random(2, 0); // random() returns 0 or 1
 }
 ```
 
@@ -46,7 +46,7 @@ if (&hits == 0)
 
 ```c
 int &health = sp_hitpoints(<sprite-getting-hit>, -1);
-&health -= &hits; 
+&health -= &damage; 
 sp_hitpoints(<sprite-getting-hit>, &health);
 if (&health <= 0)
     die();          // note: Dink's die() is in script "dinfo"
