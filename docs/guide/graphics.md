@@ -10,28 +10,33 @@ The maximum frames per sequence varies between Dink Engines:
 
 It is possible to go over the limit of frames, but you cannot play more than the frame limit in an animated sequence, and exceeding the limit can cause serious problems when playing the game.
 
+
+<VersionInfo dink="">
+
+The ini lines should be at most 80 characters long. Longer lines will be truncated.
+
+</VersionInfo>
+
 ## load_sequence
 
 The two basic commands used to load graphics are:
 
 ```txt
-load_sequence_now [path]/[filename] [seq] [delay] [X coord] [Y coord] [hardbox]
-load_sequence [path]/[filename] [seq] [delay] [X coord] [Y coord] [hardbox]
+load_sequence_now [path]/[filename] [seq] [delay] [X coord] [Y coord] [left] [top] [right] [bottom]
+load_sequence [path]/[filename] [seq] [delay] [X coord] [Y coord] [left] [top] [right] [bottom]
 ```
 
 `load_sequence_now` puts those graphics straight into memory and is mainly used for the graphics associated with Dink and the status bar, but also include the burning pine tree – as it's nice to have that tree burn as soon as it's hit by a fireball.
 
 `load_sequence` makes those graphics available to the Dink Engine or the map editor.
 
-Setting the `X coord`, `Y coord` or `hardbox` paramaters individually to `0` will make that particular paramater be ignored and the engine will use the default internal algorithm to calculate it. In the case of `hardbox` if the left or right paramaters are `0` it will apply the default algorithm for both left and right even if the other is set. It also does this for both top and bottom, if top or bottom is set to `0`.
-
-Setting all parameters to `0` will cause the engine to use the default internal algorithm for each individual frame. This is different to not setting any info, where the default internal algorithm result of the first frame will be applied to the entire sequence.
+<span id="load_sequence-auto-params">Setting the `X coord`, `Y coord`, `right`, or `bottom` paramaters individually to `0` or a negative number will make that particular paramater be ignored and the engine will use the default internal algorithm to calculate it. In the case of `right` it will apply the default algorithm for both left and right even if the other is set. It also does this for top and bottom.</span>
 
 The algorithms the Dink Engine uses to generate the depth dot position and hardbox when no paramaters are provided are:<br>
-**Depth dot X position:** (image height / 4) - (image height / 30)<br>
-**Depth dot Y position:** (image width / 2) - (image width / 6)<br>
+**Depth dot X position:** image width - (image width / 2) - (image width / 6)<br>
+**Depth dot Y position:** image height - (image height / 4) - (image height / 30)<br>
 **Hardbox left side:** 0 - (image width / 4)<br>
-**Hardbox tight side:** 0 + (image width / 4)<br>
+**Hardbox right side:** 0 + (image width / 4)<br>
 **Hardbox top side:** 0 - (image height / 10)<br>
 **Hardbox bottom side:** 0 + (image height / 10)<br>
 <br>
@@ -68,7 +73,7 @@ Some sequence numbers are dedicated to various graphics needed to run the map ed
 | 6               | east       |
 | 7               | north-west |
 | 8               | north      |
-| 8               | north-east |
+| 9               | north-east |
 
 Therefore the base sequence of 70 (which is the base sequence of Dink walking) is loaded in `dink.ini` as:
 
@@ -99,9 +104,9 @@ load_sequence_now graphics\dink\walk\ds-w1- 71 43 38 72 -14 -9 14 9
 
 In this case the depth dot is 38 pixels across from the top left hand corner and then 72 pixels down.
 
-### `[hardbox]`
+### `[left]` `[top]` `[right]` `[bottom]`
 
-These last four numbers at the end of the `load` command are the X and then Y coordinates for the top left hand corner of the hardness box for the bmp and then the X and Y coordinates of the bottom right hand corner of the hardness box, all relative to the depth dot (see above).
+These last four numbers at the end of the `load` command are the X and Y coordinates for the top left hand corner of the hardness box for the bmp and then the X and Y coordinates of the bottom right hand corner of the hardness box, all relative to the depth dot (see above).
 Note: The X and Y co-ordinates used in game for the bottom right hand corner, will be your specified value *minus* 1. It's too small to notice in almost any situation, but if you're requiring a dead-accurate hardbox for some reason, simply add one to the X and Y coordinates of the bottom right hand corner.
 
 ```txt
@@ -164,21 +169,15 @@ Other additional parameters to the `load_sequence` command include: `NOTANIM`; `
 
 ### `NOTANIM`
 
-Example of the NOTANIM is:
+Normally, when a sequence does not provide depth dot or hardbox, the engine generates the depth dot hardbox for the first frame [as described above](#load_sequence-auto-params) and then uses that hardbox for every frame. With `NOTANIM`, the hardbox and depth dot are generated individually for each frame. This causes frames with differently sized images to have different hardboxes.
 
-```txt
-load_sequence graphics\effects\arrow\arrow- 25 75 NOTANIM
-```
+Note that `NOTANIM` does not prevent animating the sequence.
 
-This is used to load the arrow bmps into graphics sequence number 25. Interestingly enough a frame delay is specified even though the sequence has been designated as 'not animated".
-
-Another example of the NOTANIM is used to load all the (static) tree bmps
+Example of the `NOTANIM` is used to load all the (static) tree bmps
 
 ```txt
 load_sequence graphics\lands\trees\tree- 32 NOTANIM
 ```
-
-Here there is no frame delay specified.
 
 ### `BLACK`
 
@@ -190,7 +189,11 @@ Example of the use of this parameter from the original `dink.ini`:
 load_sequence_now graphics\inter\status\stat- 180 BLACK
 ```
 
-Can you have an animated bmp sequence with `BLACK` as transparency? Probably, but you may have to use `SET_SPRITE_INFO` lines to set the depth dot and hardness box for each frame. And that is a waste of `SET_SPRITE_INFO` lines.
+Can you have an animated bmp sequence with `BLACK` as transparency? Yes. While the main game does not use it, you can add depth dot and hardness after the BLACK:
+
+```txt
+load_sequence graphics\my\fancy\thing- 851 BLACK 67 86 -21 -12 21 12
+```
 
 ### `LEFTALIGN`
 
@@ -285,8 +288,12 @@ The second number (11) is the frame number (of the bmp file).<br>
 The next two numbers (30 24) define the depth dot relative to the top left corner of the bmp file.<br>
 The last four numbers (-32 -22 20 3) define the hardness box relative to the depth dot.
 
-Things to note about the `SET_SPRITE_INFO` commands, is that there is a limit on the amount you can have, except in Dink Smallwood HD, which does not have a limit:
-<VersionInfo dink="" freedink= "">600</VersionInfo><br>
-<VersionInfo yedink="">2000</VersionInfo>
+## Limits on ini commands
+Things to note about the `set_sprite_info`, `set_frame_frame`, `set_frame_delay`, `set_frame_special` commands, is that there is a limit on the amount you can have, except in Dink Smallwood HD, which does not have a limit:
+<VersionInfo dink="1.07">599</VersionInfo><br>
+<VersionInfo dink="" freedink= "">999</VersionInfo><br>
+<VersionInfo yedink="">1999</VersionInfo>
 
-After that number is passed, no new lines are read. To make matters worse you can have redundant lines in which you've set the sprite info once, then gone back and changed it again. There is a line for both occurances in the `dink.ini` file (but the last one is the one that is used) and so for one sprite you can waste more than 1 of the `SET_SPRITE_INFO` lines allocated.
+After that number is passed, no new lines are read. To make matters worse you can have redundant lines in which you've (for example) set the sprite info once, then gone back and changed it again. There is a line for both occurances in the `dink.ini` file (but the last one is the one that is used) and so for one sprite you can waste more than 1 of the `set_sprite_info` lines allocated.
+
+Additionally `load_sequence_now` lines count against this limit although passing the limit does not prevent them from being executed.
