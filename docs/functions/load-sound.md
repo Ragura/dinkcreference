@@ -9,3 +9,9 @@
 By default, this command will look in the D-Mods sounds directory, and if `wav_file` cannot be found, it will look in Dink's sounds directory.
 
 Note that you can replace existing sounds at any time. So if you plan on having speech in a D-Mod, you could reserve a specific `sound_number` for speech, and use `load_sound()` to load in each line of dialogue into that slot as necessary.
+
+<VersionInfo dink="">
+
+Replacing a sound in the way described above won't free the previous sound buffer, so this leaks memory. It might not matter much if you're conservative with replacing sounds, but if you load some large sound files on every sprites main(), for example, it will add up quickly.
+
+</VersionInfo>

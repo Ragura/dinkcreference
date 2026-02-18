@@ -1,6 +1,7 @@
 # Variables
 
 A variable is a word that stores a number. This word must always start with an ampersand `&` symbol. The number must be in the range −2,147,483,648 to +2,147,483,647. There is a limit of 249 concurrent local and global variables active at any one time.
+The name length of a variable is limited to 19 characters, including the `&`.
 
 <VersionInfo yedink="0.95+">The concurrent local and global variable limit is 500</VersionInfo>
 

@@ -195,6 +195,8 @@ Can you have an animated bmp sequence with `BLACK` as transparency? Yes. While t
 load_sequence graphics\my\fancy\thing- 851 BLACK 67 86 -21 -12 21 12
 ```
 
+Note that the sequences loaded this way have delay 0, causing them to likely play faster than you want. If you want to do this, consider using [sp_frame_delay](../functions/sp-frame-delay.md), to control the frame rate.
+
 ### `LEFTALIGN`
 
 Finally, `LEFTALIGN` is used in loading graphics used to display numbers and the health bar in the stats area of the screen.
@@ -290,8 +292,8 @@ The last four numbers (-32 -22 20 3) define the hardness box relative to the dep
 
 ## Limits on ini commands
 Things to note about the `set_sprite_info`, `set_frame_frame`, `set_frame_delay`, `set_frame_special` commands, is that there is a limit on the amount you can have, except in Dink Smallwood HD, which does not have a limit:
-<VersionInfo dink="1.07">599</VersionInfo><br>
-<VersionInfo dink="" freedink= "">999</VersionInfo><br>
+<VersionInfo dink="1.07">599</VersionInfo>
+<VersionInfo dink="" freedink= "">999</VersionInfo>
 <VersionInfo yedink="">1999</VersionInfo>
 
 After that number is passed, no new lines are read. To make matters worse you can have redundant lines in which you've (for example) set the sprite info once, then gone back and changed it again. There is a line for both occurances in the `dink.ini` file (but the last one is the one that is used) and so for one sprite you can waste more than 1 of the `set_sprite_info` lines allocated.
