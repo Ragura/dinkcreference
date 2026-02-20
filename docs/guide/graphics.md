@@ -301,4 +301,4 @@ After that number is passed, no new lines are read. To make matters worse you ca
 Additionally `load_sequence_now` lines count against this limit although passing the limit does not prevent them from being executed.
 
 ## Custom Engine Parameters
-There aresome [custom engine parameters](./yedink-ini-parms.md) that you can add to dink.ini to do various things, some related to graphics. At the moment only YeOldeDink (0.95+) has this feature.
+There are some [custom engine parameters](./yedink-ini-parms.md) that you can add to dink.ini to do various things, some related to graphics. At the moment only YeOldeDink (0.95+) has this feature.
