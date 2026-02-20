@@ -1,4 +1,4 @@
-# Dink.ini parms
+# YeDink ini parms
 
 **Version:** <VersionInfo yedink="0.95+" standalone />
 

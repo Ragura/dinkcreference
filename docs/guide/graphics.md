@@ -299,3 +299,6 @@ Things to note about the `set_sprite_info`, `set_frame_frame`, `set_frame_delay`
 After that number is passed, no new lines are read. To make matters worse you can have redundant lines in which you've (for example) set the sprite info once, then gone back and changed it again. There is a line for both occurances in the `dink.ini` file (but the last one is the one that is used) and so for one sprite you can waste more than 1 of the `set_sprite_info` lines allocated.
 
 Additionally `load_sequence_now` lines count against this limit although passing the limit does not prevent them from being executed.
+
+## Custom Engine Parameters
+There aresome [custom engine parameters](./yedink-ini-parms.md) that you can add to dink.ini to do various things, some related to graphics. At the moment only YeOldeDink (0.95+) has this feature.

@@ -59,7 +59,7 @@ function getGuideSidebar() {
         { text: 'A Changing world', link: '/guide/changing-world' },
         { text: 'Screen Lock', link: '/guide/screenlock' },
         { text: 'Graphics', link: '/guide/graphics' },
-        { text: 'Dink.ini parms', link: '/guide/ini-parms' },
+        { text: 'YeDink ini parms', link: '/guide/yedink-ini-parms' },
       ]
     }
   ]
